@@ -1,0 +1,191 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TMN.Interfaces;
+using System.Data.SqlClient;
+using System.Windows;
+using Enterprise;
+
+namespace TMN
+{
+
+    public partial class User : Entity, IDeletable
+    {
+        public bool Delete()
+        {
+            if (this.ID == User.Current.ID)
+            {
+                MessageBox.Show("جهت حذف اين کاربر بايد با کاربر ديگری وارد سيستم شويد.", "حذف", MessageBoxImage.Error);
+                return false;
+            }
+
+            if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+            {
+                var db = DB.Instance;
+                db.Connection.Open();
+                db.Transaction = db.Connection.BeginTransaction();
+                User user = db.Users.Where(p => p.ID == this.ID).SingleOrDefault();
+                db.Users.DeleteOnSubmit(user);
+                try
+                {
+
+
+                    // user log
+					//UserLog.Log(db, ActionType.UserRemove, string.Format("Name={0}", user.UserName), string.Format("ID={0} , Name={1}", user.ID, user.UserName));
+
+
+                    db.SubmitChanges();
+                    db.Transaction.Commit();
+
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    db.Transaction.Rollback();
+                    db.Connection.Close();
+                    MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+                    return false;
+                }
+            }
+            return false;
+        }
+
+		public static User Current
+		{
+			get;
+			private set;
+		}
+
+        public static bool LoginDefaultUserIfNoUserDefined()
+        {
+            TMNModelDataContext db = DB.Instance;
+            User singleUser;
+            if (db.Users.Count() == 1 && (singleUser = db.Users.Single()).Password == "")
+            {
+                if (singleUser.Center == null && Center.Current != null)
+                {
+                    singleUser.Center = db.Centers.Single(c => c == Center.Current);
+                    db.SubmitChanges();
+                }
+                return Login(singleUser.UserName, "");
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+        public static bool Login(string userName, string password)
+        {
+            // User tmpUser = DB.Instance.Users.Where(p => p.UserName == userName && p.Password == password).FirstOrDefault();
+
+            var db = DB.Instance;
+            User tmpUser = db.Users.Where(p => p.UserName == userName && p.Password == password).FirstOrDefault();
+
+            if (tmpUser != null)
+            {
+                tmpUser.Shift = TMN.Shift.GetShiftBasedOnTime();
+                
+                Logger.WriteInfo("User \"{0}\" logged in.", userName);
+
+                //List<string> list = (from p in db.Permissions
+                //                     join rp in db.RolePermissions on p.PermissionID equals rp.PermissionID
+                //                     join r in db.Roles on rp.RoleID equals r.ID
+                //                     join ur in db.UserRoleRelations on r.ID equals ur.RoleID
+                //                     join u in db.Users on ur.UserID equals u.ID
+                //                     where u.ID == tmpUser.ID
+                //                     select p.Title).ToList();
+
+                //tmpUser.PermissionNames = list;
+
+                User.Current = tmpUser;
+
+				Center.Selected = User.Current.Center;
+
+                // user log
+				//UserLog.Log(db, ActionType.UserLogin, userName, "");
+
+                db.SubmitChanges();
+
+                return true;
+            }
+            Logger.WriteWarning("User \"{0}\" failed to log in.", userName);
+            return false;
+        }
+
+        public bool IsUnique
+        {
+            get
+            {
+                int cnt = DB.Instance.Users.Where(u => u.UserName == this.UserName && u.ID != this.ID).Count();
+                if (cnt == 0)
+                    return true;
+                else
+                {
+                    MessageBox.Show(MessageTypes.RepeatedName);
+                    return false;
+                }
+            }
+        }
+
+        private Shifts GetShiftFromShiftTable(DateTime date)
+        {
+            Shifts result = default(Shifts);
+
+            if (this.UserShifts.Count(p => p.Date.Date == date.Date) == 1)
+                result |= Shifts.صبح;
+            if (this.UserShifts1.Count(p => p.Date.Date == date.Date) == 1)
+                result |= Shifts.شب;
+            if (this.UserShifts2.Count(p => p.Date.Date == date.Date) == 1)
+                result |= Shifts.بعدازظهر;
+            return result;
+        }
+
+        private Shifts shift;
+        public Shifts Shift
+        {
+            get
+            {
+                /* For the current user shift is calculated immidiately when logged in based on the time of logging in.
+                 * so it woun't set in "get" accessor of "Shift"
+                 * Where as, for other users it is not set when instentiating the user, so it will be calculated in "get" accessor of "Shift"
+                 */
+                if (shift == default(Shifts))
+                    shift = GetShiftFromShiftTable(DateTime.Now);
+                return shift;
+            }
+            private set
+            {
+                shift = value;
+            }
+        }
+
+        public bool IsInRole(string roleID)
+        {
+            return DB.Instance.UserRoleRelations.Any(p => p.User == this && p.RoleID == roleID);
+        }
+
+        public void ChangePassword(string newPassord)
+        {
+            var db = DB.Instance;
+            db.Users.Single(u => u == Current).Password = newPassord;
+            db.SubmitChanges();
+        }
+
+        //private List<string> _permissionNames;
+        //public List<string> PermissionNames
+        //{
+        //    get
+        //    {
+        //        return _permissionNames;
+        //    }
+        //    set
+        //    {
+        //        _permissionNames = value;
+        //    }
+        //}
+    }
+}

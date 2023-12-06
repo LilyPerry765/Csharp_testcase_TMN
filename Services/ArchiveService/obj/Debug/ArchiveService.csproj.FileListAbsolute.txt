@@ -1,0 +1,16 @@
+D:\Develop\TMN.Classic\ArchiveService\bin\Debug\ArchiveService.dll.config
+D:\Develop\TMN.Classic\ArchiveService\bin\Debug\ArchiveService.dll
+D:\Develop\TMN.Classic\ArchiveService\bin\Debug\ArchiveService.pdb
+D:\Develop\TMN.Classic\ArchiveService\bin\Debug\Logger.dll
+D:\Develop\TMN.Classic\ArchiveService\bin\Debug\Logger.pdb
+D:\Develop\TMN.Classic\ArchiveService\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\ArchiveService\obj\Debug\ArchiveService.dll
+D:\Develop\TMN.Classic\ArchiveService\obj\Debug\ArchiveService.pdb
+D:\Develop\TMN.Classic\Services\ArchiveService\bin\Debug\ArchiveService.dll.config
+D:\Develop\TMN.Classic\Services\ArchiveService\bin\Debug\ArchiveService.dll
+D:\Develop\TMN.Classic\Services\ArchiveService\bin\Debug\ArchiveService.pdb
+D:\Develop\TMN.Classic\bin\ArchiveService.dll
+D:\Develop\TMN.Classic\bin\ArchiveService.pdb
+D:\Develop\TMN.Classic\Services\ArchiveService\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\ArchiveService\obj\Debug\ArchiveService.dll
+D:\Develop\TMN.Classic\Services\ArchiveService\obj\Debug\ArchiveService.pdb

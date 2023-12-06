@@ -1,0 +1,69 @@
+﻿<Window x:Class="TMN.UI.Windows.PowerRegionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        FlowDirection="RightToLeft"
+        Title="PowerRegionWindow"
+        Height="521"
+        Width="1075">
+    <Grid>
+        <Viewbox>
+            <Grid x:Name="grid">
+                <Image Width="1200"  x:Name="regionImage"
+                       Opacity=".5"
+                       Source="{a:ImageSource region2.jpg}" />
+                <Canvas x:Name="canvas" />
+            </Grid>
+        </Viewbox>
+        <StackPanel VerticalAlignment="Top"
+                    Margin="0,5,5,0"
+                    HorizontalAlignment="Right">
+            <uc:BlinkingLed x:Name="connectLed"
+                            DisplayMode="On"
+                            InnerBackground="Red"
+                            Height="37"
+                            Width="85"
+                            Title="وضعيت ارتباط"
+                            Cursor="Hand"
+                            MouseLeftButtonUp="connectLed_MouseLeftButtonUp">
+                <uc:BlinkingLed.Style>
+                    <Style>
+                        <Setter Property="TextElement.FontFamily"
+                                Value="Tahoma" />
+                    </Style>
+                </uc:BlinkingLed.Style>
+            </uc:BlinkingLed>
+            <uc:SoundButton x:Name="muteAllSoundButton"
+                            IsMuteChanged="muteAllSoundButton_IsMuteChanged"
+                            Title=" قطع صدا "
+                            FontFamily="Tahoma" />
+            <TextBlock x:Name="refreshStatusTextblock"
+                       Visibility="Hidden"
+                       TextAlignment="Right"
+                       Foreground="LimeGreen"
+                       FontFamily="Webdings"
+                       ToolTip="Refreshing..."
+                       FontSize="12"
+                       Text="q" />
+        </StackPanel>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="به روز رسانی"
+                          x:Name="refreshMenuItem"
+                          Click="refreshMenuItem_Click" />
+                <MenuItem Header="چيدن مراکز جديد"
+                          x:Name="reArrangeNewCenters"
+                          Click="reArrangeNewCenters_Click" />
+                <MenuItem Header="قفل مراکز"
+                          x:Name="lockMenuItem"
+                          IsCheckable="True"
+                          IsChecked="True" />
+                <MenuItem Header="قطع صدای مراکز"
+                          x:Name="muteMenuItem"
+                          IsCheckable="True"
+                          IsChecked="False" Click="muteMenuItem_Click"   />
+            </ContextMenu>
+        </Grid.ContextMenu>
+    </Grid>
+</Window>

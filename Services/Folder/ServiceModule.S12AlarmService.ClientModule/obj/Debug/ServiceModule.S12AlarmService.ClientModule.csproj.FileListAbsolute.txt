@@ -1,0 +1,11 @@
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\ServiceModule.S12AlarmService.ClientModule.dll
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\ServiceModule.S12AlarmService.ClientModule.pdb
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Folder.EMQ.dll
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Logger.dll
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Folder.Common.dll
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Folder.EMQ.pdb
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Logger.pdb
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\bin\Debug\Folder.Common.pdb
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\obj\Debug\ServiceModule.S12AlarmService.ClientModule.dll
+D:\Develop\TMN.Classic\Services\Folder\ServiceModule.S12AlarmService.ClientModule\obj\Debug\ServiceModule.S12AlarmService.ClientModule.pdb

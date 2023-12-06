@@ -1,0 +1,116 @@
+﻿using System.Collections.Generic;
+using System.Data.Linq.SqlClient;
+using System.Linq;
+using System.Windows;
+using System.Windows.Documents;
+using System.Windows.Media;
+using TMN.UI.Windows;
+using TMN.UserControls;
+
+namespace TMN
+{
+    public partial class CircuitDialogWindow : Window
+    {
+        public CircuitDialogWindow()
+        {
+            InitializeComponent();
+        }
+
+        //public CircuitDialogWindow(Center currentCenter, int currentMudoleNumber)
+        //{
+        //    InitializeComponent();
+
+        //    this.Center = currentCenter;
+        //    this.ModulNumber = currentMudoleNumber;
+
+        //    ShowMessage();
+        //}
+
+		public CircuitDialogWindow(Center currentCenter, List<string> newCircuitOpen)
+        {
+            InitializeComponent();
+
+            this.Center = currentCenter;
+            this.ModulNumbers = newCircuitOpen;
+
+            ShowMessage();
+        }
+
+        private void ShowMessage()
+        {
+            List<Sensor> sensors = null;
+            string tempNumbers = "";
+            foreach (string item in ModulNumbers)
+                tempNumbers += item + "_";
+
+            using (var db = new TMNModelDataContext())
+            {
+                sensors = db.Sensors.Where(s => s.Room.CenterID == Center.ID  && SqlMethods.Like(tempNumbers, "%" + s.ModulNumber.ToString() + "%")).ToList();
+            }
+            
+			Hyperlink link = new Hyperlink();
+            link.Foreground = Brushes.White;
+            link.FontFamily = AlarmTextBlock.FontFamily;
+            link.FontSize = AlarmTextBlock.FontSize;
+            link.BaselineAlignment = BaselineAlignment.Center;
+
+            string circuitNumbers = "";
+            foreach (Sensor item in sensors)
+            {
+                string temp = "" + item.Title;
+                int space = temp.IndexOf(' ');
+                if (space != -1)
+                {
+                    temp = temp.Substring(0, space);
+                    circuitNumbers += "و" + temp;
+                }
+            }
+
+            if(circuitNumbers != "")
+                circuitNumbers = circuitNumbers.Substring(1);
+
+            link.Inlines.Add(string.Format("کابل(های) شماره {0} مرکز {1}  قطع می باشد", circuitNumbers, this.Center.Name));
+            link.Click += new RoutedEventHandler(link_Click);
+
+            using (TMNModelDataContext db = new TMNModelDataContext())
+            {
+                UserLog.Log(db, ActionType.NewOpenCircuit, string.Format("کابل(های) شماره {0} مرکز {1}  قطع می باشد", circuitNumbers, this.Center.Name),"");
+            }
+
+            //TextBlock textBlock = new TextBlock();
+            AlarmTextBlock.Inlines.Add(link);
+
+            //mainStack.Children.Add(textBlock);
+
+        }
+
+        void link_Click(object sender, RoutedEventArgs e)
+        {
+
+
+			Center.Selected = this.Center;
+
+			
+
+            //AlarmCircuitWindow win = Singleton<AlarmCircuitWindow>.Instance;
+            //win.Title = "آلارم کابل";
+            //win.ShowAsSingleTab(MainWindow.Instance.tabControl, "Alarm Circuit");
+        }
+
+
+
+		public Center Center
+        {
+            get;
+            set;
+        }
+
+        public List<string> ModulNumbers
+        {
+            get;
+            set;
+        }
+
+
+    }
+}

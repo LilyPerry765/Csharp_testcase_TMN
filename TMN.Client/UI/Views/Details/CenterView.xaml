@@ -1,0 +1,198 @@
+﻿<UserControl x:Class="TMN.Views.Details.CenterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:enums="clr-namespace:TMN;assembly=TMN.Common"
+             xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             FlowDirection="RightToLeft"
+             FontFamily="Tahoma"
+             Height="370"
+             Width="501">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalContentAlignment"
+                        Value="Right" />
+                <Setter Property="VerticalContentAlignment"
+                        Value="Center" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="107*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition  Width="Auto" />
+            <ColumnDefinition  Width="Auto" />
+            <ColumnDefinition  Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0"
+               Grid.Row="1">سوييچ:</Label>
+        <Label Grid.Column="2"
+               Grid.Row="1">نوع مركز:</Label>
+        <Label Grid.Column="0"
+               Grid.Row="2">منطقه:</Label>
+        <Label Grid.Column="0">نام مركز:</Label>
+        <Label Grid.Column="2"
+               Grid.Row="2">كد:</Label>
+        <Label Grid.Column="0"
+               Grid.Row="5">PointCode:</Label>
+        <Label Grid.Column="2"
+               Grid.Row="5">FX:</Label>
+        <Label Grid.Column="0"
+               Grid.Row="6">شماره تست:</Label>
+        <Label Grid.Column="2"
+               Grid.Row="6">شماره تماس:</Label>
+        <Label Grid.Column="0"
+               Grid.Row="7">عرض جغرافيايي:</Label>
+        <Label Grid.Column="2"
+               Grid.Row="7">طول جغرافيايي:</Label>
+        <Label Grid.Row="9"
+               Margin="0,-1,0,1">توضيحات:</Label>
+        <uc:EntityComboBox xmlns:uc="clr-namespace:TMN.UserControls"
+                           x:Name="cmbSwitch"
+                           Width="150"
+                           SelectedItem="{Binding SwitchType}"
+                           DisplayMemberPath="Name"
+                           SelectedValuePath="ID"
+                           Margin="0,2,0,2"
+                           Grid.Row="1"
+                           Grid.Column="1" />
+        <ComboBox x:Name="cmbRegions"
+                  Width="150"
+                  Margin="0,2,0,2"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding Region}" />
+        <ComboBox x:Name="cmbCenterType"
+                  Width="150"
+                  Margin="0,2,0,2"
+                  Grid.Row="1"
+                  Grid.Column="3"
+                  SelectedValuePath="Value"
+                  ItemsSource="{a:EnumDataSource EnumType=enums:CenterTypes}"
+                  SelectedValue="{Binding CenterType}" />
+        <TextBox x:Name="txtName"
+                 Width="150"
+                 Text="{Binding Name}"
+                 Margin="0,2,0,2"
+                 Grid.Column="1" />
+        <TextBox x:Name="txtCode"
+                 Width="150"
+                 Text="{Binding Code}"
+                 Margin="0,2,0,2"
+                 Grid.Row="2"
+                 Grid.Column="3" />
+        <Label Grid.Column="2"
+               Grid.Row="3">User Name:</Label>
+        <TextBox x:Name="userNameTextBox"
+                 Width="150"
+                 Text="{Binding UserName}"
+                 Margin="0,2,0,2"
+                 Grid.Column="3"
+                 Grid.Row="3" />
+        <Label Grid.Row="3">IP:</Label>
+        <Label Grid.Row="4">کلمه عبور:</Label>
+        <PasswordBox Grid.Column="1"
+                     Grid.Row="4" 
+                     x:Name="password"/>
+        <Label Grid.Row="4" Grid.Column="2">تکرار کلمه عبور:</Label>
+        <PasswordBox Grid.Column="3"
+                     Grid.Row="4"
+                     x:Name="passwordRepeat" />
+        <TextBox x:Name="ipTextBox"
+                 Width="150"
+                 Text="{Binding IPAddress}"
+                 Margin="0,2,0,2"
+                 Grid.Column="1"
+                 Grid.Row="3" />
+        <TextBox x:Name="txtPointCode"
+                 Width="150"
+                 Text="{Binding PointCode}"
+                 Margin="0,2,0,2"
+                 Grid.Column="1"
+                 Grid.Row="5" />
+        <TextBox x:Name="txtFX"
+                 Width="150"
+                 Text="{Binding FX}"
+                 Margin="0,2,0,2"
+                 MaxLength="10"
+                 Grid.Column="3"
+                 Grid.Row="5" />
+        <TextBox x:Name="txtTest"
+                 Width="150"
+                 Text="{Binding TestNo}"
+                 Margin="0,2,0,2"
+                 MaxLength="15"
+                 Grid.Column="1"
+                 Grid.Row="6" />
+        <TextBox x:Name="txtContact"
+                 Width="150"
+                 Text="{Binding ContactNo}"
+                 Margin="0,2,0,2"
+                 MaxLength="30"
+                 Grid.Column="3"
+                 Grid.Row="6" />
+        <TextBox x:Name="txtLatitude"
+                 Width="150"
+                 Text="{Binding Latitude}"
+                 Margin="0,2,0,2"
+                 Grid.Column="1"
+                 Grid.Row="7" />
+        <TextBox x:Name="txtLongitude"
+                 Width="150"
+                 Text="{Binding Longitude}"
+                 Margin="0,2,0,2"
+                 Grid.Column="3"
+                 Grid.Row="7" />
+        <Label Grid.Column="0"
+               Grid.Row="8">Dest:</Label>
+        <DataGrid Grid.Row="8"
+                  x:Name="destDataGrid"
+                  Margin="0,5,0,5"
+                  SelectionMode="Single"
+                  CommandManager.PreviewExecuted="destDataGrid_PreviewExecuted"
+                  RowHeaderWidth="0"
+                  SelectionUnit="FullRow"
+                  HeadersVisibility="Column"
+                  ItemsSource="{Binding Dests}"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  Height="80">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="300"
+                                    Header="عنوان Dest"
+                                    Binding="{Binding Name}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtDescription"
+                 VerticalScrollBarVisibility="Auto"
+                 Text="{Binding Description}"
+                 AcceptsReturn="True"
+                 Grid.ColumnSpan="3"
+                 Margin="0,2,0,2"
+                 Height="50"
+                 Grid.Column="1"
+                 Grid.Row="9" />
+        <CheckBox x:Name="DefaultCenterCheckBox"
+                  IsChecked="True"
+                  Grid.Column="1"
+                  Grid.Row="11"
+                  VerticalAlignment="Top">مرکز جاری</CheckBox>
+    </Grid>
+</UserControl>

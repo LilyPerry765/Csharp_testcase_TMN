@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="TMN.Views.Details.ReportTypeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             Height="80">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= NameTextBox }">عنوان:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DefaultValueTextBox }">مقدار پيشفرض:</Label>
+            <Label HorizontalAlignment="Right" Target="{Binding ElementName= cmbSwitchType}"  >نوع سویچ :</Label>
+        </StackPanel>
+        <StackPanel>
+            <TextBox x:Name="NameTextBox"
+                     Text="{Binding Name}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="DefaultValueTextBox"
+                     Text="{Binding DefaultValue}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <ComboBox x:Name="cmbSwitchType" Width="140" Margin="0,2,0,2" HorizontalAlignment="Right" Text ="{Binding SwitchType.Name}" DisplayMemberPath="Name" SelectedValuePath="ID" ></ComboBox>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

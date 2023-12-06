@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TMN.Interfaces;
+using System.Windows;
+
+namespace TMN
+{
+    public partial class EventType : Entity, IDeletable
+    {
+        public bool Delete()
+        {
+            if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+            {
+                var db = DB.Instance;
+                bool isUsed = db.Events.Where(e => e.EventType == this).Count() > 0;
+
+                if (!isUsed)
+                {
+                    EventType eventType = db.EventTypes.Where(p => p.ID == this.ID).SingleOrDefault();
+                    db.EventTypes.DeleteOnSubmit(eventType);
+
+                    // user log
+					//UserLog.Log(db, ActionType.EventRemove, string.Format("Name={0}", eventType.Name), string.Format("ID={0} , Name={1}", eventType.ID, eventType.Name));
+
+
+                    db.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+                }
+            }
+            return false;
+        }
+
+        public bool IsUnique(string name)
+        {
+
+            if (DB.Instance.EventTypes.Where(c => c.ID != this.ID && c.Name == name).Count() > 0)
+            {
+                MessageBox.Show(MessageTypes.RepeatedName);
+                return false;
+            }
+            return true;
+        }
+    }
+}

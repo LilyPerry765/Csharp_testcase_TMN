@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/138/TMN.Client/Extensions
+END
+SolidColorBrushExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Extensions/SolidColorBrushExtensions.cs
+END
+ColorExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Extensions/ColorExtensions.cs
+END
+FrameworkElementExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Extensions/FrameworkElementExtensions.cs
+END
+UIElementExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Extensions/UIElementExtensions.cs
+END
+WindowExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/138/TMN.Client/Extensions/WindowExtensions.cs
+END
+CommonExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Extensions/CommonExtensions.cs
+END

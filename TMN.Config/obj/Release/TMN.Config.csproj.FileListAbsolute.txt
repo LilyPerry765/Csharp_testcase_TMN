@@ -1,0 +1,6 @@
+D:\Develop\TMN.Classic\bin\TMN.Config.dll.config
+D:\Develop\TMN.Classic\bin\TMN.Config.dll
+D:\Develop\TMN.Classic\bin\TMN.Config.pdb
+D:\Develop\TMN.Classic\TMN.Config\obj\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.Config\obj\Release\TMN.Config.dll
+D:\Develop\TMN.Classic\TMN.Config\obj\Release\TMN.Config.pdb

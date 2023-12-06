@@ -1,0 +1,20 @@
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\bin\Release\EricssonAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\Ericsson Settings.lnk
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\EricssonAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\EricssonAlarmService.exe
+D:\Develop\TMN.Classic\bin\EricssonAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\EricssonAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\EricssonAlarmService_MarkupCompile.lref
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\EricssonAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\TMN.AlarmService.resources
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\EricssonAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.EricssonAlarmService\obj\x86\Release\EricssonAlarmService.pdb

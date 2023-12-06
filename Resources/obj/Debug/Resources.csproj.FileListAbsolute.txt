@@ -1,0 +1,12 @@
+D:\Develop\TMN.Classic\bin\Resources.dll
+D:\Develop\TMN.Classic\bin\Resources.pdb
+D:\Develop\TMN.Classic\Resources\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Resources\obj\Debug\Resources.g.resources
+D:\Develop\TMN.Classic\Resources\obj\Debug\Resources.dll
+D:\Develop\TMN.Classic\Resources\obj\Debug\Resources.pdb
+D:\Folder\Resources.dll
+D:\Folder\Resources.pdb
+E:\Project\Final Project\TMN.Classic\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\Resources\obj\Debug\Resources.g.resources
+E:\Project\Final Project\TMN.Classic\Resources\obj\Debug\Resources.dll
+E:\Project\Final Project\TMN.Classic\Resources\obj\Debug\Resources.pdb

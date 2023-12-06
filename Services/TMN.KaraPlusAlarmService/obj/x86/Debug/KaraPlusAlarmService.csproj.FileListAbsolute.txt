@@ -1,0 +1,15 @@
+D:\Develop\TMN.Classic\bin\KaraPlusAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\KaraPlusAlarmService.exe
+D:\Develop\TMN.Classic\bin\KaraPlusAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\KaraPlusAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\KaraPlusAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\KaraPlusAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.KaraPlusAlarmService\obj\x86\Debug\KaraPlusAlarmService.pdb

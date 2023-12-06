@@ -1,0 +1,16 @@
+D:\Develop\TMN.Classic\bin\Huawei Settings.lnk
+D:\Develop\TMN.Classic\bin\HuaweiAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\HuaweiAlarmService.exe
+D:\Develop\TMN.Classic\bin\HuaweiAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\HuaweiAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\HuaweiAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\HuaweiAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.HuaweiAlarmService\obj\x86\Debug\HuaweiAlarmService.pdb

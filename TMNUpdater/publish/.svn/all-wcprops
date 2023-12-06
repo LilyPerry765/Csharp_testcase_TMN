@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish
+END
+setup.exe
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/setup.exe
+END
+TMN.Updater.application
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/TMN.Updater.application
+END

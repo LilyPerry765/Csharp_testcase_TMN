@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TMN.Classic" Class="TMNDataContextBase" Modifier="Abstract" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.105;Initial Catalog=TMN.Classic;User ID=sa" SettingsObjectName="TMN.Properties.Settings" SettingsPropertyName="TMN_ClassicConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AcknowledgeCenter" Member="AcknowledgeCenters">
+    <Type Name="AcknowledgeCenter">
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Creator" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IPStation" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Center_AcknowledgeCenter" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_AcknowledgeCenter" Member="User" ThisKey="CenterID" OtherKey="ID" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserShift" Member="UserShifts">
+    <Type Name="UserShift">
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MorningUser" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AfterNoonUser" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NightUser" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Center_UserShift" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="User_UserShift" Member="User" ThisKey="MorningUser" OtherKey="ID" Type="User" IsForeignKey="true" />
+      <Association Name="User_UserShift1" Member="User1" ThisKey="AfterNoonUser" OtherKey="ID" Type="User" IsForeignKey="true" />
+      <Association Name="User_UserShift2" Member="User2" ThisKey="NightUser" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Alarm" Member="Alarms">
+    <Type Name="Alarm">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisconnectTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ConnectTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RouteID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ReportTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReportReceiver" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Fixer" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Assessor" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Reporter" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FailedLink" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DamagePlace" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="AnnounceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AlarmType_Alarm" Member="AlarmType" ThisKey="Type" OtherKey="ID" Type="AlarmType" IsForeignKey="true" />
+      <Association Name="Center_Alarm" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="Link_Alarm" Member="Link" ThisKey="FailedLink" OtherKey="ID" Type="Link" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Route_Alarm" Member="Route" ThisKey="RouteID" OtherKey="ID" Type="Route" IsForeignKey="true" />
+      <Association Name="User_Alarm" Member="User" ThisKey="Reporter" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AlarmSeverityOverride" Member="AlarmSeverityOverrides">
+    <Type Name="AlarmSeverityOverride">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SwitchTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AlarmNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Pattern" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewSeverity" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NewTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SwitchType_AlarmSeverityOverride" Member="SwitchType" ThisKey="SwitchTypeID" OtherKey="ID" Type="SwitchType" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AlarmType" Member="AlarmTypes">
+    <Type Name="AlarmType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="AlarmType_Alarm" Member="Alarms" ThisKey="ID" OtherKey="Type" Type="Alarm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Card" Member="Cards">
+    <Type Name="Card">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ShelfID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SlotNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EQP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Card_Link" Member="Links" ThisKey="ID" OtherKey="CardID" Type="Link" />
+      <Association Name="CardType_Card" Member="CardType" ThisKey="Type" OtherKey="ID" Type="CardType" IsForeignKey="true" />
+      <Association Name="Shelf_Card" Member="Shelf" ThisKey="ShelfID" OtherKey="ID" Type="Shelf" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardType" Member="CardTypes">
+    <Type Name="CardType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SupportingSwitch" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="E1Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsControlCard" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CardType_Card" Member="Cards" ThisKey="ID" OtherKey="Type" Type="Card" />
+      <Association Name="CardType_ShelfCardType" Member="ShelfCardTypes" ThisKey="ID" OtherKey="CardTypeID" Type="ShelfCardType" />
+      <Association Name="CardType_SpareCard" Member="SpareCards" ThisKey="ID" OtherKey="TypeID" Type="SpareCard" />
+      <Association Name="SwitchType_CardType" Member="SwitchType" ThisKey="SupportingSwitch" OtherKey="ID" Type="SwitchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Center" Member="Centers">
+    <Type Name="Center">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Switch" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Width" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CenterType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PointCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="X" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Y" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TestNo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Center_AcknowledgeCenter" Member="AcknowledgeCenter" ThisKey="ID" OtherKey="CenterID" Type="AcknowledgeCenter" Cardinality="One" />
+      <Association Name="Center_UserShift" Member="UserShifts" ThisKey="ID" OtherKey="CenterID" Type="UserShift" />
+      <Association Name="Center_Alarm" Member="Alarms" ThisKey="ID" OtherKey="CenterID" Type="Alarm" />
+      <Association Name="Center_CenterInMap" Member="CenterInMaps" ThisKey="ID" OtherKey="CenterID" Type="CenterInMap" />
+      <Association Name="Center_CenterLink" Member="CenterLinks" ThisKey="ID" OtherKey="CenterA" Type="CenterLink" />
+      <Association Name="Center_CenterLink1" Member="CenterLinks1" ThisKey="ID" OtherKey="CenterB" Type="CenterLink" />
+      <Association Name="Center_CircuitLink" Member="CircuitLinks" ThisKey="ID" OtherKey="CenterID" Type="CircuitLink" />
+      <Association Name="Center_DDF" Member="DDFs" ThisKey="ID" OtherKey="CenterID" Type="DDF" />
+      <Association Name="Center_Dest" Member="Dests" ThisKey="ID" OtherKey="CenterID" Type="Dest" />
+      <Association Name="Center_Instruction" Member="Instructions" ThisKey="ID" OtherKey="Source" Type="Instruction" />
+      <Association Name="Center_Instruction1" Member="Instructions1" ThisKey="ID" OtherKey="Destination" Type="Instruction" />
+      <Association Name="Center_Link" Member="Links" ThisKey="ID" OtherKey="CenterID" Type="Link" />
+      <Association Name="Center_Rack" Member="Racks" ThisKey="ID" OtherKey="CenterID" Type="Rack" />
+      <Association Name="Center_Room" Member="Rooms" ThisKey="ID" OtherKey="CenterID" Type="Room" />
+      <Association Name="Center_Route" Member="Routes" ThisKey="ID" OtherKey="SourceCenter" Type="Route" />
+      <Association Name="Center_ServiceState" Member="ServiceStates" ThisKey="ID" OtherKey="CenterID" Type="ServiceState" />
+      <Association Name="Center_SpareCard" Member="SpareCards" ThisKey="ID" OtherKey="CenterID" Type="SpareCard" />
+      <Association Name="Center_User" Member="Users" ThisKey="ID" OtherKey="CenterID" Type="User" />
+      <Association Name="Center_CenterContact" Member="CenterContacts" ThisKey="ID" OtherKey="CenterID" Type="CenterContact" />
+      <Association Name="Center_LogAlarm" Member="LogAlarms" ThisKey="ID" OtherKey="CenterID" Type="LogAlarm" />
+      <Association Name="Region_Center" Member="Region" ThisKey="RegionID" OtherKey="ID" Type="Region" IsForeignKey="true" />
+      <Association Name="SwitchType_Center" Member="SwitchType" ThisKey="Switch" OtherKey="ID" Type="SwitchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CenterInMap" Member="CenterInMaps">
+    <Type Name="CenterInMap">
+      <Column Name="MapID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="X" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Y" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Center_CenterInMap" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CenterLink" Member="CenterLinks">
+    <Type Name="CenterLink">
+      <Column Name="CenterA" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterB" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LinkType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="E1Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Center_CenterLink" Member="Center" ThisKey="CenterA" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="Center_CenterLink1" Member="Center1" ThisKey="CenterB" OtherKey="ID" Type="Center" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Channel" Member="Channels">
+    <Type Name="Channel">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LinkID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RouteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TimeSlot" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="LNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsImported" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsNoc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Link_Channel" Member="Link" ThisKey="LinkID" OtherKey="ID" Type="Link" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Route_Channel" Member="Route" ThisKey="RouteID" OtherKey="ID" Type="Route" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CircuitInMap" Member="CircuitInMaps">
+    <Type Name="CircuitInMap">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="X" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Y" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CircuitInMap_CircuitLink" Member="CircuitLinks" ThisKey="ID" OtherKey="AMapID" Type="CircuitLink" />
+      <Association Name="CircuitInMap_CircuitLink1" Member="CircuitLinks1" ThisKey="ID" OtherKey="BMapID" Type="CircuitLink" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CircuitLink" Member="CircuitLinks">
+    <Type Name="CircuitLink">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AMapID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BMapID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CircuitID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Center_CircuitLink" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="CircuitInMap_CircuitLink" Member="CircuitInMap" ThisKey="AMapID" OtherKey="ID" Type="CircuitInMap" IsForeignKey="true" />
+      <Association Name="CircuitInMap_CircuitLink1" Member="CircuitInMap1" ThisKey="BMapID" OtherKey="ID" Type="CircuitInMap" IsForeignKey="true" />
+      <Association Name="Sensor_CircuitLink" Member="Sensor" ThisKey="CircuitID" OtherKey="ID" Type="Sensor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DDF" Member="DDFs">
+    <Type Name="DDF">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Bay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DDF_Link" Member="Links" ThisKey="ID" OtherKey="DDFID" Type="Link" />
+      <Association Name="Center_DDF" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dest" Member="Dests">
+    <Type Name="Dest">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="Dest_Route" Member="Routes" ThisKey="ID" OtherKey="DestID" Type="Route" />
+      <Association Name="Center_Dest" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Reporter" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsLocked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EventType_Event" Member="EventType" ThisKey="Type" OtherKey="ID" Type="EventType" IsForeignKey="true" />
+      <Association Name="User_Event" Member="User" ThisKey="Reporter" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventType" Member="EventTypes">
+    <Type Name="EventType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="EventType_Event" Member="Events" ThisKey="ID" OtherKey="Type" Type="Event" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FailureReason" Member="FailureReasons">
+    <Type Name="FailureReason">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Instruction" Member="Instructions">
+    <Type Name="Instruction">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ineffect" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IssueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Issuer" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Source" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Destination" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InstructionType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExecutionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Executer" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignmentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Instruction_Route" Member="Routes" ThisKey="ID" OtherKey="InstructionID" Type="Route" />
+      <Association Name="Center_Instruction" Member="Center" ThisKey="Source" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Center_Instruction1" Member="Center1" ThisKey="Destination" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="User_Instruction" Member="User" ThisKey="Executer" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Link" Member="Links">
+    <Type Name="Link">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CardID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LTG" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DIU" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Sys" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CIC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DDFID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsImported" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Link_Alarm" Member="Alarms" ThisKey="ID" OtherKey="FailedLink" Type="Alarm" />
+      <Association Name="Link_Channel" Member="Channels" ThisKey="ID" OtherKey="LinkID" Type="Channel" />
+      <Association Name="Card_Link" Member="Card" ThisKey="CardID" OtherKey="ID" Type="Card" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Center_Link" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="DDF_Link" Member="DDF" ThisKey="DDFID" OtherKey="ID" Type="DDF" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LongRecord" Member="LongRecords">
+    <Type Name="LongRecord">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RouteID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ANumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Channel" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Length" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Route_LongRecord" Member="Route" ThisKey="RouteID" OtherKey="ID" Type="Route" IsForeignKey="true" />
+      <Association Name="User_LongRecord" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OPM" Member="OPMs">
+    <Type Name="OPM">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="OPM_Route" Member="Routes" ThisKey="ID" OtherKey="OPMID" Type="Route" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParentPermissionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Permission_Permission" Member="Permissions" ThisKey="PermissionID" OtherKey="ParentPermissionID" Type="Permission" />
+      <Association Name="Permission_RolePermission" Member="RolePermissions" ThisKey="PermissionID" OtherKey="PermissionID" Type="RolePermission" />
+      <Association Name="Permission_Permission" Member="Permission1" ThisKey="ParentPermissionID" OtherKey="PermissionID" Type="Permission" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rack" Member="Racks">
+    <Type Name="Rack">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="X" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Y" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Rack_Shelf" Member="Shelfs" ThisKey="ID" OtherKey="RackID" Type="Shelf" />
+      <Association Name="Center_Rack" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="RackType_Rack" Member="RackType" ThisKey="Type" OtherKey="ID" Type="RackType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RackShelf" Member="RackShelfs">
+    <Type Name="RackShelf">
+      <Column Name="RackTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ShelfTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="RackType_RackShelf" Member="RackType" ThisKey="RackTypeID" OtherKey="ID" Type="RackType" IsForeignKey="true" />
+      <Association Name="ShelfType_RackShelf" Member="ShelfType" ThisKey="ShelfTypeID" OtherKey="ID" Type="ShelfType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RackType" Member="RackTypes">
+    <Type Name="RackType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SupportingSwitch" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDouble" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RackType_Rack" Member="Racks" ThisKey="ID" OtherKey="Type" Type="Rack" />
+      <Association Name="RackType_RackShelf" Member="RackShelfs" ThisKey="ID" OtherKey="RackTypeID" Type="RackShelf" />
+      <Association Name="SwitchType_RackType" Member="SwitchType" ThisKey="SupportingSwitch" OtherKey="ID" Type="SwitchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Region" Member="Regions">
+    <Type Name="Region">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Region_Center" Member="Centers" ThisKey="ID" OtherKey="RegionID" Type="Center" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Report" Member="Reports">
+    <Type Name="Report">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Miscellaneous" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Report_ReportItem" Member="ReportItems" ThisKey="ID" OtherKey="ReportID" Type="ReportItem" />
+      <Association Name="User_Report" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportItem" Member="ReportItems">
+    <Type Name="ReportItem">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportTypeID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReportID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Report_ReportItem" Member="Report" ThisKey="ReportID" OtherKey="ID" Type="Report" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ReportType_ReportItem" Member="ReportType" ThisKey="ReportTypeID" OtherKey="ID" Type="ReportType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportType" Member="ReportTypes">
+    <Type Name="ReportType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SwitchTypeID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DefaultValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ReportType_ReportItem" Member="ReportItems" ThisKey="ID" OtherKey="ReportTypeID" Type="ReportItem" />
+      <Association Name="SwitchType_ReportType" Member="SwitchType" ThisKey="SwitchTypeID" OtherKey="ID" Type="SwitchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="ID" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Role_RolePermission" Member="RolePermissions" ThisKey="ID" OtherKey="RoleID" Type="RolePermission" />
+      <Association Name="Role_UserRoleRelation" Member="UserRoleRelations" ThisKey="ID" OtherKey="RoleID" Type="UserRoleRelation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RolePermission" Member="RolePermissions">
+    <Type Name="RolePermission">
+      <Column Name="RoleID" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Permission_RolePermission" Member="Permission" ThisKey="PermissionID" OtherKey="PermissionID" Type="Permission" IsForeignKey="true" />
+      <Association Name="Role_RolePermission" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Room" Member="Rooms">
+    <Type Name="Room">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Room_Sensor" Member="Sensors" ThisKey="ID" OtherKey="RoomID" Type="Sensor" />
+      <Association Name="Center_Room" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Route" Member="Routes">
+    <Type Name="Route">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Protocol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RouteName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TGNO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="InstructionID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsSignaling" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OPMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsImported" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SourceCenter" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DestID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Route_Alarm" Member="Alarms" ThisKey="ID" OtherKey="RouteID" Type="Alarm" />
+      <Association Name="Route_Channel" Member="Channels" ThisKey="ID" OtherKey="RouteID" Type="Channel" />
+      <Association Name="Route_LongRecord" Member="LongRecords" ThisKey="ID" OtherKey="RouteID" Type="LongRecord" />
+      <Association Name="Route_Task" Member="Tasks" ThisKey="ID" OtherKey="RouteID" Type="Task" />
+      <Association Name="Dest_Route" Member="Dest" ThisKey="DestID" OtherKey="ID" Type="Dest" IsForeignKey="true" />
+      <Association Name="Instruction_Route" Member="Instruction" ThisKey="InstructionID" OtherKey="ID" Type="Instruction" IsForeignKey="true" />
+      <Association Name="OPM_Route" Member="OPM" ThisKey="OPMID" OtherKey="ID" Type="OPM" IsForeignKey="true" />
+      <Association Name="Center_Route" Member="Center" ThisKey="SourceCenter" OtherKey="ID" Type="Center" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sensor" Member="Sensors">
+    <Type Name="Sensor">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ModulNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RoomID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Max" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Min" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Sensor_CircuitLink" Member="CircuitLinks" ThisKey="ID" OtherKey="CircuitID" Type="CircuitLink" />
+      <Association Name="Sensor_SensorData" Member="SensorDatas" ThisKey="ID" OtherKey="SensorID" Type="SensorData" />
+      <Association Name="Room_Sensor" Member="Room" ThisKey="RoomID" OtherKey="ID" Type="Room" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SensorData" Member="SensorDatas">
+    <Type Name="SensorData">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SensorID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Sensor_SensorData" Member="Sensor" ThisKey="SensorID" OtherKey="ID" Type="Sensor" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceState" Member="ServiceStates">
+    <Type Name="ServiceState">
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceType" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastActiveTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TechnicalReport" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="InActiveSeconds" Type="System.Int32" DbType="Int" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Version" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="UpgradeTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Center_ServiceState" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Setting" Member="Settings">
+    <Type Name="Setting">
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shelf" Member="Shelfs">
+    <Type Name="Shelf">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RackID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Position" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Shelf_Card" Member="Cards" ThisKey="ID" OtherKey="ShelfID" Type="Card" />
+      <Association Name="Rack_Shelf" Member="Rack" ThisKey="RackID" OtherKey="ID" Type="Rack" IsForeignKey="true" />
+      <Association Name="ShelfType_Shelf" Member="ShelfType" ThisKey="Type" OtherKey="ID" Type="ShelfType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShelfCardType" Member="ShelfCardTypes">
+    <Type Name="ShelfCardType">
+      <Column Name="ShelfTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CardTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CardType_ShelfCardType" Member="CardType" ThisKey="CardTypeID" OtherKey="ID" Type="CardType" IsForeignKey="true" />
+      <Association Name="ShelfType_ShelfCardType" Member="ShelfType" ThisKey="ShelfTypeID" OtherKey="ID" Type="ShelfType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShelfType" Member="ShelfTypes">
+    <Type Name="ShelfType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SupportingSwitch" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ShelfType_RackShelf" Member="RackShelfs" ThisKey="ID" OtherKey="ShelfTypeID" Type="RackShelf" />
+      <Association Name="ShelfType_Shelf" Member="Shelfs" ThisKey="ID" OtherKey="Type" Type="Shelf" />
+      <Association Name="ShelfType_ShelfCardType" Member="ShelfCardTypes" ThisKey="ID" OtherKey="ShelfTypeID" Type="ShelfCardType" />
+      <Association Name="SwitchType_ShelfType" Member="SwitchType" ThisKey="SupportingSwitch" OtherKey="ID" Type="SwitchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shift" Member="Shifts">
+    <Type Name="Shift">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SpareCard" Member="SpareCards">
+    <Type Name="SpareCard">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="CardType_SpareCard" Member="CardType" ThisKey="TypeID" OtherKey="ID" Type="CardType" IsForeignKey="true" />
+      <Association Name="Center_SpareCard" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SwitchType" Member="SwitchTypes">
+    <Type Name="SwitchType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="SwitchType_AlarmSeverityOverride" Member="AlarmSeverityOverrides" ThisKey="ID" OtherKey="SwitchTypeID" Type="AlarmSeverityOverride" />
+      <Association Name="SwitchType_CardType" Member="CardTypes" ThisKey="ID" OtherKey="SupportingSwitch" Type="CardType" />
+      <Association Name="SwitchType_Center" Member="Centers" ThisKey="ID" OtherKey="Switch" Type="Center" />
+      <Association Name="SwitchType_RackType" Member="RackTypes" ThisKey="ID" OtherKey="SupportingSwitch" Type="RackType" />
+      <Association Name="SwitchType_ReportType" Member="ReportTypes" ThisKey="ID" OtherKey="SwitchTypeID" Type="ReportType" />
+      <Association Name="SwitchType_ShelfType" Member="ShelfTypes" ThisKey="ID" OtherKey="SupportingSwitch" Type="ShelfType" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Definer" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Type" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RouteID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ChannelCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Route_Task" Member="Route" ThisKey="RouteID" OtherKey="ID" Type="Route" IsForeignKey="true" />
+      <Association Name="TaskType_Task" Member="TaskType" ThisKey="Type" OtherKey="ID" Type="TaskType" IsForeignKey="true" />
+      <Association Name="User_Task" Member="User" ThisKey="Definer" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaskType" Member="TaskTypes">
+    <Type Name="TaskType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TaskType_Task" Member="Tasks" ThisKey="ID" OtherKey="Type" Type="Task" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="User_AcknowledgeCenter" Member="AcknowledgeCenter" ThisKey="ID" OtherKey="CenterID" Type="AcknowledgeCenter" Cardinality="One" />
+      <Association Name="User_UserShift" Member="UserShifts" ThisKey="ID" OtherKey="MorningUser" Type="UserShift" />
+      <Association Name="User_UserShift1" Member="UserShifts1" ThisKey="ID" OtherKey="AfterNoonUser" Type="UserShift" />
+      <Association Name="User_UserShift2" Member="UserShifts2" ThisKey="ID" OtherKey="NightUser" Type="UserShift" />
+      <Association Name="User_Alarm" Member="Alarms" ThisKey="ID" OtherKey="Reporter" Type="Alarm" />
+      <Association Name="User_Event" Member="Events" ThisKey="ID" OtherKey="Reporter" Type="Event" />
+      <Association Name="User_Instruction" Member="Instructions" ThisKey="ID" OtherKey="Executer" Type="Instruction" />
+      <Association Name="User_LongRecord" Member="LongRecords" ThisKey="ID" OtherKey="UserID" Type="LongRecord" />
+      <Association Name="User_Report" Member="Reports" ThisKey="ID" OtherKey="UserID" Type="Report" />
+      <Association Name="User_Task" Member="Tasks" ThisKey="ID" OtherKey="Definer" Type="Task" />
+      <Association Name="User_UserRoleRelation" Member="UserRoleRelations" ThisKey="ID" OtherKey="UserID" Type="UserRoleRelation" />
+      <Association Name="Center_User" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRoleRelation" Member="UserRoleRelations">
+    <Type Name="UserRoleRelation">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Role_UserRoleRelation" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_UserRoleRelation" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CenterContact" Member="CenterContacts">
+    <Type Name="CenterContact">
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContactID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlarmType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Center_CenterContact" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" />
+      <Association Name="Contact_CenterContact" Member="Contact" ThisKey="ContactID" OtherKey="ID" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogAlarm" Member="LogAlarms">
+    <Type Name="LogAlarm">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Severity" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Data" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsRead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Center_LogAlarm" Member="Center" ThisKey="CenterID" OtherKey="ID" Type="Center" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Contact_CenterContact" Member="CenterContacts" ThisKey="ID" OtherKey="ContactID" Type="CenterContact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLog" Member="UserLogs">
+    <Type Name="UserLog">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CenterID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TechnicalReport" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetDate" Method="GetDate" IsComposable="true">
+    <Return Type="System.DateTime" />
+  </Function>
+  <Function Name="dbo.GetInActiveSensors" Method="GetInActiveSensors" IsComposable="true">
+    <Parameter Name="recentHours" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetInActiveSensorsResult">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ModulNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,343 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ServiceProcess;
+using Enterprise;
+using System.IO;
+using System.Reflection;
+using System.Threading;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.ServiceModel;
+
+namespace TMN
+{
+	public class Updater
+	{
+		private static List<string> runningServices = new List<string>();
+		private static string updateUrl = UpdaterSettings.Default.UpdateUrl;
+		private static string currentDir = Environment.CurrentDirectory;
+		private static bool restartUpdate = false;
+
+
+
+
+		//static ArchiveServiceReference.MainServiceClient service;
+
+		private static string GetIP(string ip)
+		{
+			const string pattern = @"\\\\(?<IP>.+?)\\.*";
+			try
+			{
+				var match = Regex.Match(ip, pattern);
+				if (match.Success && match.Groups["IP"].Success)
+					return Regex.Match(ip, pattern).Groups["IP"].Value;
+				else
+					return string.Empty;
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+				return string.Empty;
+
+			}
+		}
+
+		static void Main(string[] args)
+		{
+			//Logger.WriteStart("TMN Updater {0} started.", Assembly.GetExecutingAssembly().GetName().Version);
+
+			try
+			{
+				string username = "";
+				string password = "";
+				for (int i = 0; i < args.Length; i++)
+				{
+					if (args[i] == "/username")
+						username = args[++i];
+					if (args[i] == "/password")
+						password = args[++i];
+				}
+
+
+				//BasicHttpBinding binding = new BasicHttpBinding();
+				//EndpointAddress endPoint = new EndpointAddress(string.Format("http://{0}:3663/", GetIP(UpdaterSettings.Default.UpdateUrl)));
+				//service = new ArchiveServiceReference.MainServiceClient(binding, endPoint);
+	
+
+				Impersonation.TryImpersonateByPath(username, password, UpdaterSettings.Default.UpdateUrl);
+				Console.WriteLine("TMN Updater Version {0}\n", Assembly.GetExecutingAssembly().GetName().Version);
+				Logger.WriteDebug("Local dircetory is \"{0}\".", currentDir);
+				if (Directory.Exists(updateUrl))
+				{
+					StartUpdate(args);
+				}
+				else
+				{
+					PrintOut("Update directory \"{0}\" not found or access denied.", updateUrl);
+				}
+
+				if (!args.Contains("/silent"))
+				{
+					Console.Write("\nPress any key to exit...");
+					Console.ReadKey();
+				}
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+				Console.WriteLine(ex.Message);
+			}
+			Logger.WriteEnd("TMN Updater finished.");
+		}
+
+
+		protected static void RestartUpgradeService(string[] args)
+		{
+			try
+			{
+				string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+				string updaterPath = Path.Combine(assemblyDir, "TMN.Updater.exe");
+				if (File.Exists(updaterPath))
+				{
+					Logger.WriteInfo("Restarting update process...");
+					var startInfo = new ProcessStartInfo(updaterPath, string.Concat(args));
+					startInfo.WorkingDirectory = assemblyDir;
+					new System.Threading.Thread((arg) =>
+					{
+						try
+						{
+							Process.Start((ProcessStartInfo)arg);
+						}
+						catch (Exception ex)
+						{
+							Logger.Write(ex);
+						}
+					}).Start(startInfo);
+					Logger.WriteDebug("Update process started.");
+				}
+				else
+				{
+					Logger.WriteWarning("Updater({0}) was not found. Update failed.", updaterPath);
+
+				}
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+
+			}
+		}
+
+		private static void StartUpdate(string[] args)
+		{
+			try
+			{
+				StopServices();
+				Thread.Sleep(1000);
+				UpdateFiles();
+				if (restartUpdate)
+					RestartUpgradeService(args);
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+				Console.WriteLine("Update failed because of the following error:\n{0}\nCheck log for more info.", ex.Message);
+			}
+			finally
+			{
+				StartRunningServices();
+			}
+		}
+
+		private static void StartRunningServices()
+		{
+			try
+			{
+				foreach (var svcName in runningServices)
+				{
+					new System.Threading.Thread((arg) =>
+					{
+						try
+						{
+							using (ServiceController ctr = new ServiceController())
+							{
+								ctr.ServiceName = "" + arg;
+								if (ctr.Status == ServiceControllerStatus.Stopped)
+								{
+									PrintOut("Starting {0}...", arg);
+									ctr.Start();
+									ctr.WaitForStatus(ServiceControllerStatus.Running);
+									PrintOut("{0} started.", arg);
+								}
+							}
+						}
+						catch (Exception ex)
+						{
+							Logger.Write(ex);
+						}
+					}).Start(svcName);
+
+				}
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+
+		private static void UpdateFiles()
+		{
+			string updatePath, localPath;
+			string backupDir = Path.Combine(currentDir, string.Format("Updater Backups\\{0:yyyyMMddHHmmss}", DateTime.Now));
+
+
+			if (!Directory.Exists(updateUrl))
+			{
+				PrintOut("{0} does not exist!", updateUrl);
+				return;
+			}
+			else
+			{
+				PrintOut("Looking for updates on \"{0}\"...", updateUrl);
+			}
+			PrintOut("File extentions copied every time : {0}", ".dll.wav.pdf.chm");
+			if (UpdaterSettings.Default.Forced != null)
+			{
+				foreach (var fileName in UpdaterSettings.Default.Forced)
+				{
+					try
+					{
+						updatePath = Path.Combine(updateUrl, fileName);
+						localPath = Path.Combine(currentDir, fileName);
+						if (File.Exists(localPath))
+						{
+
+							Logger.WriteInfo("Creating backup for {0}...", fileName);
+
+							Backup(localPath, backupDir);
+							Logger.WriteInfo("* Updating {0}...", fileName);
+							Console.Write("* Updating {0}...", fileName);
+						}
+						else
+						{
+							Logger.WriteInfo("* Creating {0}...", fileName);
+							Console.Write("* Creating {0}...", fileName);
+						}
+						File.Copy(updatePath, localPath);
+					}
+					catch (Exception ex)
+					{
+						Logger.Write(ex);
+						Console.WriteLine("An exception occured during updating of {0}!", fileName);
+					}
+				}
+			}
+			foreach (var fileName in UpdaterSettings.Default.Files)
+			{
+				try
+				{
+					updatePath = Path.Combine(updateUrl, fileName);
+					localPath = Path.Combine(currentDir, fileName);
+
+
+					if ((".dll.wav.pdf.chm").IndexOf(Path.GetExtension(fileName).ToLower()) > -1 || File.Exists(localPath))
+					{
+
+						long updateTicks = File.GetLastWriteTime(updatePath).Ticks;
+						long localTicks = File.GetLastWriteTime(localPath).Ticks;
+						if (File.Exists(updatePath) && Math.Abs(updateTicks - localTicks) > (TimeSpan.TicksPerSecond * 200))
+						{
+
+							if (File.Exists(localPath))
+							{
+
+								Logger.WriteInfo("Creating backup for {0}...", fileName);
+								Backup(localPath, backupDir);
+								Logger.WriteInfo("* Updating {0}...", fileName);
+								Console.Write("* Updating {0}...", fileName);
+							}
+							else
+							{
+								Logger.WriteInfo("* Creating {0}...", fileName);
+								Console.Write("* Creating {0}...", fileName);
+							}
+							File.Copy(updatePath, localPath);
+							if (fileName.ToLower() == "tmn.updater.exe" || fileName.ToLower() == "updatesettings.xml")
+								restartUpdate = true;
+							Console.WriteLine(" OK!");
+						}
+						else
+						{
+							PrintOut("No update for {0}", fileName);
+						}
+					}
+				}
+				catch (Exception ex)
+				{
+					Logger.Write(ex);
+					Console.WriteLine("An exception occured during updating of {0}!", fileName);
+				}
+			}
+
+
+		}
+
+		private static void Backup(string localFilePath, string backupDir)
+		{
+			if (!Directory.Exists(backupDir))
+			{
+				Directory.CreateDirectory(backupDir);
+			}
+			string destFilePath = Path.Combine(backupDir, Path.GetFileName(localFilePath));
+			File.Move(localFilePath, destFilePath);
+		}
+
+		private static void StopServices()
+		{
+			runningServices.Clear();
+			foreach (var svcName in UpdaterSettings.Default.Services)
+			{
+				using (ServiceController ctr = new ServiceController(svcName))
+				{
+					try
+					{
+						if (ctr.Status == ServiceControllerStatus.Running)
+						{
+							runningServices.Add(svcName);
+							PrintOut("Stopping {0}...", svcName);
+							ctr.Stop();
+							ctr.WaitForStatus(ServiceControllerStatus.Stopped);
+							PrintOut("{0} stopped.", svcName);
+						}
+						else if (ctr.Status == ServiceControllerStatus.Stopped)
+						{
+							PrintOut("{0} is already stopped.", svcName);
+						}
+						else
+						{
+							Logger.WriteWarning("The state of {0} is {1}!", svcName, ctr.Status.ToString());
+						}
+					}
+					catch (InvalidOperationException ex)
+					{
+						if (ex.InnerException != null && ex.InnerException.Message == "The specified service does not exist as an installed service")
+						{
+							Logger.WriteDebug("{0} is not installed on this machine.", svcName);
+						}
+						else
+							throw;
+					}
+				}
+			}
+		}
+
+		private static void PrintOut(string format, params object[] args)
+		{
+			Logger.WriteInfo(format, args);
+			Console.WriteLine(format, args);
+		}
+
+	}
+}

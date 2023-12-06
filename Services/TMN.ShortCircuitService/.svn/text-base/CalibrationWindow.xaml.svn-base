@@ -1,0 +1,62 @@
+﻿<Window x:Class="TMN.CalibrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:e="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        mc:Ignorable="d"
+        Title="Calibration"
+        Height="192"
+        Width="378">
+    <DockPanel>
+        <StackPanel  DockPanel.Dock="Bottom"
+                     TextElement.FontFamily="Tahoma"
+                     FlowDirection="RightToLeft"
+                     Orientation="Horizontal">
+            <Button Width="70"
+                    IsDefault="True"
+                    x:Name="okButton"
+                    Margin="3"
+                    Click="okButton_Click">تاييد</Button>
+            <Button Width="70"
+                    IsCancel="True"
+                    x:Name="cancelButton"
+                    Margin="3"
+                    Click="cancelButton_Click">انصراف</Button>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap"
+                       FlowDirection="RightToLeft"
+                       Margin="5"
+                       FontFamily="Tahoma">
+                کاليبراسيون قبلی پاک شد. لطفا سنسور را مجددا کاليبره کنيد.</TextBlock>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="20">
+                <Border Background="{Binding DisplayBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        CornerRadius="4">
+                    <e:NumericUpDown Width="80"
+                                     Margin="0"
+                                     Height="40"
+                                     FontFamily="Digital Readout"
+                                     FontSize="35"
+                                     Background="#80000000"
+                                     Foreground="{Binding Background, RelativeSource={RelativeSource AncestorType=Border}}"
+                                     DecimalPlaces="1"
+                                     Increment="0.1"
+                                     Maximum="{Binding Threashold.Maximum}"
+                                     Minimum="{Binding Threashold.Minimum}"
+                                     Value="{Binding Value}"></e:NumericUpDown>
+                </Border>
+                <Label Content="{Binding CircuitTitle}"
+                       HorizontalContentAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>

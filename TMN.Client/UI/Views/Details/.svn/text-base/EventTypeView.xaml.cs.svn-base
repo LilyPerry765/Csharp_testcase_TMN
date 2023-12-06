@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using TMN.Interfaces;
+
+namespace TMN.Views.Details
+{
+    /// <summary>
+    /// Interaction logic for EventTypeView.xaml
+    /// </summary>
+    public partial class EventTypeView : UserControl, IDetailsView
+    {
+        private TMNModelDataContext db = DB.Instance;
+        public TMNModelDataContext DataSource
+        {
+            get
+            {
+                return db;
+            }
+        }
+
+        public EventTypeView()
+        {
+            InitializeComponent();
+        }
+
+        public void BeginEdit(Entity entity)
+        {
+            DataContext = DataSource.EventTypes.Where(p => p.ID == (entity as EventType).ID).SingleOrDefault();
+        }
+
+        public void BeginInsert()
+        {
+            DataContext = new EventType();
+        }
+
+        public Entity SaveData()
+        {
+            if ((DataContext as EventType).ID == Guid.Empty)
+            {
+                (DataContext as EventType).ID = Guid.NewGuid();
+                DataSource.EventTypes.InsertOnSubmit(DataContext as EventType);
+            }
+          
+            // user log
+			UserLog.Log(db, ActionType.EventInsert, string.Format("Name={0}",(DataContext as EventType).Name), 
+				string.Format("ID={0} , Name={1}", (DataContext as EventType).ID, (DataContext as EventType).Name));
+
+            this.EndEdit();
+            DataSource.SubmitChanges();
+            return DataContext as Entity ;
+        }
+
+        public bool Validate()
+        {
+            return txtName.IsAnswered("نام") && (DataContext as EventType).IsUnique(txtName.Text);
+        }
+
+    }
+}

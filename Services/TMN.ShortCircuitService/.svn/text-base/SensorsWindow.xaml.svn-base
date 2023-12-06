@@ -1,0 +1,173 @@
+﻿<Window x:Class="TMN.UI.Windows.CircuitsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:TMN;assembly=TMN.Common"
+        xmlns:e="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        FontFamily="Tahoma"
+        FlowDirection="RightToLeft"
+        WindowStartupLocation="CenterScreen"
+        Title="تعريف سنسور ها"
+        Height="377"
+        Width="548">
+    <Window.Resources>
+        <Style TargetType="DataGridCell">
+            <Style.Triggers>
+                <Trigger Property="IsSelected"
+                         Value="True">
+                    <Setter Property="Background"
+                            Value="#E0E0E0" />
+                    <Setter Property="Foreground"
+                            Value="Black" />
+                    <Setter Property="BorderBrush"
+                            Value="#E0E0E0" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="HorizontalGridLinesBrush"
+                    Value="#D0D7E5" />
+            <Setter Property="VerticalGridLinesBrush"
+                    Value="#D0D7E5" />
+            <Setter Property="AutoGenerateColumns"
+                    Value="False" />
+            <Setter Property="SelectionUnit"
+                    Value="FullRow" />
+            <Setter Property="RowHeaderWidth"
+                    Value="30" />
+            <Setter Property="CanUserAddRows"
+                    Value="True" />
+            <Setter Property="CanUserDeleteRows"
+                    Value="True" />
+            <Setter Property="CanUserResizeRows"
+                    Value="False" />
+        </Style>
+    </Window.Resources>
+    <DockPanel Margin="5">
+        <StackPanel DockPanel.Dock="Bottom"
+                    Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width"
+                            Value="70" />
+                    <Setter Property="Margin"
+                            Value="3,5" />
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="okButton"
+                    IsDefault="True"
+                    Click="okButton_Click">تاييد</Button>
+            <Button IsCancel="True">انصراف</Button>
+        </StackPanel>
+        <GroupBox Header="سالن ها"
+                  Height="100"
+                  Padding="3"
+                  Margin="3"
+                  DockPanel.Dock="Top">
+            <DataGrid RowHeight="23"
+                      InitializingNewItem="roomsDataGrid_InitializingNewItem"
+                      SelectionChanged="roomsDataGrid_SelectionChanged"
+                      x:Name="roomsDataGrid"
+                      HeadersVisibility="Column"
+                      SelectionUnit="FullRow"
+                      SelectedIndex="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="عنوان سالن"
+                                        Binding="{Binding Name}"
+                                        Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox Header="سنسور ها"
+                  Padding="3"
+                  Margin="3">
+            <DataGrid x:Name="circuitsGrid"
+                      RowHeight="23"
+                      HeadersVisibility="Column"
+                      InitializingNewItem="circuitsGrid_InitializingNewItem"
+                      SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                   
+                    <DataGridTextColumn Header="عنوان"
+                                        Binding="{Binding Title}"
+                                        Width="*" />
+                    <DataGridTextColumn Header="شماره ماژول"
+                                        Binding="{Binding ModulNumber, UpdateSourceTrigger=PropertyChanged}"
+                                        Width="80" />
+                    <DataGridTemplateColumn Header="حداقل"
+                                            Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="3"
+                                           Text="{Binding Min}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <e:NumericUpDown Value="{Binding Min}"
+                                                 Minimum="0"
+                                                 Maximum="10" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="حداکثر"
+                                            Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="3"
+                                           Text="{Binding Max}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <e:NumericUpDown Value="{Binding Max}"
+                                                 Minimum="10">
+                                    <e:NumericUpDown.Style>
+                                        <Style TargetType="e:NumericUpDown">
+                                            <!-- Temp: -->
+                                            <Setter Property="Maximum"
+                                                    Value="40" />
+                                            <Style.Triggers>
+                                                <!-- TypeID: 1=Hum, 2=Temp-->
+                                                <!-- Hum: -->
+                                                <DataTrigger Binding="{Binding TypeID}"
+                                                             Value="1">
+                                                    <Setter Property="Maximum"
+                                                            Value="60" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </e:NumericUpDown.Style>
+                                </e:NumericUpDown>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!--<DataGrid x:Name="circuitsGrid"
+                      RowHeight="23"
+                      HeadersVisibility="Column"
+                      InitializingNewItem="circuitsGrid_InitializingNewItem"
+                      SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                   <DataGridComboBoxColumn Header="نوع سنسور"
+                                            SelectedValueBinding="{Binding TypeID}"
+                                            SelectedValuePath="Value"
+                                          
+                                            Width="Auto" />
+                    <DataGridTextColumn Header="عنوان"
+                                        Binding="{Binding Title}"
+                                        Width="*" />
+                    <DataGridTextColumn Header="شماره ماژول"
+                                        Binding="{Binding ModulNumber}"
+                                        Width="80" />
+                    <DataGridTextColumn Header="حداقل"
+                                        Width="50"
+                                        Binding="{Binding Min}" />
+                    <DataGridTextColumn Header="حداکثر"
+                                        Width="50"
+                                        Binding="{Binding Max}" />
+                </DataGrid.Columns>
+            </DataGrid>-->
+        </GroupBox>
+    </DockPanel>
+</Window>

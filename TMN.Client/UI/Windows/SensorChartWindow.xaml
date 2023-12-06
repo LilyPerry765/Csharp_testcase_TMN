@@ -1,0 +1,306 @@
+﻿<Window x:Class="TMN.UI.Windows.SensorChartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ch="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+        xmlns:e="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        WindowStartupLocation="CenterScreen"
+        FlowDirection="RightToLeft"
+        FontFamily="Tahoma"
+        Title="جزييات سنسورها"
+        mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        d:DesignHeight="286"
+        d:DesignWidth="602"
+       >
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <TextBlock DockPanel.Dock="Right"
+                       Margin="5">
+                <Hyperlink Click="Hyperlink_Click">تنظيمات سنسور ها</Hyperlink></TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,5">
+                <!--<Label>محور عمودی: از</Label>
+                <e:NumericUpDown Width="50"
+                                 Maximum="200"
+                                 x:Name="axisYFrom"
+                                 ValueChanged="axisYFrom_ValueChanged" />
+                <Label>تا</Label>
+                <e:NumericUpDown Width="50" 
+                                 Maximum="200"
+                                 x:Name="axisYTo"
+                                 ValueChanged="axisYTo_ValueChanged" />-->
+                <Label>گام عمودی:</Label>
+                <e:NumericUpDown Width="50"
+                                 Value="1"
+                                 DecimalPlaces="1"
+                                 x:Name="axisYInterval"
+                                 ValueChanged="axisYInterval_ValueChanged" />
+                <CheckBox VerticalAlignment="Center"
+                          x:Name="zeroBasedAxisCheckBox"
+                          Checked="zeroBasedAxisCheckBox_Checked"
+                          Unchecked="zeroBasedAxisCheckBox_Unchecked"
+                          Margin="10,0">شروع مقادير از 0</CheckBox>
+                <Label Content="تاريخ: از">
+                    <Label.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="تشخيص خودکار تاريخ"
+                                      x:Name="autoDateDetectMenuItem"
+                                      Click="autoDateDetectMenuItem_Click" />
+                        </ContextMenu>
+                    </Label.ContextMenu>
+                </Label>
+                <e:PersianDateBox DisplayMode="DateTime"
+                                  x:Name="dateFromDateBox"
+                                  IsDateNull="False" />
+                <Label>تا</Label>
+                <e:PersianDateBox DisplayMode="DateTime"
+                                  x:Name="dateToDateBox" />
+                <Button x:Name="refresh"
+                        Click="refresh_Click">
+                    <Image Source="{a:ImageSource refresh.png}"
+                           Width="20" />
+                </Button>
+            </StackPanel>
+        </DockPanel>
+        <!--<DataGrid x:Name="valuesDataGrid"
+                  IsReadOnly="True"
+                  ClipboardCopyMode="IncludeHeader"
+                  ItemsSource="{Binding SelectedItem.SensorDatas, ElementName=sensorsDataGrid}"
+                  HeadersVisibility="Column"
+                  DockPanel.Dock="Right"
+                  Background="White"
+                  Width="150">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="تاريخ"
+                                    Width="*"
+                                    Binding="{Binding Date, StringFormat=ddd HH:mm:ss}" />
+                <DataGridTextColumn Header="مقدار"
+                                    Binding="{Binding Value}" />
+            </DataGrid.Columns>
+        </DataGrid>-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <DataGrid x:Name="sensorsDataGrid"
+                      IsReadOnly="True"
+                      Background="White"
+                      ClipboardCopyMode="IncludeHeader">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Foreground">
+                            <Setter.Value>
+                                <MultiBinding Converter="{x:Static conv:SensorToBrushConverter.Instance}">
+                                    <Binding Path="Value" />
+                                    <Binding Path="Min" />
+                                    <Binding Path="Max" />
+                                </MultiBinding>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Room.Name}"
+                                        Header="سالن"
+                                        Width="Auto" />
+                    <DataGridTextColumn Binding="{Binding Title}"
+                                        Header="عنوان سنسور"
+                                        Width="*" />
+                    <DataGridTextColumn Binding="{Binding ModulNumber}"
+                                        Header="آدرس" />
+                    <DataGridTextColumn Binding="{Binding Value}"
+                                        Header="آخريت مقدار" />
+                    <DataGridTextColumn Binding="{Binding MinVal}"
+                                        Header="حداقل" />
+                    <DataGridTextColumn Binding="{Binding MaxVal}"
+                                        Header="حداکثر" />
+                    <DataGridTextColumn Binding="{Binding AvgVal, StringFormat=0.##}"
+                                        Header="ميانگين" />
+                    <DataGridTextColumn Binding="{Binding Min}"
+                                        Header="حداقل مجاز" />
+                    <DataGridTextColumn Binding="{Binding Max}"
+                                        Header="حداکثر مجاز" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <GridSplitter VerticalAlignment="Bottom"
+                          Height="5"
+                          Background="Transparent"
+                          HorizontalAlignment="Stretch" />
+            <WindowsFormsHost Background="AliceBlue"
+                              Grid.Row="1">
+                <ch:Chart x:Name="chart"
+                          GetToolTipText="chart_GetToolTipText">
+                    <ch:Chart.ContextMenu>
+                        <swf:ContextMenu>
+                            <swf:ContextMenu.MenuItems>
+                                <swf:MenuItem Text="Live"
+                                              x:Name="liveMenuItem"
+                                              Click="liveMenuItem_Click" />
+                                <swf:MenuItem Text="Copy"
+                                              x:Name="chartCopyMenuItem"
+                                              Click="chartCopyMenuItem_Click" />
+                                <swf:MenuItem Text="Save as..."
+                                              x:Name="saveChartMenuItem"
+                                              Click="saveChartMenuItem_Click" />
+                                <swf:MenuItem Text="-" />
+                                <swf:MenuItem Text="Page Setup..."
+                                              x:Name="pageSetupChartMenuItem"
+                                              Click="pageSetupChartMenuItem_Click" />
+                                <swf:MenuItem Text="Print Preview..."
+                                              x:Name="printPreviewMenuItem"
+                                              Click="printPreviewMenuItem_Click" />
+                                <swf:MenuItem Text="Print..."
+                                              x:Name="printChartMenuItem"
+                                              Click="printChartMenuItem_Click" />
+                            </swf:ContextMenu.MenuItems>
+                        </swf:ContextMenu>
+                    </ch:Chart.ContextMenu>
+                    <ch:Chart.Legends>
+                        <ch:Legend Font="Tahoma" />
+                    </ch:Chart.Legends>
+                    <ch:Chart.ChartAreas>
+                        <ch:ChartArea>
+                            <ch:ChartArea.Area3DStyle>
+                                <ch:ChartArea3DStyle />
+                            </ch:ChartArea.Area3DStyle>
+                            <ch:ChartArea.AxisX>
+                                <ch:Axis Interval="15"
+                                         IntervalType="Minutes">
+                                    <ch:Axis.LabelStyle>
+                                        <ch:LabelStyle Format="HH:mm:ss" />
+                                    </ch:Axis.LabelStyle>
+                                    <ch:Axis.MajorGrid>
+                                        <ch:Grid LineColor="LightGray" />
+                                    </ch:Axis.MajorGrid>
+                                    <ch:Axis.MajorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MajorTickMark>
+                                    <ch:Axis.MinorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MinorGrid>
+                                    <ch:Axis.MinorTickMark>
+                                        <ch:TickMark Interval="1"
+                                                     IntervalType="Minutes" />
+                                    </ch:Axis.MinorTickMark>
+                                    <ch:Axis.ScaleBreakStyle>
+                                        <ch:AxisScaleBreakStyle />
+                                    </ch:Axis.ScaleBreakStyle>
+                                    <ch:Axis.ScaleView>
+                                        <ch:AxisScaleView />
+                                    </ch:Axis.ScaleView>
+                                    <ch:Axis.ScrollBar>
+                                        <ch:AxisScrollBar />
+                                    </ch:Axis.ScrollBar>
+                                </ch:Axis>
+                            </ch:ChartArea.AxisX>
+                            <ch:ChartArea.AxisX2>
+                                <ch:Axis>
+                                    <ch:Axis.LabelStyle>
+                                        <ch:LabelStyle />
+                                    </ch:Axis.LabelStyle>
+                                    <ch:Axis.MajorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MajorGrid>
+                                    <ch:Axis.MajorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MajorTickMark>
+                                    <ch:Axis.MinorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MinorGrid>
+                                    <ch:Axis.MinorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MinorTickMark>
+                                    <ch:Axis.ScaleBreakStyle>
+                                        <ch:AxisScaleBreakStyle />
+                                    </ch:Axis.ScaleBreakStyle>
+                                    <ch:Axis.ScaleView>
+                                        <ch:AxisScaleView />
+                                    </ch:Axis.ScaleView>
+                                    <ch:Axis.ScrollBar>
+                                        <ch:AxisScrollBar />
+                                    </ch:Axis.ScrollBar>
+                                </ch:Axis>
+                            </ch:ChartArea.AxisX2>
+                            <ch:ChartArea.AxisY>
+                                <ch:Axis IsStartedFromZero="False"
+                                         Interval="1">
+                                    <ch:Axis.LabelStyle>
+                                        <ch:LabelStyle />
+                                    </ch:Axis.LabelStyle>
+                                    <ch:Axis.MajorGrid>
+                                        <ch:Grid LineColor="LightGray" />
+                                    </ch:Axis.MajorGrid>
+                                    <ch:Axis.MajorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MajorTickMark>
+                                    <ch:Axis.MinorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MinorGrid>
+                                    <ch:Axis.MinorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MinorTickMark>
+                                    <ch:Axis.ScaleBreakStyle>
+                                        <ch:AxisScaleBreakStyle />
+                                    </ch:Axis.ScaleBreakStyle>
+                                    <ch:Axis.ScaleView>
+                                        <ch:AxisScaleView />
+                                    </ch:Axis.ScaleView>
+                                    <ch:Axis.ScrollBar>
+                                        <ch:AxisScrollBar />
+                                    </ch:Axis.ScrollBar>
+                                </ch:Axis>
+                            </ch:ChartArea.AxisY>
+                            <ch:ChartArea.AxisY2>
+                                <ch:Axis>
+                                    <ch:Axis.LabelStyle>
+                                        <ch:LabelStyle />
+                                    </ch:Axis.LabelStyle>
+                                    <ch:Axis.MajorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MajorGrid>
+                                    <ch:Axis.MajorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MajorTickMark>
+                                    <ch:Axis.MinorGrid>
+                                        <ch:Grid />
+                                    </ch:Axis.MinorGrid>
+                                    <ch:Axis.MinorTickMark>
+                                        <ch:TickMark />
+                                    </ch:Axis.MinorTickMark>
+                                    <ch:Axis.ScaleBreakStyle>
+                                        <ch:AxisScaleBreakStyle />
+                                    </ch:Axis.ScaleBreakStyle>
+                                    <ch:Axis.ScaleView>
+                                        <ch:AxisScaleView />
+                                    </ch:Axis.ScaleView>
+                                    <ch:Axis.ScrollBar>
+                                        <ch:AxisScrollBar />
+                                    </ch:Axis.ScrollBar>
+                                </ch:Axis>
+                            </ch:ChartArea.AxisY2>
+                            <ch:ChartArea.CursorX>
+                                <ch:Cursor  IsUserEnabled="True"
+                                            IsUserSelectionEnabled="True"
+                                            IntervalType="Seconds"
+                                            SelectionColor="CornflowerBlue"
+                                            LineDashStyle="NotSet" />
+                            </ch:ChartArea.CursorX>
+                            <ch:ChartArea.CursorY>
+                                <ch:Cursor  IsUserEnabled="True"
+                                            IsUserSelectionEnabled="True"
+                                            IntervalType="Number"
+                                            SelectionColor="CornflowerBlue"
+                                            LineDashStyle="NotSet" />
+                            </ch:ChartArea.CursorY>
+                        </ch:ChartArea>
+                    </ch:Chart.ChartAreas>
+                </ch:Chart>
+            </WindowsFormsHost>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,16 @@
+D:\Develop\TMN.Classic\bin\Ewsd Settings.lnk
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.exe
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\EwsdAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\EwsdAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\EwsdAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Debug\EwsdAlarmService.pdb

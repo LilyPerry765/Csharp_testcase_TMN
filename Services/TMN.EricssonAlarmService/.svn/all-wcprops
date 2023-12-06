@@ -1,0 +1,129 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 26
+/svn/TMN.Classic/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.EricssonAlarmService
+END
+AlarmService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/AlarmService.Designer.cs
+END
+AlarmService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/AlarmService.cs
+END
+RS232AlarmReceiver.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/455/Services/TMN.EricssonAlarmService/RS232AlarmReceiver.cs
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/DebugWindow.xaml.cs
+END
+EricssonAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.EricssonAlarmService/EricssonAlarmService.csproj
+END
+ConnectionMethods.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/ConnectionMethods.cs
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TMN.Classic/!svn/ver/164/Services/TMN.EricssonAlarmService/ProjectInstaller.Designer.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/215/Services/TMN.EricssonAlarmService/SettingsWindow.xaml
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/164/Services/TMN.EricssonAlarmService/ProjectInstaller.cs
+END
+Ericsson Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/Ericsson%20Settings.lnk
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/219/Services/TMN.EricssonAlarmService/SettingsWindow.xaml.cs
+END
+AlarmService.resx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/AlarmService.resx
+END
+TelnetClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/423/Services/TMN.EricssonAlarmService/TelnetClient.cs
+END
+EricssonAlarmService.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/EricssonAlarmService.csproj.user
+END
+TelnetAlarmReceiver.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/423/Services/TMN.EricssonAlarmService/TelnetAlarmReceiver.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/164/Services/TMN.EricssonAlarmService/ProjectInstaller.resx
+END
+EricssonParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/258/Services/TMN.EricssonAlarmService/EricssonParser.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/215/Services/TMN.EricssonAlarmService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.EricssonAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/161/Services/TMN.EricssonAlarmService/DebugWindow.xaml
+END

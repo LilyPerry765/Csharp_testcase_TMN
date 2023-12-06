@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UpdaterSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <string>UpdateSettings.xml</string>
+    <string>TMN.Updater.exe</string>
+    <string>TMN.Common.dll</string>
+    <string>TMN.Model.dll</string>
+    <string>TMN.Config.dll</string>
+    <string>TMN.exe</string>
+    <string>TMN.Converters.dll</string>
+    <string>TMN.Reporting.dll</string>
+    <string>Resources.dll</string>
+    <string>TMN.ServiceCommon.dll</string>
+    <string>CarinAlarmService.exe</string>
+    <string>HuaweiAlarmService.exe</string>
+    <string>EwsdAlarmService.exe</string>
+    <string>SensorService.exe</string>
+    <string>NeaxAlarmService.exe</string>
+    <string>S12AlarmService.exe</string>
+    <string>Sounds\Critical.Wav</string>
+    <string>Sounds\DC.Wav</string>
+    <string>Sounds\Major.Wav</string>
+    <string>Sounds\Minor.Wav</string>
+    <string>Help.Pdf</string>
+    <string>Help.Chm</string>
+  </Files>
+  <Services>
+    <string>CarinAlarmService</string>
+    <string>HuaweiAlarmService</string>
+    <string>EwsdAlarmService</string>
+    <string>SensorService</string>
+    <string>NeaxAlarmService</string>
+    <string>S12AlarmService</string>
+  </Services>
+  <UpdateUrl>\\SERVER\public\Firouze\Services1</UpdateUrl>
+</UpdaterSettings>
+
+

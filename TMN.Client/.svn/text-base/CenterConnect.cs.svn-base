@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Enterprise;
+using System.ServiceModel;
+
+namespace TMN
+{
+	public class CenterConnect
+	{
+		public static  void Connect(WCFServiceReference.Center center, User user)
+		{
+			try
+			{
+				string username = string.Format(@"{0}\{1}", center.IPAddress, user.UserName.ToLower());
+				string pass = "123" + User.Current.Password;
+
+				SendDataForAccountCreatorService(center.IPAddress,user.UserName.ToLower(), pass);
+
+				RDPManager helper = new RDPManager();
+				helper.RdcTest(center.IPAddress, "", username, pass, center.DisplayName);
+
+				// user log
+				using (var db = new TMNModelDataContext())
+				{
+					UserLog.Log(db, ActionType.ConnectToCenter, center.IPAddress, "");
+					db.SubmitChanges();
+				}
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+
+
+		private static  void SendDataForAccountCreatorService(string ip,string username, string password)
+		{
+			try
+			{
+				string port = Setting.Get(Setting.ACCOUNT_CREATOR_PORT, Setting.DEFAULT_ACCOUNT_CREATOR_PORT);
+				//string ip = this.IPAddress;
+
+				NetTcpBinding binding = new NetTcpBinding(SecurityMode.None, true);
+				EndpointAddress ndPoint = new EndpointAddress(string.Format("net.tcp://{0}:{1}/MainService", ip, port));
+				ChannelFactory<TMN.IMainService> channel = new ChannelFactory<TMN.IMainService>(binding);
+				TMN.IMainService proxy = channel.CreateChannel(ndPoint);
+				proxy.CheckAccount(username, password);
+
+				Logger.WriteInfo("send message to AccountCreatorService .");
+
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+	}
+}

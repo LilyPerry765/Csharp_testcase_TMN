@@ -1,0 +1,6 @@
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\TMN.Converters.dll
+D:\Develop\TMN.Classic\bin\TMN.Converters.pdb
+D:\Develop\TMN.Classic\TMN.Converters\obj\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.Converters\obj\Release\TMN.Converters.dll
+D:\Develop\TMN.Classic\TMN.Converters\obj\Release\TMN.Converters.pdb

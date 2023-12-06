@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/TMN.Classic/!svn/ver/761/Services/ParsTelAlarmService
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/DebugWindow.xaml.cs
+END
+ParsTelAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/761/Services/ParsTelAlarmService/ParsTelAlarmService.csproj
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ProjectInstaller.Designer.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ProjectInstaller.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/SettingsWindow.xaml
+END
+ParsTelAlarmService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ParsTelAlarmService.Designer.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/Program.cs
+END
+ParsTelAlarmService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ParsTelAlarmService.cs
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/SettingsWindow.xaml.cs
+END
+ParsTelLogParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ParsTelLogParser.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/747/Services/ParsTelAlarmService/DebugWindow.xaml
+END

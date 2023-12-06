@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="TMN.Views.Details.LongRecordView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:uc="clr-namespace:TMN.UserControls"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= RouteComboBox }">مسير:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= StateComboBox }">وضعيت کانال:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= LengthNumericUpDown }">مدت مکالمه(دقيقه):</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ChannelNumericUpDown }">شماره کانال:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ANumberTextBox }">شماره مشترک A:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= BNumberTextBox }">شماره مشترک B:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DescriptionTextBox }">توضيحات:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox x:Name="RouteComboBox"
+                      IsEditable="True"
+                      Width="140"
+                      SelectedItem="{Binding Route}"
+                      DisplayMemberPath="TGNO"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <ComboBox x:Name="StateComboBox"
+                      Width="140"
+                      Margin="0,2,0,2"
+                      xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                      SelectedValue="{Binding State, Converter={x:Static conv:ChannelStatesConverter.Instance} }"
+                      HorizontalAlignment="Left">
+                <ComboBox.Resources>
+                    <ObjectDataProvider x:Key="States"
+                                        MethodName="GetValues"
+                                        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                                        ObjectType="{x:Type sys:Enum}">
+                        <ObjectDataProvider.MethodParameters>
+                            <x:Type xmlns:enums="clr-namespace:TMN;assembly=TMN.Common"
+                                    TypeName="enums:ChannelStatus" />
+                        </ObjectDataProvider.MethodParameters>
+                    </ObjectDataProvider>
+                </ComboBox.Resources>
+                <ComboBox.ItemsSource>
+                    <Binding Source="{StaticResource States}" />
+                </ComboBox.ItemsSource>
+            </ComboBox>
+            <r:NumericUpDown x:Name="LengthNumericUpDown"
+                             Value="{Binding Path=Length, Mode=TwoWay}"
+                             Margin="0,2,0,2"
+                             Width="140"
+                             Maximum="100000"
+                             HorizontalAlignment="Left" />
+            <r:NumericUpDown x:Name="ChannelNumericUpDown"
+                             Value="{Binding Path=Channel, Mode=TwoWay}"
+                             Width="140"
+                             Maximum="100000"
+                             Margin="0,2,0,2"
+                             HorizontalAlignment="Left" />
+            <TextBox x:Name="ANumberTextBox"
+                     Text="{Binding ANumber}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="BNumberTextBox"
+                     Text="{Binding BNumber}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="DescriptionTextBox"
+                     Text="{Binding Description}"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto"
+                     TextWrapping="Wrap"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

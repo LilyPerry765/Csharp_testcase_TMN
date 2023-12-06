@@ -1,0 +1,535 @@
+﻿<Window x:Class="TMN.UI.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:access="clr-namespace:TMN" 
+        Title="Telecommunications Management Network (TMN)"
+        FontFamily="Tahoma"
+        Height="511"
+        Width="695"
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown"
+        WindowState="Maximized"
+        Background="{StaticResource backgroundPicture}"
+        Icon="{a:ImageSource icon.ico}">
+    <DockPanel x:Name="DockPanel"
+               LastChildFill="True"
+               FlowDirection="RightToLeft">
+        <DockPanel.LayoutTransform>
+            <ScaleTransform ScaleX="1"
+                            ScaleY="1" />
+        </DockPanel.LayoutTransform>
+        <Menu x:Name="menu1"
+              DockPanel.Dock="Top">
+            <Menu.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Width"
+                            Value="16" />
+                    <Setter Property="Height"
+                            Value="16" />
+                </Style>
+            </Menu.Resources>
+            <MenuItem Header="سيستم" access:UIElementExtenstion.ResourceName="system">
+                <MenuItem Header="تغيير کاربر..."
+                          x:Name="mnuChangeUser"
+                          Click="mnuChangeUser_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=user.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="وضعيت سرويس ها"
+                          x:Name="omcServicesMenuItem"
+                          Click="omcServicesMenuItem_Click" access:UIElementExtenstion.ResourceName="status_services"/>
+                <MenuItem Header="سنسورهای غيرفعال"
+                          x:Name="inactiveSensorsMenuItem"
+                          Click="inactiveSensorsMenuItem_Click" access:UIElementExtenstion.ResourceName="disable_sensors"/>
+                <Separator />
+                <MenuItem Header="خروج"
+                          x:Name="mnuExit"
+                          Click="mnuExit_Click" />
+            </MenuItem>
+            <MenuItem Header="اطلاعات پايه" access:UIElementExtenstion.ResourceName="baseinfo" >
+                <MenuItem Header="انواع سوييچ"
+                          x:Name="mnuSwitches"
+                          Click="mnuSwitches_Click" access:UIElementExtenstion.ResourceName="switch_type" />
+                <MenuItem Header="انواع رك"
+                          Click="mnuRacks_Click" access:UIElementExtenstion.ResourceName="rack_type"
+                          x:Name="mnuRacks">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=rack.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="انواع شلف"
+                          x:Name="mnuShelves"
+                          Click="mnuShelves_Click" access:UIElementExtenstion.ResourceName="shelf_type">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=shelf.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="انواع كارت"
+                          x:Name="mnuCards"
+                          Click="mnuCards_Click" access:UIElementExtenstion.ResourceName="card_type">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=card.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="انواع عمليات"
+                          x:Name="mnuEvents"
+                          Click="mnuEvents_Click" access:UIElementExtenstion.ResourceName="operations_type" />
+                <MenuItem Header="آيتم های گزارش"
+                          x:Name="mnuReportTypes"
+                          Click="mnuReportTypes_Click" access:UIElementExtenstion.ResourceName="repots_items"/>
+                <Separator />
+                <MenuItem Header="مسير ها"
+                          x:Name="mnuRoutes"
+                          Click="mnuRoutes_Click" access:UIElementExtenstion.ResourceName="lines">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=routes.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <!--<MenuItem Header="علل قطعی"
+                          x:Name="mnuFailureReasons"
+                          Click="mnuFailureReasons_Click" />-->
+                <MenuItem Header="انواع آلارم"
+                          x:Name="mnuAlarmTypes"
+                          Click="mnuAlarmTypes_Click" access:UIElementExtenstion.ResourceName="alarms_type" />
+                <MenuItem Header="انواع وظيفه"
+                          Visibility="Collapsed"
+                          x:Name="mnuTaskTypes"
+                          Click="mnuTaskTypes_Click" />
+                <Separator />
+                <MenuItem Header="تعريف سنسور ها"
+                          x:Name="sensorsMenuItem"
+                          Click="sensorsMenuItem_Click" access:UIElementExtenstion.ResourceName="define_sensor" />
+            </MenuItem>
+            <MenuItem x:Name="mnuCenter" access:UIElementExtenstion.ResourceName="center"
+                      Header="مرکز">
+                <MenuItem x:Name="mnuSchema"
+                          Header="شماي مركز"
+                          Click="mnuSchema_Click" access:UIElementExtenstion.ResourceName="schema_center">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=CenterSchema.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuLinks"
+                          Header="ليست E1"
+                          Click="mnuLinks_Click" access:UIElementExtenstion.ResourceName="e1_list">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=link.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="CenterLink"
+                          Header="ارتباط بین مراکز"
+                          Click="CenterLink_Click" access:UIElementExtenstion.ResourceName="connection_center">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=centerLink.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuDDF"
+                          Header="DDF"
+                          Click="mnuDDF_Click" access:UIElementExtenstion.ResourceName="ddf">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=ddf.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuInstructions"
+                          Click="mnuInstructions_Click" access:UIElementExtenstion.ResourceName="orbit_instructions"
+                          Header="دستور هاي مداري">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=instruction.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="mnuReports"
+                          Header="گزارشات مرکز"
+                          Click="mnuReports_Click" access:UIElementExtenstion.ResourceName="center_reports">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=Report.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuTests"
+                          Header="تست های مرکز"
+                          Click="mnuTests_Click" access:UIElementExtenstion.ResourceName="center_tests">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=Test.png}" />
+                    </MenuItem.Icon>
+                    
+                </MenuItem>
+                <MenuItem x:Name="mnuAlarms"
+                          Header="خرابی های مرکز"
+                          Click="mnuAlarms_Click" access:UIElementExtenstion.ResourceName="center_failurs">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=alarm.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mapPanelMenuItem"
+                          Click="mapPanelMenuItem_Click" access:UIElementExtenstion.ResourceName="map_region"
+                          Header="نقشه ناحيه"
+                          Icon="{a:ImageSource map.png}" />
+                <MenuItem x:Name="alarmPanelMenuItem"
+                          Click="alarmPanelMenuItem_Click" access:UIElementExtenstion.ResourceName="alarm_panel"
+                          Header="آلارم پنل"
+                          Icon="{a:ImageSource alarmPanel.png}" />
+                <!--<MenuItem x:Name="powerRegionMenuItem"
+                          Click="powerRegionMenuItem_Click" access:UIElementExtenstion.ResourceName="map_power"
+                          Header="نقشه پاور"
+                          Icon="{a:ImageSource map.png}" />-->
+                <MenuItem x:Name="powerPanelMenuItem"
+                          Click="powerPanelMenuItem_Click" access:UIElementExtenstion.ResourceName="power_alarm"
+                           Icon="{a:ImageSource power_alarm.png}"
+                          Header="آلارم پاور"
+                           />
+                <!--<MenuItem x:Name="CircuitLink"
+                          Header="نقشه کابل"
+                          Click="CircuitLink_Click" access:UIElementExtenstion.ResourceName="circuit_map" Icon="{a:ImageSource circuit.png}">
+                </MenuItem>-->
+                <MenuItem x:Name="circuitalarm"
+                          Header="آلارم کابل"
+                          Click="CircuitAlarmLink_Click" access:UIElementExtenstion.ResourceName="circuit_alarm" Icon="{a:ImageSource circuit.png}">
+                </MenuItem>
+                <!--<MenuItem x:Name="circuitlog"
+                          Header="لاگ کابل"
+                          Click="circuitlog_Click" access:UIElementExtenstion.ResourceName="circuit_log">
+                </MenuItem>-->
+                <Separator />
+                <MenuItem x:Name="Archive" Header="آرشیو الارم" Click="Archive_Click" access:UIElementExtenstion.ResourceName="archive_alarm" Icon="{a:ImageSource archive.png}" />
+                <MenuItem x:Name="UserLog" Header="سوابق کاربران" Click="UserLog_Click" access:UIElementExtenstion.ResourceName="user_logs"  Icon="{a:ImageSource userlog.png}" />
+                <MenuItem x:Name="SMS" Header="مدیریت ارسال پیامک" Click="SMS_Click" access:UIElementExtenstion.ResourceName="sms_managment" Icon="{a:ImageSource sms.png}" />
+                <Separator />
+                <MenuItem x:Name="mnuLogBook"
+                          Header="Log Book"
+                          Click="mnuLogBook_Click" access:UIElementExtenstion.ResourceName="log_book">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=LogBook.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuLongRecord"
+                          Header="رکورد طولانی"
+                          Click="mnuLongRecord_Click" access:UIElementExtenstion.ResourceName="long_record">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=call.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuSpareCards"
+                          Header="کارت های يدکی"
+                          Click="mnuSpareCards_Click" access:UIElementExtenstion.ResourceName="trailer_cards">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=spare.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="گزارشات" access:UIElementExtenstion.ResourceName="reports">
+                <MenuItem x:Name="mnuRoutesReport"
+                          Header="گزارش مسير ها"
+                          Click="mnuRoutesReport_Click" access:UIElementExtenstion.ResourceName="lines_report"/>
+                <MenuItem x:Name="mnuLinksReport"
+                          Header="گزارش لينک ها"
+                          Click="mnuLinksReport_Click" access:UIElementExtenstion.ResourceName="links_report" />
+                <MenuItem x:Name="mnuTrunksReport"
+                          Header="گزارش ترانک ها"
+                          Click="mnuTrunksReport_Click"  access:UIElementExtenstion.ResourceName="tranks_report"/>
+                <MenuItem x:Name="mnuInstructionsReport"
+                          Header="گزارش دستور مداری"
+                          Click="mnuInstructionsReport_Click" access:UIElementExtenstion.ResourceName="instruction_report"/>
+                <Separator />
+                <MenuItem x:Name="mnuAlarmReport"
+                          Header="گزارش آلارم و خرابی ها"
+                          Click="mnuAlarmReport_Click"  access:UIElementExtenstion.ResourceName="alarm_and_failur_report"/>
+                <MenuItem x:Name="mnuEventsReport"
+                          Header="Log Book"
+                          Click="mnuEventsReport_Click" access:UIElementExtenstion.ResourceName="log_book_report"/>
+                <MenuItem x:Name="mnuTasksReport"
+                          Header="گزارش تست های مرکز"
+                          Click="mnuTasksReport_Click"  access:UIElementExtenstion.ResourceName="center_test_report"/>
+                <MenuItem x:Name="mnuFailurePieChart"
+                          Visibility="Collapsed"
+                          Header="*******Pie******"
+                          Click="mnuFailurePieChart_Click" />
+                <MenuItem x:Name="mnuLongRecordReport"
+                          Header="گزارش رکورد طولانی"
+                          Click="mnuLongRecordReport_Click" access:UIElementExtenstion.ResourceName="long_record_report" />
+                <Separator />
+                <MenuItem x:Name="mnuCardsReport"
+                          Header="گزارش کارت ها"
+                          Click="mnuCardsReport_Click" access:UIElementExtenstion.ResourceName="cards_report" />
+                <MenuItem x:Name="mnuSpareCardsReport"
+                          Header="گزارش کارت های يدکی"
+                          Click="mnuSpareCardsReport_Click" access:UIElementExtenstion.ResourceName="trailer_cards_report" />
+                <Separator />
+                <MenuItem Header="نمودار پاسخگويی سنسورها"
+                          x:Name="mnuSensorStatusChart"
+                          Click="mnuSensorStatusChart_Click" access:UIElementExtenstion.ResourceName="respone_sensors_chart" />
+                <MenuItem Header="نمودار تغييرات سنسورها"
+                          x:Name="mnuSensorChart"
+                          Click="mnuSensorChart_Click" access:UIElementExtenstion.ResourceName="changes__sensors_chart" />
+                <MenuItem Header="گزارش مقادير سنسورها"
+                          x:Name="mnuSensorReport"
+                          Click="mnuSensorReport_Click"  access:UIElementExtenstion.ResourceName="value_sensor_report"/>
+            </MenuItem>
+            <MenuItem Header="تنظيمات" access:UIElementExtenstion.ResourceName="settings">
+                <MenuItem Header="تنظيمات سيستم"
+                          x:Name="mnuSettings"
+                          Click="mnuSettings_Click" access:UIElementExtenstion.ResourceName="setting_system" />
+                <MenuItem Header="ساعت سیستم" IsCheckable="True" IsChecked="False"
+                          x:Name="mnuClock"
+                          Click="mnuClock_Click" access:UIElementExtenstion.ResourceName="setting_system" />
+                <Separator />
+                
+                <MenuItem Name="mnuUsers"
+                          Header="مديريت کاربران"
+                          Click="mnuUsers_Click" access:UIElementExtenstion.ResourceName="managment_users">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=users.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="mnuChangePass"
+                          Header="تغيير رمز عبور"
+                          Click="mnuChangePass_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=key.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="مديريت شيفت ها"
+                          x:Name="mnuShifts"
+                          Click="mnuShifts_Click" access:UIElementExtenstion.ResourceName="managment_shifts" />
+            </MenuItem>
+            <MenuItem Header="نمايش">
+                <MenuItem x:Name="mnuZoomIn"
+                          Header="بزرگ نمايی"
+                          ToolTip="F12"
+                          Click="mnuZoomIn_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=zoomin.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mnuZoomNormal"
+                          Header="اندازه واقعی"
+                          ToolTip="F10"
+                          Click="mnuZoomNormal_Click" />
+                <MenuItem x:Name="mnuZoomOut"
+                          Header="کوچک نمايی"
+                          ToolTip="F11"
+                          Click="mnuZoomOut_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=zoomout.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="mnuTabs"
+                      SubmenuOpened="mnuTabs_SubmenuOpened"
+                      Header="برگه ها">
+                <MenuItem Header="بستن همه برگه ها"
+                          x:Name="mnuCloseAllTabs"
+                          Click="mnuCloseAllTabs_Click" />
+                <MenuItem Header="بستن سایر برگه ها"
+                          x:Name="mnuCloseOtherTabs"
+                          Click="mnuCloseOtherTabs_Click" />
+            </MenuItem>
+            <MenuItem Header="راهنما" >
+                <MenuItem Header="راهنما" x:Name="mnuHelp" Click="mnuHelp_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{a:ImageSource Path=help.png}" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="تغییرات جدید"
+                          x:Name="mnuNewUpdate"
+                          Click="mnuNewUpdate_Click" />
+                <MenuItem Header="مرور کلی ..."
+                          x:Name="mnuBrief"
+                          Click="mnuBrief_Click" />
+                <Separator />
+                <MenuItem Header="درباره"
+                          x:Name="mnuAbout"
+                          Click="mnuAbout_Click" />
+                <!--<MenuItem Header="test"
+                          Click="MenuItem_Click" />-->
+            </MenuItem>
+        </Menu>
+        <ToolBarTray  Background="{StaticResource ToolBarBrush}"
+                      Name="toolbarTray"
+                      DockPanel.Dock="Top">
+            <ToolBar HorizontalAlignment="Stretch">
+                <ToolBar.Resources>
+                    <Style TargetType="Image">
+                        <Setter Property="Height"
+                                Value="32" />
+                    </Style>
+                    <Style TargetType="{x:Type Separator}">
+                        <Setter Property="Opacity"
+                                Value=".1" />
+                    </Style>
+                </ToolBar.Resources>
+                <Button x:Name="btnCenterSchema"
+                        ToolTip="{Binding Header, ElementName=mnuSchema}"
+                        Click="mnuSchema_Click" access:UIElementExtenstion.ResourceName="schema_center">
+                    <Image  Source="{a:ImageSource Path=CenterSchema.png}" />
+                </Button>
+                <Button x:Name="btnDDF"
+                        ToolTip="DDF"
+                        Click="mnuDDF_Click" access:UIElementExtenstion.ResourceName="ddf">
+                    <!--<Image Source="{a:ImageSource Path=ddf.png}" />-->
+                    <Image>
+                        <Image.Source>
+                            <a:ImageSource Path="ddf.png" />
+                        </Image.Source>
+                    </Image>
+                </Button>
+                <Button x:Name="btnLinks"
+                        ToolTip="{Binding Header, ElementName=mnuLinks}"
+                        Click="mnuLinks_Click" access:UIElementExtenstion.ResourceName="e1_list">
+                    <Image Source="{a:ImageSource Path=link.png}" />
+                </Button>
+                <Button x:Name="btnRoutes"
+                        ToolTip="{Binding Header, ElementName=mnuRoutes}"
+                        Click="mnuRoutes_Click" access:UIElementExtenstion.ResourceName="lines">
+                    <Image Source="{a:ImageSource Path=routes.png}" />
+                </Button>
+                <Button x:Name="btnInstruction"
+                        ToolTip="{Binding Header, ElementName=mnuInstructions}"
+                        Click="mnuInstructions_Click" access:UIElementExtenstion.ResourceName="orbit_instructions">
+                    <Image  Source="{a:ImageSource Path=Instruction.png}"
+                            FlowDirection="LeftToRight" />
+                </Button>
+                <Button x:Name="btnCenterLink"
+                        Click="CenterLink_Click" access:UIElementExtenstion.ResourceName="connection_center"
+                        ToolTip="{Binding Header, ElementName=CenterLink}">
+                    <Image  Source="{a:ImageSource Path=CenterLink.png}" />
+                </Button>
+                <Separator />
+                <Button x:Name="btnReports"
+                        ToolTip="{Binding Header, ElementName=mnuReports}"
+                        Click="mnuReports_Click" access:UIElementExtenstion.ResourceName="center_reports">
+                    <Image Source="{a:ImageSource Path=Report.png}"
+                           FlowDirection="LeftToRight" />
+                </Button>
+                <Button x:Name="btnTests"
+                        ToolTip="{Binding Header, ElementName=mnuTests}"
+                        Click="mnuTests_Click" access:UIElementExtenstion.ResourceName="center_tests">
+                    <Image Source="{a:ImageSource Path=Test.png}"
+                           FlowDirection="LeftToRight" />
+                </Button>
+                <Button x:Name="btnAlarms"
+                        ToolTip="{Binding Header, ElementName=mnuAlarms}"
+                        Click="mnuAlarms_Click" access:UIElementExtenstion.ResourceName="center_failurs">
+                    <Image Source="{a:ImageSource Path=alarm.png}" />
+                </Button>
+                <Button x:Name="btnmapPanel"
+                        ToolTip="{Binding Header, ElementName=mapPanelMenuItem}"
+                        Click="mapPanelMenuItem_Click" access:UIElementExtenstion.ResourceName="map_region">
+                    <Image Source="{a:ImageSource map.png}" />
+                </Button>
+                <Button x:Name="btnAlarmPanel"
+                        ToolTip="{Binding Header, ElementName=alarmPanelMenuItem}"
+                        Click="alarmPanelMenuItem_Click" access:UIElementExtenstion.ResourceName="alarm_panel">
+                    <Image Source="{a:ImageSource Path=alarmpanel.png}" />
+                </Button>
+                <Button x:Name="btnAlarmPower"
+                        ToolTip="{Binding Header, ElementName=powerPanelMenuItem}"
+                        Click="btnAlarmPower_Click" access:UIElementExtenstion.ResourceName="power_alarm">
+                    <Image Source="{a:ImageSource Path=power_alarm.png}" />
+                </Button>
+                <Button x:Name="btnCircuitAlarmLink" 
+                        ToolTip="آلارم کابل"
+                        Click="CircuitAlarmLink_Click" access:UIElementExtenstion.ResourceName="circuit_alarm">
+                    <Image Source="{a:ImageSource circuit.png}"  FlowDirection="RightToLeft"  />
+                </Button>
+                <!--<Button x:Name="btnCircuitLink" 
+                        ToolTip="{Binding Header, ElementName=CircuitLink}"
+                        Click="CircuitLink_Click" access:UIElementExtenstion.ResourceName="circuit_map">
+                    <Image Source="{a:ImageSource wire.png}"  FlowDirection="RightToLeft"  />
+                </Button>-->
+                <Separator />
+                <Button x:Name="btnArchiv" Click="btnArchiv_Click"  ToolTip="{Binding Header, ElementName=Archive}"  
+                        access:UIElementExtenstion.ResourceName="archive_alarm">
+                    <Image Source="{a:ImageSource archive.png}"/>
+                </Button>
+
+                <Button x:Name="btnUserLog" Click="btnUserLog_Click" access:UIElementExtenstion.ResourceName="user_logs"  ToolTip="{Binding Header, ElementName=UserLog}" >
+                    <Image Source="{a:ImageSource userlog.png}"/>
+                </Button>
+
+                <Button x:Name="btnSMS" Click="btnSMS_Click" ToolTip="{Binding Header,ElementName=SMS}"  access:UIElementExtenstion.ResourceName="sms_managment" >
+                    <Image Source="{a:ImageSource sms.png}" FlowDirection="LeftToRight" />
+                </Button>
+                <Separator />
+                <Button x:Name="btnLogBook"
+                        ToolTip="{Binding Header, ElementName=mnuLogBook}"
+                        Click="mnuLogBook_Click" access:UIElementExtenstion.ResourceName="log_book">
+                    <Image Source="{a:ImageSource Path=LogBook.png}"
+                           FlowDirection="LeftToRight" />
+                </Button>
+                <Button x:Name="btnLongRecord"
+                        ToolTip="{Binding Header, ElementName=mnuLongRecord}"
+                        Click="mnuLongRecord_Click" access:UIElementExtenstion.ResourceName="long_record">
+                    <Image Source="{a:ImageSource Path=call.png}"
+                           FlowDirection="RightToLeft" />
+                </Button>
+                <Button x:Name="btnSpare"
+                        ToolTip="{Binding Header, ElementName=mnuSpareCards}"
+                        Click="mnuSpareCards_Click" access:UIElementExtenstion.ResourceName="trailer_cards">
+                    <Image Source="{a:ImageSource Path=spare.png}" />
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom"
+                   FontFamily="Tahoma">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Image Source="{a:ImageSource Path=calendar.png}"
+                       Width="16"
+                       Height="16" />
+                <TextBlock x:Name="ClockText"
+                           Margin="10,0" />
+            </StackPanel>
+            <Separator Margin="0"
+                       Background="White" />
+            <Separator Margin="0"
+                       Background="LightGray" />
+            <MenuItem HorizontalAlignment="Center"
+                      Focusable="False"
+                      ToolTip="تغيير کاربر"
+                      Click="mnuChangeUser_Click">
+                <MenuItem.Header>
+                    <!--<TextBlock x:Name="UserText"
+                               Width="Auto" />-->
+                    <Label x:Name="UserText" Width="auto" />
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="{a:ImageSource Path=User.png}"
+                           Width="16"
+                           Height="16" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator Margin="0"
+                       Background="White" />
+            <Separator Margin="0"
+                       Background="LightGray" />
+            <TextBlock x:Name="CountText"
+                       Width="100"
+                       HorizontalAlignment="Center" />
+            <StatusBarItem HorizontalAlignment="Right" x:Name="serverStatus" />
+        </StatusBar>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition  Width="*" />
+            </Grid.ColumnDefinitions >
+
+            <uc:CenterTree x:Name="Tree" Grid.Column="0" access:UIElementExtenstion.ResourceName="centermanager" Width="187" /> 
+           
+            <GridSplitter VerticalAlignment="Stretch"
+                          HorizontalAlignment="Right"
+                          ResizeDirection="Columns"
+                          Background="Transparent"
+                          Width="5"
+                          Grid.Column="0" />
+            <TabControl x:Name="tabControl"
+                        Grid.Column="1"
+                        BorderThickness="0"
+                        Background="#20000000"  />
+        </Grid>
+    </DockPanel>
+</Window>

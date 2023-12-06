@@ -1,0 +1,27 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.ContactListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:uc="clr-namespace:TMN.UserControls"
+                     xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                     xmlns:v="clr-namespace:TMN.Views.Lists">
+    <v:ItemsListBase.ListView>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="نام "
+                                    DisplayMemberBinding="{Binding Name}"
+                                    Width="100" />
+                    <GridViewColumn Header="سمت"
+                                    DisplayMemberBinding="{Binding Position}"
+                                    Width="100" />
+                    <GridViewColumn Header="شماره تلفن"
+                                    DisplayMemberBinding="{Binding Number}"
+                                    Width="100" />
+                    <GridViewColumn Header="توضیحات"
+                                    DisplayMemberBinding="{Binding Description}"
+                                    Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

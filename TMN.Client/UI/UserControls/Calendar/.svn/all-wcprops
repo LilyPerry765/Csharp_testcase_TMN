@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/UserControls/Calendar
+END
+YearView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/YearView.xaml.cs
+END
+MonthView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/UserControls/Calendar/MonthView.xaml
+END
+MonthView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/MonthView.xaml.cs
+END
+CalendarItem.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/CalendarItem.xaml
+END
+DayView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/DayView.xaml
+END
+Calendar.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/Calendar.xaml
+END
+Navigator.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/UserControls/Calendar/Navigator.xaml
+END
+YearView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/YearView.xaml
+END
+CalendarItem.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/CalendarItem.xaml.cs
+END
+DayView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/DayView.xaml.cs
+END
+Calendar.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/Calendar.xaml.cs
+END
+Navigator.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/UserControls/Calendar/Navigator.xaml.cs
+END

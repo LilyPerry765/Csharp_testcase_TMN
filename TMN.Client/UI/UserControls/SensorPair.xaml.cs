@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using TMN.UI.Windows;
+using Enterprise;
+
+namespace TMN.UserControls
+{
+
+    public partial class SensorPair : UserControl
+    {
+        public event Action SoundAlertManagementRequested;
+
+        public SensorPair(Guid roomID)
+        {
+            InitializeComponent();
+            HumidityDisplay.RoomID = roomID;
+            TemperatureDisplay.RoomID = roomID;
+        }
+
+        public void RefreshDisplays(KeyValuePair<Sensor, double?>[] data )
+        {
+            HumidityDisplay.Refresh(data);
+            TemperatureDisplay.Refresh(data);
+        }
+
+        public bool RequestsAlarm
+        {
+            get
+            {
+                return HumidityDisplay.RequestsAlarm || TemperatureDisplay.RequestsAlarm;
+            }
+        }
+
+        // Handles 2 events in Xaml
+        private void OnSoundAlertManagementRequested()
+        {
+            if (SoundAlertManagementRequested != null)
+            {
+                SoundAlertManagementRequested();
+            }
+        }
+
+        public bool IsMute
+        {
+            get
+            {
+                return HumidityDisplay.IsMute && TemperatureDisplay.IsMute;
+            }
+            set
+            {
+                HumidityDisplay.IsMute = TemperatureDisplay.IsMute = value;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+D:\Develop\TMN.Classic\AccountCreatorService\bin\Debug\AccountCreatorService.dll
+D:\Develop\TMN.Classic\AccountCreatorService\bin\Debug\AccountCreatorService.pdb
+D:\Develop\TMN.Classic\AccountCreatorService\bin\Debug\Logger.dll
+D:\Develop\TMN.Classic\AccountCreatorService\bin\Debug\Logger.pdb
+D:\Develop\TMN.Classic\AccountCreatorService\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\AccountCreatorService\obj\Debug\AccountCreatorService.dll
+D:\Develop\TMN.Classic\AccountCreatorService\obj\Debug\AccountCreatorService.pdb

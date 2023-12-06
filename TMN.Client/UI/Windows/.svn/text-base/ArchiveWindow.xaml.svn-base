@@ -1,0 +1,147 @@
+﻿<Window x:Class="TMN.UI.Windows.ArchiveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:uc="clr-namespace:TMN"
+        Title="ArchiveWindow" 
+        Height="350" 
+        Width="1000"
+        FlowDirection="RightToLeft" 
+        FontFamily="Tahoma"  >
+    
+<Window.Resources>
+   <Style x:Key="ItemContStyle" TargetType="{x:Type ListViewItem}">     
+   <Style.Resources>
+                <LinearGradientBrush x:Key="red" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#F53D00" />
+                </LinearGradientBrush>
+                
+                <LinearGradientBrush x:Key="green" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#BFFEBF" />
+                </LinearGradientBrush>
+                
+                <LinearGradientBrush x:Key="yellow" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#FEFF80" />
+                </LinearGradientBrush>
+
+                <LinearGradientBrush x:Key="orange" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#FF9900" />
+                </LinearGradientBrush>
+
+                <LinearGradientBrush x:Key="white" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#FFFFFF" />
+                </LinearGradientBrush>
+            </Style.Resources>        
+   <Style.Triggers>
+                <DataTrigger Binding="{Binding Severity}" Value="1">
+                    <Setter Property="Background" Value="{StaticResource red}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Severity}" Value="2">
+                    <Setter Property="Background" Value="{StaticResource orange}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Severity}" Value="3">
+                    <Setter Property="Background" Value="{StaticResource yellow}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Severity}" Value="4" >
+                    <Setter Property="Background" Value="{StaticResource green}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</Window.Resources>
+
+ <DockPanel >
+ 
+            <Grid DockPanel.Dock="Top" x:Name="Root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Expander  x:Name="SearchExpander" x:FieldModifier="public" Grid.Row="0"  >
+            <Expander.Header>
+                <TextBlock Margin="5">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="1" />
+                    </TextBlock.Effect>
+                    جستجو</TextBlock>
+            </Expander.Header>
+
+            <Border CornerRadius="5" BorderThickness="1" BorderBrush="White" Padding="3" Background="#44FFFFFF" Margin="3">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel  Margin="3,2,3,4" FlowDirection="RightToLeft"  DockPanel.Dock="Top" Orientation="Horizontal" >
+                            <TextBlock   Margin="2" VerticalAlignment="Center" Text="تاریخ :" />
+                            <DatePicker Margin="2" Width="150" x:Name="datePicker" VerticalAlignment="Center"  CalendarClosed="datePicker_CalendarClosed"   />
+                            <TextBlock Margin="2" VerticalAlignment="Center" Text="جستجو :"  />
+                            <TextBox Margin="2" Width="200" x:Name="txtSearch" VerticalAlignment="Center"   FlowDirection="RightToLeft" KeyUp="txtSearch_KeyUp"    />
+                        </StackPanel>
+                    </Grid>
+            </Border>
+        </Expander>
+
+        <Border x:Name="ListViewHolder" Grid.Row="1" />
+        
+    </Grid>
+
+    <Border DockPanel.Dock="Bottom" CornerRadius="5" BorderThickness="1" BorderBrush="White" Padding="3" Background="#44FFFFFF" Margin="3">
+        
+    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="2">
+                <Button x:Name="btnFirstRecord" Width="80"  Margin="2" Click="btnFirstRecord_Click" >اولین صفحه</Button>
+                <Button x:Name="btnNextRecord" Width="80" Margin="2" Click="btnNextRecord_Click" >صفحه بعدی</Button>
+        <TextBox x:Name="txtPosition" Height="25" Width="150" Margin="2" TextAlignment="Center"  KeyDown="txtPosition_KeyDown" />
+                <Button x:Name="btnPrevRecord" Width="80" Margin="2" Click="btnPrevRecord_Click" >صفحه قبلی</Button>
+                <Button x:Name="btnLastRecord"  Width="80" Margin="2" Click="btnLastRecord_Click" >آخرین صفحه</Button>
+        <Label VerticalAlignment="Center"  >اندازه صفحه :</Label>
+        <TextBox Text="30" x:Name="txtPageSize" TextAlignment="Center" Width="40" Height="25" KeyUp="txtPageSize_KeyUp" ></TextBox>
+    </StackPanel>
+</Border>
+    
+    <Border DockPanel.Dock="Bottom" CornerRadius="5" BorderThickness="1" BorderBrush="White"  Background="#44FFFFFF" Margin="2">
+            <ListView  Unloaded="listView_Unloaded"   x:Name="listView"  ItemContainerStyle="{StaticResource ItemContStyle }"  FlowDirection="RightToLeft" MouseDoubleClick="listView_MouseDoubleClick" Loaded="listView_Loaded"  >
+                <ListView.View >
+                    <GridView x:Name="dataGrid" >
+                    <GridViewColumn  Width="300" Header="Title" DisplayMemberBinding="{Binding Title}"  />
+                    <GridViewColumn Width="200" Header="Time" DisplayMemberBinding="{Binding Time}"/>
+                        <GridViewColumn Width="120" Header="Severity" >
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate >
+                                    <TextBlock x:Name="txt" Text="info" />
+                                    <DataTemplate.Triggers >
+                                        <DataTrigger Binding="{Binding Severity }" Value="1">
+                                            <Setter TargetName="txt" Property="Text"  Value="Critical" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Severity }" Value="2">
+                                            <Setter TargetName="txt" Property="Text"  Value="Major" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Severity }" Value="3">
+                                            <Setter TargetName="txt" Property="Text"  Value="Minor" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Severity }" Value="4">
+                                            <Setter TargetName="txt" Property="Text"  Value="info" />
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                            <!--<GridViewColumn Width="70" Header="IsRead" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate >
+                                    <CheckBox IsEnabled="False" Background="Transparent" BorderBrush="Transparent" IsChecked="{Binding IsRead}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            </GridViewColumn>-->
+                        
+                    <GridViewColumn Width="200" Header="Location" DisplayMemberBinding="{Binding Location}"  />
+                </GridView>
+            </ListView.View>
+        </ListView>
+</Border>
+        
+</DockPanel>
+
+</Window>

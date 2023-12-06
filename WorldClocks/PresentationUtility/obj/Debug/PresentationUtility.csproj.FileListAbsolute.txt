@@ -1,0 +1,16 @@
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\bin\Debug\TMN.PresentationUtility.dll
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\bin\Debug\TMN.PresentationUtility.pdb
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\TMN.PresentationUtility.Properties.Resources.resources
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\TMN.PresentationUtility.dll
+D:\Download\WorldClocks_src\WorldClocks\Components\PresentationUtility\obj\Debug\TMN.PresentationUtility.pdb
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\bin\Debug\TMN.PresentationUtility.dll
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\bin\Debug\TMN.PresentationUtility.pdb
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\TMN.PresentationUtility.Properties.Resources.resources
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\TMN.PresentationUtility.dll
+D:\Develop\TMN.Classic\WorldClocks\PresentationUtility\obj\Debug\TMN.PresentationUtility.pdb

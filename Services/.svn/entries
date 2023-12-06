@@ -1,0 +1,94 @@
+10
+
+dir
+771
+https://server:8443/svn/TMN.Classic/Services
+https://server:8443/svn/TMN.Classic
+
+
+
+2013-07-20T11:50:06.747139Z
+768
+Khosro
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+da620a8a-bd38-ee4b-a775-c416072e626d
+
+
+
+
+
+
+
+
+()
+
+TMN.EricssonAlarmService
+dir
+
+ServiceManagementUtility
+dir
+
+TMN.NeaxAlarmService
+dir
+
+TMN.SensorService
+dir
+
+TMN.CarinAlarmService
+dir
+
+TMN.WCFService
+dir
+
+TMN.EwsdAlarmService
+dir
+
+ZTEAlarmService
+dir
+
+TMN.ShortCircuitService
+dir
+
+TMN.S12AlarmService
+dir
+
+TMN.MaintenanceService
+dir
+
+ArchiveService
+dir
+
+MessageSenderService
+dir
+
+TMN.ServiceCommon
+dir
+
+ParsTelAlarmService
+dir
+
+TMN.KaraAlarmService
+dir
+
+TMN.HuaweiAlarmService
+dir
+
+TMN.KaraPlusAlarmService
+dir
+
+Public
+dir
+

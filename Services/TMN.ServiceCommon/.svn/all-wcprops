@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/761/Services/TMN.ServiceCommon
+END
+TmnService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.ServiceCommon/TmnService.cs
+END
+ServiceHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/2/Services/TMN.ServiceCommon/ServiceHelper.cs
+END
+ServiceCommon.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/761/Services/TMN.ServiceCommon/ServiceCommon.csproj
+END
+IService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/2/Services/TMN.ServiceCommon/IService.cs
+END

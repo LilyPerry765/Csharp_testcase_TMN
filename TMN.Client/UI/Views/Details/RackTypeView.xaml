@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="TMN.Views.Details.RackTypeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             Height="114"
+             Width="226">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right">سوييچ:</Label>
+            <Label HorizontalContentAlignment="Right">تعداد شلف:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= chkIsDouble }">دابل رک:</Label>
+            <Label HorizontalContentAlignment="Right">نام:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox xmlns:uc="clr-namespace:TMN.UserControls" x:Name="cmbSupportingSwitch"
+                      Width="150"
+                      SelectedItem="{Binding SwitchType}"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2" />
+            <r:NumericUpDown x:Name="nudCapacity"
+                             Value="{Binding Path=Capacity, Mode=TwoWay}"
+                             Margin="0,2,0,2"
+                             HorizontalAlignment="Left" />
+            <CheckBox x:Name="chkIsDouble"
+                      Width="140"
+                      IsChecked="{Binding IsDouble}"
+                      Margin="0,7,0,7"
+                      HorizontalAlignment="Left" />
+            <TextBox x:Name="txtName"
+                     Width="150"
+                     Text="{Binding Name}"
+                     Margin="0,2,0,2" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

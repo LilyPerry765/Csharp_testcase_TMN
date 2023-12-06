@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.HuaweiAlarmService
+END
+HuaweiAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.HuaweiAlarmService/HuaweiAlarmService.csproj
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.HuaweiAlarmService/DebugWindow.xaml.cs
+END
+Service1.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/Service1.Designer.cs
+END
+Service1.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/Service1.cs
+END
+Huawei Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/Huawei%20Settings.lnk
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/ProjectInstaller.Designer.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/568/Services/TMN.HuaweiAlarmService/SettingsWindow.xaml
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/ProjectInstaller.cs
+END
+HuaweiAlarmReceiver.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/472/Services/TMN.HuaweiAlarmService/HuaweiAlarmReceiver.cs
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/568/Services/TMN.HuaweiAlarmService/SettingsWindow.xaml.cs
+END
+HuaweiParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/568/Services/TMN.HuaweiAlarmService/HuaweiParser.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/ProjectInstaller.resx
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.HuaweiAlarmService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.HuaweiAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.HuaweiAlarmService/DebugWindow.xaml
+END

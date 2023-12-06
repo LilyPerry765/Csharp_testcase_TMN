@@ -1,0 +1,17 @@
+D:\Develop\TMN.Classic\bin\Neax Settings.lnk
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe
+D:\Develop\TMN.Classic\bin\NeaxAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\NeaxAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\NeaxAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\NeaxAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.NeaxAlarmService\obj\x86\Debug\NeaxAlarmService.pdb

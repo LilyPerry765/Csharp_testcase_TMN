@@ -1,0 +1,7 @@
+﻿<UserControl x:Class="TMN.Reports.Filters._TemplateFilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FlowDirection="RightToLeft">
+    <Grid />
+</UserControl>

@@ -1,0 +1,90 @@
+﻿using System.Linq;
+using TMN.Interfaces;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System ;
+
+namespace TMN
+{
+
+    public partial class ReportType : Entity, IDeletable
+    {
+        //public int Rank { get; set; }
+
+        public string SwitchName  { get; set; }
+        
+
+        public bool Delete()
+        {
+            var db = DB.Instance;
+            if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+            {
+                List<ReportItem> reportItem = db.ReportItems.Where(r => r.ReportTypeID == this.ID).ToList();
+                if (reportItem.Count > 0)
+                {
+                    if (MessageBox.Show(MessageTypes.HasChilds) == System.Windows.MessageBoxResult.Yes)
+                    {
+                        db.Connection.Open();
+                        db.Transaction = db.Connection.BeginTransaction();
+
+                        foreach (ReportItem item in reportItem)
+                        {
+                            item.Delete();
+                        }
+
+                        ReportType reportType = db.ReportTypes.Where(p => p == this).SingleOrDefault();
+                        db.ReportTypes.DeleteOnSubmit(reportType );
+                        try
+                        {
+                        
+                            // user log
+							UserLog.Log(db, ActionType.ReportItemsRemove, string.Format("Name={0}", reportType.Name), string.Format("ID={0} , Name={1} ", reportType.ID, reportType.Name));
+          
+
+                            db.SubmitChanges();
+                            db.Transaction.Commit();
+                            return true;
+                        }
+                        catch (SqlException)
+                        {
+                            db.Transaction.Rollback();
+                            db.Connection.Close();
+                            MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    db.ReportTypes.DeleteOnSubmit(db.ReportTypes.Where(p => p == this).SingleOrDefault());
+                    db.SubmitChanges();
+                }
+            }
+            return false;
+        }
+//--------------------------------------------------------------------------------------------------------
+
+            //if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+            //{
+                
+            //    var db = DB.Instance;
+            //    db.Connection.Open();
+            //    db.Transaction = db.Connection.BeginTransaction();
+            //    db.ReportTypes.DeleteOnSubmit(db.ReportTypes.Where(p => p == this).SingleOrDefault());
+            //    try
+            //    {
+            //        db.SubmitChanges();
+            //        db.Transaction.Commit();
+            //        return true;
+            //    }
+            //    catch (SqlException)
+            //    {
+            //        db.Transaction.Rollback();
+            //        db.Connection.Close();
+            //        MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+            //        return false;
+            //    }
+            //}
+            //return false;
+    }
+}

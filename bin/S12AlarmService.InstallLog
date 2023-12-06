@@ -1,0 +1,122 @@
+﻿Uninstalling assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Removing EventLog source S12AlarmService.
+Service S12AlarmService is being removed from the system...
+Service S12AlarmService was successfully removed from the system.
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService2...
+Service S12AlarmService2 has been successfully installed.
+Creating EventLog source S12AlarmService2 in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Removing EventLog source S12AlarmService2.
+Service S12AlarmService2 is being removed from the system...
+Service S12AlarmService2 was successfully removed from the system.
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService1...
+Service S12AlarmService1 has been successfully installed.
+Creating EventLog source S12AlarmService1 in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService2...
+Service S12AlarmService2 has been successfully installed.
+Creating EventLog source S12AlarmService2 in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Removing EventLog source S12AlarmService.
+Service S12AlarmService is being removed from the system...
+Service S12AlarmService was successfully removed from the system.
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Removing EventLog source S12AlarmService.
+Warning: The source S12AlarmService is not registered on the local machine.
+Service S12AlarmService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService...
+Service S12AlarmService has been successfully installed.
+Creating EventLog source S12AlarmService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService...
+Creating EventLog source S12AlarmService in log Application...
+Rolling back assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Restoring event log to previous state for source S12AlarmService.
+Installing assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Installing service S12AlarmService...
+Creating EventLog source S12AlarmService in log Application...
+Rolling back assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Restoring event log to previous state for source S12AlarmService.
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\S12AlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\S12AlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+Removing EventLog source S12AlarmService.
+Service S12AlarmService is being removed from the system...
+Service S12AlarmService was successfully removed from the system.
+Attempt to stop service S12AlarmService.

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/TMN.Classic/!svn/ver/141/TMN.Client/Sounds
+END
+minor.WAV
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Sounds/minor.WAV
+END
+DC.WAV
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/TMN.Classic/!svn/ver/141/TMN.Client/Sounds/DC.WAV
+END
+major.WAV
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Sounds/major.WAV
+END
+critical.WAV
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Sounds/critical.WAV
+END
+info.WAV
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Sounds/info.WAV
+END

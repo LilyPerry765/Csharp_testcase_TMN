@@ -1,0 +1,10 @@
+﻿<cx:FadeInOutWindow x:Class="TMN.WorldClock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:TMN.PresentationUtility.Controls;assembly=TMN.PresentationUtility"
+    xmlns:data="clr-namespace:TMN.WorldClocks.Data"
+    Background="#00000000" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False" Topmost="True">
+
+	<cx:StretchStack x:Name="_stack" />
+
+</cx:FadeInOutWindow>

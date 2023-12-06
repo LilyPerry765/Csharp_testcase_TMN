@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="TMN.UserControls.CenterTree"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             xmlns:access="clr-namespace:TMN"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="UserControl_Loaded">
+    <Border BorderBrush="Gray"  
+            BorderThickness=".5">
+        <Grid x:Name="dockPanel1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ToolBar Height="26"
+                     x:Name="toolBar1"
+                     Grid.Row="0">
+                <ToolBar.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width"
+                                Value="16" />
+                        <Setter Property="Width"
+                                Value="16" />
+                        <Setter Property="VerticalAlignment"
+                                Value="Center" />
+                        <Setter Property="SnapsToDevicePixels"
+                                Value="True" />
+                    </Style>
+                </ToolBar.Resources>
+                <Button x:Name="btnAddCenter"
+                        ToolTip="مركز جديد"
+                        Click="btnAddCenter_Click" access:UIElementExtenstion.ResourceName="new_center" >
+                    <Image Source="{a:ImageSource Path=center.png}" />
+                </Button>
+                <Button x:Name="btnAdd" access:UIElementExtenstion.ResourceName="details_center" 
+                        Visibility="{Binding Visibility, ElementName=mnuNewtem}"
+                        ToolTip="آيتم جديد"
+                        Click="btnAdd_Click" >
+                    <Image Source="{a:ImageSource Path=add.png}" />
+                </Button>
+                <Button x:Name="btnEdit"
+                        ToolTip="ويرايش"
+                        Click="btnEdit_Click" access:UIElementExtenstion.ResourceName="edit_center"  >
+                    <Image Source="{a:ImageSource Path=edit.png}" />
+                </Button>
+                <Button x:Name="btnDelete"
+                        ToolTip="حذف"
+                        Click="btnDelete_Click" access:UIElementExtenstion.ResourceName="delete_center" >
+                    <Image Source="{a:ImageSource Path=delete.png}" />
+                </Button>
+                <Button x:Name="btnRefresh" access:UIElementExtenstion.ResourceName="refresh_center"
+                        ToolTip="به روزرساني"
+                        Click="btnRefresh_Click">
+                    <Image Source="{a:ImageSource Path=refresh.png}" />
+                </Button>
+            </ToolBar>
+            <Grid Grid.Row="1"
+                  ToolTip="جستجو">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="SearchTextBox"
+                         Height="20"
+                         Padding="5,0,0,0"
+                         Margin="-7,2,2,2"
+                         Grid.Column="1"
+                         TextChanged="SearchTextBox_TextChanged"
+                         LostFocus="SearchTextBox_LostFocus" />
+                <Image Grid.Column="0"
+                       Width="20"
+                       Source="{a:ImageSource Path=search.png}" />
+            </Grid>
+            <TreeView x:Name="treeView1"
+                      Background="#100000FF"
+                      Grid.Row="2"
+                      SelectedItemChanged="treeView1_SelectedItemChanged">
+                <TreeView.ContextMenu>
+                    <ContextMenu x:Name="contextMenu"
+                                 FlowDirection="RightToLeft">
+                        <MenuItem x:Name="mnuNewItem" access:UIElementExtenstion.ResourceName="details_center"
+                                  Header="آيتم جديد" 
+                                  Click="btnAdd_Click" />
+                        <MenuItem x:Name="mnuLinks"
+                                  Click="mnuLinks_Click"
+                                  Visibility="Collapsed">
+                            <MenuItem.Icon>
+                                <Image Width="16"
+                                       Height="16"
+                                       Source="{a:ImageSource Path=link.png}" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Header="ويرايش" access:UIElementExtenstion.ResourceName="edit_center"
+                                  Click="btnEdit_Click">
+                            <MenuItem.Icon>
+                                <Image Source="{a:ImageSource Path=edit.png}"
+                                       Width="16"
+                                       Height="16" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="حذف" access:UIElementExtenstion.ResourceName="delete_center"
+                                  Click="btnDelete_Click">
+                            <MenuItem.Icon>
+                                <Image Source="{a:ImageSource Path=delete.png}"
+                                       Width="16"
+                                       Height="16" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="تعريف سنسور ها"
+                          x:Name="sensorsMenuItem"
+                          Click="sensorsMenuItem_Click" access:UIElementExtenstion.ResourceName="define_sensor" />
+                        <Separator />
+                        <MenuItem Header="اتصال به مرکز"
+                                  x:Name="remoteMenuItem"
+                                  Click="remoteMenuItem_Click" 
+                                  access:UIElementExtenstion.ResourceName="connet_to_center" />
+                    </ContextMenu>
+                </TreeView.ContextMenu>
+            </TreeView>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,94 @@
+﻿<Window x:Class="TMN.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FontFamily="Tahoma"
+        Icon="/;component/icon.png"
+        Title="TMN Service Management Utility"
+        WindowStartupLocation="CenterScreen"
+        Closed="Window_Closed"
+        Height="620"
+        Width="700">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top"
+                    FlowDirection="RightToLeft"
+                    Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin"
+                            Value="3" />
+                </Style>
+            </StackPanel.Resources>
+            <Label>سوييچ:</Label>
+            <TextBox x:Name="switchTextBox"
+                     Width="70" />
+            <Label>سرويس:</Label>
+            <TextBox x:Name="serviceTextBox"
+                     Width="70" />
+            <Button x:Name="refreshButton"
+                    Click="refreshButton_Click"
+                    Margin="3">نمايش</Button>
+        </StackPanel>
+        <StatusBar DockPanel.Dock="Bottom"
+                   AllowDrop="True"
+                   Drop="StatusBar_Drop">
+            <TextBlock Height="20"
+                       Foreground="Gray"
+                       x:Name="versionFinderLabel"
+                       Text="Drag an assembly file here to get its version" />
+        </StatusBar>
+        <Grid  FlowDirection="RightToLeft">
+            <DataGrid x:Name="servicesDataGrid"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      AutoGenerateColumns="False">
+                <DataGrid.ContextMenu>
+                    <ContextMenu Opened="ContextMenu_Opened">
+                        <MenuItem Header="Start"
+                                  x:Name="startMenuItem"
+                                  Click="startMenuItem_Click" />
+                        <MenuItem Header="Stop"
+                                  x:Name="stopMenuItem"
+                                  Click="stopMenuItem_Click" />
+                        <MenuItem Header="Upgrade"
+                                  x:Name="upgradeMenuItem"
+                                  Click="upgradeMenuItem_Click" />
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="اتصال"
+                                            Width="Auto"
+                                            IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                <Hyperlink  Click="Hyperlink_Click">
+                                    <TextBlock  Text="{Binding Center.IPAddress}"
+                                               Foreground="Black" />
+                                </Hyperlink></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="مرکز"
+                                        Width="Auto"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Center.Name}" />
+                    <DataGridTextColumn Header="سوييچ"
+                                        Width="Auto"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Center.SwitchType.Name}" />
+                    <DataGridTextColumn Header="سرويس"
+                                        Binding="{Binding ServiceName}" />
+                    <DataGridTextColumn Header="ورژن"
+                                        Binding="{Binding Version}" />
+                    <DataGridTextColumn Header="تاريخ بروزرسانی"
+                                        Binding="{Binding UpgradeTime}" />
+                    <DataGridTextColumn Header="مدت بروزرسانی"
+                                        SortMemberPath="UpgradeTime"
+                                        Binding="{Binding UpgradeTimeSpan}" />
+                    <DataGridTextColumn Header="وضعيت"
+                                        Binding="{Binding Status}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>

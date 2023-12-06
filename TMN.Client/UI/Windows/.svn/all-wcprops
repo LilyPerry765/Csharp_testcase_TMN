@@ -1,0 +1,497 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows
+END
+CircuitChartRegionWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/594/TMN.Client/UI/Windows/CircuitChartRegionWindow.xaml.cs
+END
+CenterLinkWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/CenterLinkWindow.xaml
+END
+CircuitShowPictureWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/728/TMN.Client/UI/Windows/CircuitShowPictureWindow.xaml
+END
+SensorChartWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/227/TMN.Client/UI/Windows/SensorChartWindow.xaml.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/663/TMN.Client/UI/Windows/SettingsWindow.xaml
+END
+CircuitWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/402/TMN.Client/UI/Windows/CircuitWindow.xaml
+END
+CenterLinkWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/372/TMN.Client/UI/Windows/CenterLinkWindow.xaml.cs
+END
+PowerRegionWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/451/TMN.Client/UI/Windows/PowerRegionWindow.xaml.cs
+END
+ServiceStateWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/527/TMN.Client/UI/Windows/ServiceStateWindow.xaml.cs
+END
+CircuitWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/644/TMN.Client/UI/Windows/CircuitWindow.xaml.cs
+END
+ChangePasswordWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/ChangePasswordWindow.xaml
+END
+LoginWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/730/TMN.Client/UI/Windows/LoginWindow.xaml
+END
+AlarmPowerWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/228/TMN.Client/UI/Windows/AlarmPowerWindow.xaml
+END
+AlarmPanelWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/351/TMN.Client/UI/Windows/AlarmPanelWindow.xaml
+END
+LinkToRouteWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/LinkToRouteWindow.xaml
+END
+AlarmLogViewerWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/375/TMN.Client/UI/Windows/AlarmLogViewerWindow.xaml
+END
+UserLogWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/707/TMN.Client/UI/Windows/UserLogWindow.xaml
+END
+InstructionAttachmentsList.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/InstructionAttachmentsList.xaml
+END
+AlarmCircuitWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/730/TMN.Client/UI/Windows/AlarmCircuitWindow.xaml.cs
+END
+InstructionImageWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/InstructionImageWindow.xaml
+END
+SetCardWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/SetCardWindow.xaml
+END
+DetailsHolderWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/107/TMN.Client/UI/Windows/DetailsHolderWindow.xaml.cs
+END
+MainWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/761/TMN.Client/UI/Windows/MainWindow.xaml.cs
+END
+RolesWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/446/TMN.Client/UI/Windows/RolesWindow.xaml.cs
+END
+SensorChartWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/SensorChartWindow.xaml
+END
+InputDialog.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/147/TMN.Client/UI/Windows/InputDialog.xaml.cs
+END
+SendMessageWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/618/TMN.Client/UI/Windows/SendMessageWindow.xaml
+END
+SchemaWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/SchemaWindow.xaml
+END
+AlarmRegionWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/393/TMN.Client/UI/Windows/AlarmRegionWindow.xaml
+END
+SendMessageWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/500/TMN.Client/UI/Windows/SendMessageWindow.xaml.cs
+END
+CircuitRegionWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/508/TMN.Client/UI/Windows/CircuitRegionWindow.xaml
+END
+ShiftConfigWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/ShiftConfigWindow.xaml.cs
+END
+CircuitLogWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/599/TMN.Client/UI/Windows/CircuitLogWindow.xaml.cs
+END
+CircuitRegionWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/534/TMN.Client/UI/Windows/CircuitRegionWindow.xaml.cs
+END
+AlarmPowerWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows/AlarmPowerWindow.xaml.cs
+END
+AlarmCircuitWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/600/TMN.Client/UI/Windows/AlarmCircuitWindow.xaml
+END
+ItemsListHolderWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/ItemsListHolderWindow.xaml.cs
+END
+ArchiveWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/684/TMN.Client/UI/Windows/ArchiveWindow.xaml
+END
+DetailsHolderWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/DetailsHolderWindow.xaml
+END
+InstructionAttachmentsList.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/InstructionAttachmentsList.xaml.cs
+END
+InputDialog.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/InputDialog.xaml
+END
+CircuitChartRegionWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/594/TMN.Client/UI/Windows/CircuitChartRegionWindow.xaml
+END
+SetCardWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/SetCardWindow.xaml.cs
+END
+DDFWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/DDFWindow.xaml
+END
+PowerRegionWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/254/TMN.Client/UI/Windows/PowerRegionWindow.xaml
+END
+CenterReportsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/718/TMN.Client/UI/Windows/CenterReportsWindow.xaml.cs
+END
+ShiftConfigWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/ShiftConfigWindow.xaml
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/647/TMN.Client/UI/Windows/SettingsWindow.xaml.cs
+END
+SetDDFWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/SetDDFWindow.xaml
+END
+CalendarWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/288/TMN.Client/UI/Windows/CalendarWindow.xaml
+END
+ItemsListHolderWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/ItemsListHolderWindow.xaml
+END
+LoginWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows/LoginWindow.xaml.cs
+END
+ChangePasswordWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/ChangePasswordWindow.xaml.cs
+END
+SensorsSettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/568/TMN.Client/UI/Windows/SensorsSettingsWindow.xaml
+END
+WorldClock.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/730/TMN.Client/UI/Windows/WorldClock.xaml.cs
+END
+AlarmPanelWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows/AlarmPanelWindow.xaml.cs
+END
+CircuitDialogWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/536/TMN.Client/UI/Windows/CircuitDialogWindow.xaml
+END
+InactiveSensorsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/InactiveSensorsWindow.xaml.cs
+END
+MainWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/TMN.Classic/!svn/ver/730/TMN.Client/UI/Windows/MainWindow.xaml
+END
+AlarmLogViewerWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/625/TMN.Client/UI/Windows/AlarmLogViewerWindow.xaml.cs
+END
+UserLogWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/714/TMN.Client/UI/Windows/UserLogWindow.xaml.cs
+END
+RolesWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/446/TMN.Client/UI/Windows/RolesWindow.xaml
+END
+ArchiveWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/714/TMN.Client/UI/Windows/ArchiveWindow.xaml.cs
+END
+CircuitDialogWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows/CircuitDialogWindow.xaml.cs
+END
+InstructionImageWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/InstructionImageWindow.xaml.cs
+END
+CenterReportsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/444/TMN.Client/UI/Windows/CenterReportsWindow.xaml
+END
+DDFWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/75/TMN.Client/UI/Windows/DDFWindow.xaml.cs
+END
+ServiceStateWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/ServiceStateWindow.xaml
+END
+CircuitShowPictureWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/728/TMN.Client/UI/Windows/CircuitShowPictureWindow.xaml.cs
+END
+AlarmRegionWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/765/TMN.Client/UI/Windows/AlarmRegionWindow.xaml.cs
+END
+SchemaWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/SchemaWindow.xaml.cs
+END
+CircuitLogWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/599/TMN.Client/UI/Windows/CircuitLogWindow.xaml
+END
+ImportWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Windows/ImportWindow.xaml
+END
+AboutWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/113/TMN.Client/UI/Windows/AboutWindow.xaml
+END
+WorldClock.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/TMN.Classic/!svn/ver/730/TMN.Client/UI/Windows/WorldClock.xaml
+END
+SetDDFWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/SetDDFWindow.xaml.cs
+END
+CalendarWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/CalendarWindow.xaml.cs
+END
+AboutWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/201/TMN.Client/UI/Windows/AboutWindow.xaml.cs
+END
+ImportWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/221/TMN.Client/UI/Windows/ImportWindow.xaml.cs
+END
+InactiveSensorsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/InactiveSensorsWindow.xaml
+END
+SensorsSettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/569/TMN.Client/UI/Windows/SensorsSettingsWindow.xaml.cs
+END
+LinkToRouteWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Windows/LinkToRouteWindow.xaml.cs
+END

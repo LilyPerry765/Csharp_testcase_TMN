@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3547C596-4484-44B1-94E7-DFEFDE1C5EC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN</RootNamespace>
+    <AssemblyName>TMN</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetExtension.cs" />
+    <Compile Include="Coverters.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Interfaces\IChild.cs" />
+    <Compile Include="Interfaces\IDeletable.cs" />
+    <Compile Include="Model\Center.cs" />
+    <Compile Include="Model\CardType.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Personnel.cs" />
+    <Compile Include="Model\Instruction.cs" />
+    <Compile Include="Model\Shelf.cs" />
+    <Compile Include="Model\Rack.cs" />
+    <Compile Include="Model\ShelfType.cs" />
+    <Compile Include="Model\RackType.cs" />
+    <Compile Include="Model\SwitchType.cs" />
+    <Compile Include="Model\TMNModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TMNModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\Styles.xaml.cs">
+      <DependentUpon>Styles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CenterStructure.xaml.cs">
+      <DependentUpon>CenterStructure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CenterView.xaml.cs">
+      <DependentUpon>CenterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\PersonnelView.xaml.cs">
+      <DependentUpon>PersonnelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\InstructionView.xaml.cs">
+      <DependentUpon>InstructionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\LinkView.xaml.cs">
+      <DependentUpon>LinkView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Items\RackView.xaml.cs">
+      <DependentUpon>RackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ShelfView.xaml.cs">
+      <DependentUpon>ShelfView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\SwitchTypeView.xaml.cs">
+      <DependentUpon>SwitchTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\BasicInfoListView.cs" />
+    <Compile Include="test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBasicInfoItemView.cs" />
+    <Compile Include="Views\Lists\CardTypesListView.xaml.cs">
+      <DependentUpon>CardTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CardTypeView.xaml.cs">
+      <DependentUpon>CardTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ShelfTypeView.xaml.cs">
+      <DependentUpon>ShelfTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\PersonnelsListView.xaml.cs">
+      <DependentUpon>PersonnelsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\InstructionsListView.xaml.cs">
+      <DependentUpon>InstructionsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\SwitchTypesListView.xaml.cs">
+      <DependentUpon>SwitchTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\RackTypesListView.xaml.cs">
+      <DependentUpon>RackTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\RackTypeView.xaml.cs">
+      <DependentUpon>RackTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\ShelfTypesListView.xaml.cs">
+      <DependentUpon>ShelfTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowApplicationSettings.cs" />
+    <Compile Include="Units\CardUnit.cs" />
+    <Compile Include="Units\CenterUnit.cs" />
+    <Compile Include="EntityHelper.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Model\DB.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="Units\RackUnit.cs" />
+    <Compile Include="Units\ShelfUnit.cs" />
+    <Compile Include="Units\Unit.cs" />
+    <Compile Include="UserControls\CenterSchema.xaml.cs">
+      <DependentUpon>CenterSchema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Windows\BasicInfoListWindow.xaml.cs">
+      <DependentUpon>BasicInfoListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BasicInfoItemWindow.xaml.cs">
+      <DependentUpon>BasicInfoItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="app.manifest">
+    </None>
+    <None Include="Model\TMNModel.dbml.layout">
+      <DependentUpon>TMNModel.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Model\TMNModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>TMNModel.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="..\..\..\References\CustomControlLibrary.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Engine.dll" />
+    <ReferencePath Include="..\..\Persian Tools\bin\PersianTools.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Linq.dll" />
+    <ReferencePath Include="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Security.dll" />
+    <ReferencePath Include="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\test.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Themes\Styles.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\UserControls\CenterSchema.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\UserControls\CenterStructure.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\CenterView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\CardView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\PersonnelView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\InstructionView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\LinkView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\RackView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\ShelfView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\SwitchTypeView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\CardTypesListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\CardTypeView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\ShelfTypeView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\PersonnelsListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\InstructionsListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\SwitchTypesListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\RackTypesListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Items\RackTypeView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Views\Lists\ShelfTypesListView.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Windows\AboutWindow.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Windows\BasicInfoListWindow.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Windows\BasicInfoItemWindow.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\Windows\MainWindow.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\App.g.cs" />
+    <Compile Include="d:\Projects\TMN\TMN\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

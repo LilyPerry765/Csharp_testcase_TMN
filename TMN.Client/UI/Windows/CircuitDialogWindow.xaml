@@ -1,0 +1,9 @@
+﻿<Window x:Class="TMN.CircuitDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="آلارم کابل" Height="80" Width="800"  >
+
+    <TextBlock x:Name="AlarmTextBlock" Background="#FFEE1C24" Foreground="White"   FontFamily="B Nazanin"  FontStyle="Normal" FontWeight="UltraBold"   FontSize="20"   FontStretch="ExtraExpanded" TextAlignment="Center" VerticalAlignment="Stretch">
+    </TextBlock>
+    
+</Window>

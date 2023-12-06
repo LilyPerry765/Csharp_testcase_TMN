@@ -1,0 +1,90 @@
+﻿<Window x:Class="TMN.UI.Windows.AlarmLogViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+        WindowStartupLocation="CenterScreen"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+          xmlns:access="clr-namespace:TMN" 
+        FontFamily="Tahoma"
+        Title="Alarm Log"
+        Height="469"
+        Width="632">
+    <DockPanel>
+        <!--<StackPanel DockPanel.Dock="Top"></StackPanel>-->
+        <DockPanel DockPanel.Dock="Bottom">
+            <TextBlock x:Name="countTextBlock"
+                       DockPanel.Dock="Right"
+                       VerticalAlignment="Center"
+                       Margin="10">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="1"
+                                      Opacity=".5" />
+                </TextBlock.Effect></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  >
+                <Button Content="تعلیق همه" Height="25" Name="postPoneButton" Width="80" Click="postPoneButton_Click" access:UIElementExtenstion.ResourceName="alarm_suspension" />
+                <Button Width="80"  access:UIElementExtenstion.ResourceName="alarm_delete"
+                        Height="25"
+                        x:Name="clearButton"
+                        Margin="5"
+                        Click="clearButton_Click" >حذف همه</Button>
+                <Button Width="80" access:UIElementExtenstion.ResourceName="alarm_ok" 
+                        Height="25"
+                        x:Name="AckButton"
+                        Margin="5"
+                        Click="AckButton_Click">تایید همه</Button>
+                <Button Width="80"
+                        IsDefault="True"
+                        IsCancel="True"
+                        Height="25"
+                        x:Name="okButton"
+                        Margin="5"
+                        Click="okButton_Click">بستن</Button>
+            </StackPanel>
+        </DockPanel>
+        <StackPanel DockPanel.Dock="Top"
+                    Margin="1"
+                    Orientation="Horizontal"
+                    FlowDirection="RightToLeft">
+            <TextBlock Margin="3,0"
+                       VerticalAlignment="Center">جستجو:</TextBlock>
+            <TextBox x:Name="searchTextBox"
+                     Margin="1"
+                     TextChanged="searchTextBox_TextChanged"
+                     Width="200"
+                     FlowDirection="LeftToRight" />
+            <CheckBox VerticalAlignment="Center"
+                      x:Name="oldAlarmsCheckbox"
+                      Checked="oldAlarmsCheckbox_CheckedChanged"
+                      Unchecked="oldAlarmsCheckbox_CheckedChanged"
+                      Margin="10,0">مشاهده لاگ های قبلی</CheckBox>
+
+            <CheckBox VerticalAlignment="Center"
+                      x:Name="postPoneAlarmsCheckbox"
+                      Checked="oldAlarmsCheckbox_CheckedChanged"
+                      Unchecked="oldAlarmsCheckbox_CheckedChanged"
+                      Margin="10,0">مشاهده لاگ های تعلیق شده</CheckBox>
+        </StackPanel>
+        <Grid>
+            <DataGrid IsReadOnly="True"
+                      x:Name="logsDataGrid"
+                      AutoGenerateColumns="False"
+                      ScrollViewer.CanContentScroll="True"
+                      HeadersVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Background="Transparent"
+                                         BorderThickness="0.01"
+                                         BorderBrush="Transparent"
+                                         IsReadOnly="True"
+                                         Text="{Binding Data, Mode=OneWay}"
+                                         Margin="0,20" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,297 @@
+﻿<Window x:Class="TMN.UI.Windows.AlarmPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                 xmlns:access="clr-namespace:TMN" 
+        FontFamily="Tahoma"
+        FlowDirection="RightToLeft"
+        Title="آلارم پنل"
+        Topmost="True"
+        Height="650"
+        Background="{StaticResource backgroundPicture}"
+        Width="1145">
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto">
+        <Border FlowDirection="LeftToRight"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                CornerRadius="5"
+                Background="#30FFFFFF"
+                BorderThickness="1"
+                BorderBrush="CornflowerBlue">
+            <Border CornerRadius="5"
+                    BorderThickness="1"
+                    BorderBrush="White">
+                <Grid Margin="5">
+                    <Grid.Resources>
+                        <Style TargetType="ListView">
+                            <Setter Property="Margin"
+                                    Value="5" />
+                            <Setter Property="Width"
+                                    Value="240" />
+                            <Setter Property="Height"
+                                    Value="300" />
+                            <Setter Property="Background"
+                                    Value="Transparent" />
+                            <Setter Property="BorderBrush"
+                                    Value="CornflowerBlue" />
+                            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                                    Value="Disabled" />
+                            <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                                    Value="Disabled" />
+                        </Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextAlignment"
+                                    Value="Center" />
+                            <Setter Property="VerticalAlignment"
+                                    Value="Center" />
+                            <Setter Property="FontSize"
+                                    Value="15" />
+                        </Style>
+                        <Style TargetType="uc:BlinkingLed">
+                            <Setter Property="Margin"
+                                    Value="3,0,0,0" />
+                            <Setter Property="ToolTip"
+                                    Value="Click To View Log" />
+                            <Setter Property="Cursor"
+                                    Value="Hand" />
+                        </Style>
+                        <Style TargetType="Label">
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect ShadowDepth="1"
+                                                      BlurRadius="1"
+                                                      Color="White"
+                                                      Opacity="1" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="headerRow" />
+                        <RowDefinition x:Name="sensorRow" />
+                        <RowDefinition x:Name="alarmPanelRow" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="HeaderGrid"
+                          Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="CenterNameLabel"
+                               FlowDirection="RightToLeft"
+                               VerticalContentAlignment="Center"
+                               HorizontalContentAlignment="Center"
+                               FontWeight="ExtraBold"
+                               FontFamily="B Nazanin"
+                               Padding="0"
+                               FontSize="30"
+                               Foreground="Black"
+                               Content="محل نمايش نام مرکز جاری"
+                               Grid.Column="1" />
+                        <StackPanel  Grid.Row="1"
+                                     Grid.Column="1"
+                                     HorizontalAlignment="Center"
+                                     Orientation="Horizontal">
+                            <StackPanel.Resources>
+                                <Style TargetType="Label">
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect ShadowDepth="0"
+                                                              Opacity="1" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </StackPanel.Resources>
+                            <Label x:Name="DateTimeLabel"
+                                   FlowDirection="LeftToRight"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Center"
+                                   FontWeight="Bold"
+                                   FontFamily="Tahoma"
+                                   FontSize="20"
+                                   Content="Christian Date Time Placeholder"
+                                   Foreground="White" />
+                            <Label x:Name="PersianDateTimeLabel"
+                                   FlowDirection="RightToLeft"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Center"
+                                   FontWeight="Bold"
+                                   FontFamily="B Nazanin"
+                                   FontSize="25"
+                                   Content="محل ساعت و تاريخ هجری شمسی"
+                                   Foreground="White" />
+                        </StackPanel>
+                        <uc:BlinkingLed x:Name="alarmServiceLed"
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        Height="35"
+                                        PreviewMouseUp="alarmServiceLed_PreviewMouseUp"
+                                        Width="100"
+                                        Margin="3"
+                                        Title="Service"
+                                        InnerBackground="LimeGreen" />
+                        <uc:BlinkingLed x:Name="PoweralarmLed"
+                                        Grid.Column="2"
+                                        Grid.Row="1"
+                                        Height="35"
+                                        ToolTip=""
+                                        Width="100"
+                                        Margin="3"
+                                        Title="Power"
+                                        Cursor="Arrow"
+                                        InnerBackground="LimeGreen" />
+                        <Grid Margin="3"
+                              Grid.Row="0"
+                              Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="1"
+                                       HorizontalAlignment="Left"
+                                       Margin="5">Mute All Alarms</TextBlock>
+                            <Border CornerRadius="3"
+                                    Width="40"
+                                    BorderThickness=".5"
+                                    BorderBrush="Black"
+                                    HorizontalAlignment="Left">
+                                <uc:SoundButton x:Name="masterSound" access:UIElementExtenstion.ResourceName="mute_all_centers" 
+                                                Margin="5,0"
+                                                ToolTip="کنترل مشترک صدا"
+                                                IsMuteChanged="Sound_IsMuteChanged" />
+                            </Border>
+                        </Grid>
+                        <Grid Margin="3"
+                              Grid.Row="1"
+                              Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="1"
+                                       HorizontalAlignment="Left"
+                                       Margin="5">اتصال به مرکز</TextBlock>
+                            <Button HorizontalAlignment="Left" access:UIElementExtenstion.ResourceName="connet_to_center" 
+                                    BorderThickness="0"
+                                    x:Name="remoteButton"
+                                    Click="remoteButton_Click"
+                                    Width="40"
+                                    Background="Transparent">
+                                <Image Source="{a:ImageSource remote.png}"
+                                       Width="30" />
+                            </Button>
+                        </Grid>
+                    </Grid>
+                    <UniformGrid Rows="1"
+                                 Grid.Row="1"
+                                 x:Name="sensorsPanel"
+                                 Style="{x:Null}"
+                                 Background="Transparent">
+                        <TextBlock Height="70">This Panel is used for populating sensors</TextBlock>
+                    </UniformGrid>
+                    <Border   Grid.Row="2"
+                              BorderThickness="1"
+                              BorderBrush="CornflowerBlue"
+                              Background="#FFB8D9F3"
+                              CornerRadius="5">
+                        <Border  BorderBrush="White"
+                                 BorderThickness="1"
+                                 Padding="0,5"
+                                 CornerRadius="4">
+                            <Grid x:Name="AlarmPanelGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Critical Alarms"
+                                           Grid.Column="1" />
+                                <TextBlock Grid.Column="2"
+                                           Text="Major Alarms" />
+                                <TextBlock Grid.Column="3"
+                                           Text="Minor Alarms" />
+                                <TextBlock Grid.Column="4"
+                                           Text="INF" />
+                                <TextBlock Grid.Column="5"
+                                           Text="PP" ToolTip="ـعلیق یافته"/>
+                                <Grid Margin="5"
+                                      Grid.Row="1"
+                                      Grid.Column="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <uc:BlinkingLed InnerBackground="Red"
+                                                    MouseUp="criticalLed_MouseUp"
+                                                    x:Name="criticalLed"
+                                                    DisplayModeChanged="Led_DisplayModeChanged"
+                                                    Grid.Column="1" />
+                                    <uc:SoundButton HorizontalAlignment="Left" access:UIElementExtenstion.ResourceName="mute_all_critical" 
+                                                    x:Name="critSound"
+                                                    IsMuteChanged="Sound_IsMuteChanged" />
+                                </Grid>
+                                <Grid Grid.Column="2"
+                                      Margin="5"
+                                      Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <uc:BlinkingLed  InnerBackground="OrangeRed"
+                                                     MouseUp="majorLed_MouseUp"
+                                                     x:Name="majorLed"
+                                                     Grid.Column="1"
+                                                     DisplayModeChanged="Led_DisplayModeChanged" />
+                                    <uc:SoundButton x:Name="majorSound" access:UIElementExtenstion.ResourceName="mute_all_major" 
+                                                    IsMuteChanged="Sound_IsMuteChanged" />
+                                </Grid>
+                                <Grid Grid.Column="3"
+                                      Margin="5"
+                                      Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <uc:BlinkingLed InnerBackground="Orange"
+                                                    MouseUp="minorLed_MouseUp"
+                                                    x:Name="minorLed"
+                                                    Grid.Column="1"
+                                                    DisplayModeChanged="Led_DisplayModeChanged" />
+                                    <uc:SoundButton x:Name="minorSound" access:UIElementExtenstion.ResourceName="mute_all_minor" 
+                                                    IsMuteChanged="Sound_IsMuteChanged" />
+                                </Grid>
+
+                                <ListView x:Name="newCriticalAlarmsList"
+                                          Grid.Row="2"
+                                          Grid.Column="1"  Width="270"/>
+                                <ListView  x:Name="newMajorAlarmsList"
+                                          Grid.Column="2"
+                                          Grid.Row="2"  Width="270"/>
+                                <ListView x:Name="newMinorAlarmsList"
+                                          Grid.Column="3"
+                                          Grid.Row="2" Width="270"  />
+                                <uc:BlinkingLed InnerBackground="CornflowerBlue"  MouseUp="infoLed_MouseUp" Width="40" x:Name="infoLed" Grid.Column="4" Margin="5" DisplayModeChanged="Led_DisplayModeChanged"  Grid.Row="2" OverridesDefaultStyle="False" DataContext="{Binding}"  />
+                                <uc:BlinkingLed InnerBackground="CornflowerBlue"  MouseUp="ppLed_MouseUp" Width="40" x:Name="ppLed" Grid.Column="5" Margin="5" DisplayModeChanged="Led_DisplayModeChanged"  Grid.Row="2" OverridesDefaultStyle="False" DataContext="{Binding}"  />
+                            </Grid>
+                        </Border>
+                    </Border>
+                </Grid>
+            </Border>
+        </Border>
+    </ScrollViewer>
+</Window>

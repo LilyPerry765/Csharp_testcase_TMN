@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.CarinAlarmService
+END
+CarinLogParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/346/Services/TMN.CarinAlarmService/CarinLogParser.cs
+END
+CarinService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/CarinService.Designer.cs
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/345/Services/TMN.CarinAlarmService/Constants.cs
+END
+CarinService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/CarinService.cs
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/DebugWindow.xaml.cs
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.CarinAlarmService/ProjectInstaller.Designer.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/ProjectInstaller.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/345/Services/TMN.CarinAlarmService/SettingsWindow.xaml
+END
+CarinAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/187/Services/TMN.CarinAlarmService/CarinAlarmService.csproj
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/345/Services/TMN.CarinAlarmService/SettingsWindow.xaml.cs
+END
+CarinService.resx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/CarinService.resx
+END
+Carin Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/Carin%20Settings.lnk
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/ProjectInstaller.resx
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/11/Services/TMN.CarinAlarmService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.CarinAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/10/Services/TMN.CarinAlarmService/DebugWindow.xaml
+END

@@ -1,0 +1,1188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3547C596-4484-44B1-94E7-DFEFDE1C5EC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN</RootNamespace>
+    <AssemblyName>TMN</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Folder\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\bin\TMN.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TMN.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enterprise.Wpf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EnterpriseAssemblies\Enterprise.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger, Version=5.7.2.21003, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib, Version=1.2.3.0, Culture=neutral, PublicKeyToken=26762b829f36a08d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helpers\ITabedWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\SortCollection.cs" />
+    <Compile Include="UI\UserControls\JellyIcon.xaml.cs">
+      <DependentUpon>JellyIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\PipeIcon.xaml.cs">
+      <DependentUpon>PipeIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\RoleView.xaml.cs">
+      <DependentUpon>RoleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TreeViewModel.cs" />
+    <Compile Include="Helpers\AlarmPlayer.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\CommonExtensions.cs" />
+    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="Extensions\UIElementExtensions.cs" />
+    <Compile Include="Extensions\WindowExtensions.cs" />
+    <Compile Include="UI\UserControls\CenterSpot.xaml.cs">
+      <DependentUpon>CenterSpot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\CenterSpotComplex.xaml.cs">
+      <DependentUpon>CenterSpotComplex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\JellyButton.xaml.cs">
+      <DependentUpon>JellyButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\MuteCenter.xaml.cs">
+      <DependentUpon>MuteCenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\BlinkingImageLed.xaml.cs">
+      <DependentUpon>BlinkingImageLed.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\SensorDisplay.xaml.cs">
+      <DependentUpon>SensorDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\SensorPair.xaml.cs">
+      <DependentUpon>SensorPair.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\AlarmPowerWindow.xaml.cs">
+      <DependentUpon>AlarmPowerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\AlarmRegionWindow.xaml.cs">
+      <DependentUpon>AlarmRegionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\InactiveSensorsWindow.xaml.cs">
+      <DependentUpon>InactiveSensorsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\RolesWindow.xaml.cs">
+      <DependentUpon>RolesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SensorChartWindow.xaml.cs">
+      <DependentUpon>SensorChartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SensorsSettingsWindow.xaml.cs">
+      <DependentUpon>SensorsSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ViewInfo.cs" />
+    <Page Include="UI\UserControls\JellyIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\PipeIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\RoleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Diagram\CenterItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Units\Unit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\BlinkingLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\CalendarItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\DayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\MonthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\Navigator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\Calendar\YearView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\CenterSchema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\CenterSpot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControls\CenterTree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\CenterSpotComplex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\JellyButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\MuteCenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\DDFDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserControls\BlinkingImageLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControls\SensorDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControls\SensorPair.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserControls\SoundButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\Details\CalendarItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\CenterView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\CardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\AlarmTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\ChannelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\LinkGroupView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\LongRecordView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\ReportTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\ShiftView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\SpareCardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\AlarmView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\FailureReasonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\TasktView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\TaskTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\EventTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\UserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\EventView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\RouteView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\InstructionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\LinkView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\RackView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\ShelfView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\SwitchTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\ChannelsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\ItemsListUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\CardTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\CardTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\ShelfTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\AlarmTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\DDFRoutesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\LinksListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\LongRecordsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\ReportTypesListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\ShiftsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\AlarmListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\FailureReasonsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\TasksListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\TaskTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\EventTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\UsersListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\EventsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\SpareCardsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\RoutesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\InstructionsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\SwitchTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\RackTypesListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Details\RackTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\Lists\ShelfTypesListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\AlarmLogViewerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\AlarmPanelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\AlarmPowerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\AlarmRegionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\ChangePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\InactiveSensorsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\RolesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\SensorChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\SensorsSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\ServiceStateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\InstructionAttachmentsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\ItemsListHolderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\DetailsHolderWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\CalendarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\CenterLinkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\CenterReportsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\LinkToRouteWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\SetCardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\SetDDFWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\DDFWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\InstructionImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\SchemaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Windows\ShiftConfigWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ShellIcon.cs" />
+    <Compile Include="Helpers\StatTrunkImporter.cs" />
+    <Compile Include="UI\Diagram\CenterItem.cs" />
+    <Compile Include="UI\UserControls\BlinkingLed.xaml.cs">
+      <DependentUpon>BlinkingLed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\CenterTree.xaml.cs">
+      <DependentUpon>CenterTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\SoundButton.xaml.cs">
+      <DependentUpon>SoundButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\CenterView.xaml.cs">
+      <DependentUpon>CenterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\ChannelView.xaml.cs">
+      <DependentUpon>ChannelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\RouteView.xaml.cs">
+      <DependentUpon>RouteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\InstructionView.xaml.cs">
+      <DependentUpon>InstructionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\LinkView.xaml.cs">
+      <DependentUpon>LinkView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Details\RackView.xaml.cs">
+      <DependentUpon>RackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\ShelfView.xaml.cs">
+      <DependentUpon>ShelfView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\SwitchTypeView.xaml.cs">
+      <DependentUpon>SwitchTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ChannelsListView.xaml.cs">
+      <DependentUpon>ChannelsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ItemsListBase.cs">
+    </Compile>
+    <Compile Include="UI\Views\Lists\CardTypesListView.xaml.cs">
+      <DependentUpon>CardTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\CardTypeView.xaml.cs">
+      <DependentUpon>CardTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\ShelfTypeView.xaml.cs">
+      <DependentUpon>ShelfTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\SpareCardsListView.xaml.cs">
+      <DependentUpon>SpareCardsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\RoutesListView.xaml.cs">
+      <DependentUpon>RoutesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\InstructionsListView.xaml.cs">
+      <DependentUpon>InstructionsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\SwitchTypesListView.xaml.cs">
+      <DependentUpon>SwitchTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\RackTypesListView.xaml.cs">
+      <DependentUpon>RackTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\RackTypeView.xaml.cs">
+      <DependentUpon>RackTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ShelfTypesListView.xaml.cs">
+      <DependentUpon>ShelfTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Units\CardUnit.cs" />
+    <Compile Include="UI\Units\CenterUnit.cs" />
+    <Compile Include="UI\Units\RackUnit.cs" />
+    <Compile Include="UI\Units\ShelfUnit.cs" />
+    <Compile Include="UI\Units\Unit.cs" />
+    <Compile Include="UI\UserControls\CenterSchema.xaml.cs">
+      <DependentUpon>CenterSchema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Windows\AlarmLogViewerWindow.xaml.cs">
+      <DependentUpon>AlarmLogViewerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\AlarmPanelWindow.xaml.cs">
+      <DependentUpon>AlarmPanelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\ServiceStateWindow.xaml.cs">
+      <DependentUpon>ServiceStateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\InstructionAttachmentsList.xaml.cs">
+      <DependentUpon>InstructionAttachmentsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\ItemsListHolderWindow.xaml.cs">
+      <DependentUpon>ItemsListHolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\DetailsHolderWindow.xaml.cs">
+      <DependentUpon>DetailsHolderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\CenterLinkWindow.xaml.cs">
+      <DependentUpon>CenterLinkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\DDFWindow.xaml.cs">
+      <DependentUpon>DDFWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SchemaWindow.xaml.cs">
+      <DependentUpon>SchemaWindow.xaml</DependentUpon>
+    </Compile>
+    <None Include="..\TMN.Config\app.config">
+      <Link>app.config</Link>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Help.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\ArchiveService.LogAlarm.datasource" />
+    <None Include="Properties\DataSources\ArchiveService.SensorData.datasource" />
+    <None Include="Properties\DataSources\ArchiveService.UserLog.datasource" />
+    <None Include="Properties\DataSources\ServiceState.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Cards.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Events.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Failure.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.FailurePieChart.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Instruction.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Links.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.LongRecord.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Routes.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.SensorState.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.SensorVal.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.SpareCards.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Tasks.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Trunks.datasource" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Themes\Generic.xaml.cs">
+      <DependentUpon>Generic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\CalendarItem.xaml.cs">
+      <DependentUpon>CalendarItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\DayView.xaml.cs">
+      <DependentUpon>DayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\MonthView.xaml.cs">
+      <DependentUpon>MonthView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\Navigator.xaml.cs">
+      <DependentUpon>Navigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\Calendar\YearView.xaml.cs">
+      <DependentUpon>YearView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\DDFDisplay.xaml.cs">
+      <DependentUpon>DDFDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\EntityComboBox.cs">
+    </Compile>
+    <Compile Include="UI\UserControls\ImageButton.cs" />
+    <Compile Include="UI\Views\Details\CalendarItemTemplate.xaml.cs">
+      <DependentUpon>CalendarItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\AlarmTypeView.xaml.cs">
+      <DependentUpon>AlarmTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\LinkGroupView.xaml.cs">
+      <DependentUpon>LinkGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\LongRecordView.xaml.cs">
+      <DependentUpon>LongRecordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\ReportTypeView.xaml.cs">
+      <DependentUpon>ReportTypeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Details\ShiftView.xaml.cs">
+      <DependentUpon>ShiftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\SpareCardView.xaml.cs">
+      <DependentUpon>SpareCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\AlarmView.xaml.cs">
+      <DependentUpon>AlarmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\FailureReasonView.xaml.cs">
+      <DependentUpon>FailureReasonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\TasktView.xaml.cs">
+      <DependentUpon>TasktView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\TaskTypeView.xaml.cs">
+      <DependentUpon>TaskTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\EventTypeView.xaml.cs">
+      <DependentUpon>EventTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Details\EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ItemsListUI.xaml.cs">
+      <DependentUpon>ItemsListUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\AlarmTypesListView.xaml.cs">
+      <DependentUpon>AlarmTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\DDFRoutesListView.xaml.cs">
+      <DependentUpon>DDFRoutesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\LinksListView.xaml.cs">
+      <DependentUpon>LinksListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\LongRecordsListView.xaml.cs">
+      <DependentUpon>LongRecordsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ReportTypesListView.xaml.cs">
+      <DependentUpon>ReportTypesListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Views\Lists\ShiftsListView.xaml.cs">
+      <DependentUpon>ShiftsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\AlarmListView.xaml.cs">
+      <DependentUpon>AlarmListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\FailureReasonsListView.xaml.cs">
+      <DependentUpon>FailureReasonsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\TasksListView.xaml.cs">
+      <DependentUpon>TasksListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\TaskTypesListView.xaml.cs">
+      <DependentUpon>TaskTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\EventTypesListView.xaml.cs">
+      <DependentUpon>EventTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\UsersListView.xaml.cs">
+      <DependentUpon>UsersListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\Lists\EventsListView.xaml.cs">
+      <DependentUpon>EventsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\CalendarWindow.xaml.cs">
+      <DependentUpon>CalendarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\CenterReportsWindow.xaml.cs">
+      <DependentUpon>CenterReportsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\LinkToRouteWindow.xaml.cs">
+      <DependentUpon>LinkToRouteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SetCardWindow.xaml.cs">
+      <DependentUpon>SetCardWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Windows\SetDDFWindow.xaml.cs">
+      <DependentUpon>SetDDFWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\InstructionImageWindow.xaml.cs">
+      <DependentUpon>InstructionImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\ShiftConfigWindow.xaml.cs">
+      <DependentUpon>ShiftConfigWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{C76E48B7-6901-4911-B227-05A1D4ED051E}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\TMN.ServiceCommon\ServiceCommon.csproj">
+      <Project>{6E4B8294-DD9F-4237-8B80-57EA64B37183}</Project>
+      <Name>ServiceCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Common\TMN.Common.csproj">
+      <Project>{EC843D73-217F-43E8-BDD4-BA1E7C16415E}</Project>
+      <Name>TMN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Config\TMN.Config.csproj">
+      <Project>{F2CF4237-26B0-4785-8897-F762C4092D09}</Project>
+      <Name>TMN.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Converters\TMN.Converters.csproj">
+      <Project>{1BBC56BE-623F-423D-AB80-6EE599356D6D}</Project>
+      <Name>TMN.Converters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Model\TMN.Model.csproj">
+      <Project>{D822965E-8830-4021-9F33-450A2F47A713}</Project>
+      <Name>TMN.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Reporting\TMN.Reporting.csproj">
+      <Project>{62FFB6DC-D03F-433D-B0D4-8CC1FBCA4F62}</Project>
+      <Name>TMN.Reporting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\TMN.ServiceModel.AlarmPanelModel.datasource" />
+    <None Include="Properties\DataSources\TMN.ServiceModel.AlarmRegionModel.datasource" />
+    <None Include="Properties\DataSources\TMN.ServiceModel.AlarmRegionModelCollection.datasource" />
+    <None Include="Sounds\critical.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sounds\DC.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sounds\info.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sounds\major.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sounds\minor.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

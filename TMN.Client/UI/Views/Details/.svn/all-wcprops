@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/TMN.Classic/!svn/ver/707/TMN.Client/UI/Views/Details
+END
+RackView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/RackView.xaml.cs
+END
+CenterView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/CenterView.xaml.cs
+END
+InstructionView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/InstructionView.xaml.cs
+END
+TasktView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/TasktView.xaml
+END
+EventTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/647/TMN.Client/UI/Views/Details/EventTypeView.xaml.cs
+END
+LongRecordView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/LongRecordView.xaml
+END
+AlarmTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/AlarmTypeView.xaml
+END
+AlarmView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/AlarmView.xaml.cs
+END
+ShelfView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/ShelfView.xaml
+END
+RouteView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/647/TMN.Client/UI/Views/Details/RouteView.xaml.cs
+END
+SwitchTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/SwitchTypeView.xaml
+END
+TaskTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/288/TMN.Client/UI/Views/Details/TaskTypeView.xaml
+END
+SpareCardView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/SpareCardView.xaml
+END
+ShelfView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/415/TMN.Client/UI/Views/Details/ShelfView.xaml.cs
+END
+SwitchTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/647/TMN.Client/UI/Views/Details/SwitchTypeView.xaml.cs
+END
+ChannelView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/ChannelView.xaml
+END
+CardTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/CardTypeView.xaml
+END
+ShiftView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/ShiftView.xaml
+END
+UserView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/UserView.xaml
+END
+LinkGroupView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/LinkGroupView.xaml.cs
+END
+CardTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/CardTypeView.xaml.cs
+END
+CenterView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/CenterView.xaml
+END
+RackView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/RackView.xaml
+END
+ArchiveView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/707/TMN.Client/UI/Views/Details/ArchiveView.xaml
+END
+EventView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/EventView.xaml
+END
+ShiftView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/415/TMN.Client/UI/Views/Details/ShiftView.xaml.cs
+END
+ArchiveView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/707/TMN.Client/UI/Views/Details/ArchiveView.xaml.cs
+END
+EventView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/EventView.xaml.cs
+END
+RackTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/RackTypeView.xaml.cs
+END
+CalendarItemTemplate.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/CalendarItemTemplate.xaml
+END
+TasktView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/TasktView.xaml.cs
+END
+ContactView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/598/TMN.Client/UI/Views/Details/ContactView.xaml
+END
+AlarmView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/AlarmView.xaml
+END
+LinkView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/LinkView.xaml
+END
+CalendarItemTemplate.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/288/TMN.Client/UI/Views/Details/CalendarItemTemplate.xaml.cs
+END
+RouteView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/RouteView.xaml
+END
+ContactView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/608/TMN.Client/UI/Views/Details/ContactView.xaml.cs
+END
+FailureReasonView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/FailureReasonView.xaml
+END
+LinkView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/LinkView.xaml.cs
+END
+AlarmTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/647/TMN.Client/UI/Views/Details/AlarmTypeView.xaml.cs
+END
+LongRecordView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/LongRecordView.xaml.cs
+END
+ShelfTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/ShelfTypeView.xaml
+END
+FailureReasonView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/FailureReasonView.xaml.cs
+END
+ShelfTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/ShelfTypeView.xaml.cs
+END
+TaskTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/TaskTypeView.xaml.cs
+END
+SpareCardView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/SpareCardView.xaml.cs
+END
+CardView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/CardView.xaml
+END
+LinkGroupView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/LinkGroupView.xaml
+END
+ChannelView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/ChannelView.xaml.cs
+END
+ReportTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/288/TMN.Client/UI/Views/Details/ReportTypeView.xaml
+END
+CardView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/365/TMN.Client/UI/Views/Details/CardView.xaml.cs
+END
+ReportTypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/ReportTypeView.xaml.cs
+END
+InstructionView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Views/Details/InstructionView.xaml
+END
+UserView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/683/TMN.Client/UI/Views/Details/UserView.xaml.cs
+END
+RackTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/RackTypeView.xaml
+END
+EventTypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/UI/Views/Details/EventTypeView.xaml
+END

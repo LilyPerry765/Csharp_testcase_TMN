@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62FFB6DC-D03F-433D-B0D4-8CC1FBCA4F62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN</RootNamespace>
+    <AssemblyName>TMN.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Folder\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enterprise.Wpf, Version=1.1.0.0, Culture=neutral, PublicKeyToken=80f1ae88e0a8b4d1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\EnterpriseAssemblies\Enterprise.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\Filters\AlarmsFilter.xaml.cs">
+      <DependentUpon>AlarmsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\CardsFilter.xaml.cs">
+      <DependentUpon>CardsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\EventsFilter.xaml.cs">
+      <DependentUpon>EventsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\FailureReasonPieFilter.xaml.cs">
+      <DependentUpon>FailureReasonPieFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\InstructionFilter.xaml.cs">
+      <DependentUpon>InstructionFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\IReportFilter.cs" />
+    <Compile Include="Reports\Filters\LinksFilter.xaml.cs">
+      <DependentUpon>LinksFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\LongRecordFiltrer.xaml.cs">
+      <DependentUpon>LongRecordFiltrer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\RoutesFilter.xaml.cs">
+      <DependentUpon>RoutesFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\SpareCardsFilter.xaml.cs">
+      <DependentUpon>SpareCardsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\TasksFilter.xaml.cs">
+      <DependentUpon>TasksFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\TrunksFilter.xaml.cs">
+      <DependentUpon>TrunksFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\_TemplateFilter.xaml.cs">
+      <DependentUpon>_TemplateFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model\Alarm.cs" />
+    <Compile Include="Reports\Model\Cards.cs" />
+    <Compile Include="Reports\Model\Events.cs" />
+    <Compile Include="Reports\Model\FailurePieChart.cs" />
+    <Compile Include="Reports\Model\Instruction.cs" />
+    <Compile Include="Reports\Model\Links.cs" />
+    <Compile Include="Reports\Model\LongRecord.cs" />
+    <Compile Include="Reports\Model\Routes.cs" />
+    <Compile Include="Reports\Model\SensorData.cs" />
+    <Compile Include="Reports\Model\SensorState.cs" />
+    <Compile Include="Reports\Model\SpareCards.cs" />
+    <Compile Include="Reports\Model\Tasks.cs" />
+    <Compile Include="Reports\Model\Trunks.cs" />
+    <Compile Include="ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SensorReportWindow.xaml.cs">
+      <DependentUpon>SensorReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SensorStatusWindow.xaml.cs">
+      <DependentUpon>SensorStatusWindow.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\RDLC\AlarmsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\CardsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\EventsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\FailureReasonPieChart.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\InstructionsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\LinksReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLC\LongRecordReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLC\RoutesReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLC\SensorsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\SensorsStatusReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\SpareCardsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\TasksReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\TrunksReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Reports\Filters\AlarmsFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\CardsFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\EventsFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\FailureReasonPieFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\InstructionFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\LinksFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\LongRecordFiltrer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\RoutesFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\SpareCardsFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\TasksFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\TrunksFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\Filters\_TemplateFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ReportWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SensorReportWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SensorStatusWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMN.Common\TMN.Common.csproj">
+      <Project>{EC843D73-217F-43E8-BDD4-BA1E7C16415E}</Project>
+      <Name>TMN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Converters\TMN.Converters.csproj">
+      <Project>{1BBC56BE-623F-423D-AB80-6EE599356D6D}</Project>
+      <Name>TMN.Converters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Model\TMN.Model.csproj">
+      <Project>{D822965E-8830-4021-9F33-450A2F47A713}</Project>
+      <Name>TMN.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

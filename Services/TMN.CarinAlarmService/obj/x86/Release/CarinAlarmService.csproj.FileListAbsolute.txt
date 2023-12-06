@@ -1,0 +1,19 @@
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\bin\Release\CarinAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\Carin Settings.lnk
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\CarinAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\CarinAlarmService.exe
+D:\Develop\TMN.Classic\bin\CarinAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\CarinAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\CarinAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\TMN.CarinService.resources
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\CarinAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.CarinAlarmService\obj\x86\Release\CarinAlarmService.pdb

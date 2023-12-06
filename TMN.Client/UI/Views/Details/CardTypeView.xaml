@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="TMN.Views.Details.CardTypeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:uc="clr-namespace:TMN.UserControls"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf">
+    <!--Modified-->
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right">سوييچ:</Label>
+            <Label HorizontalContentAlignment="Right">کنترلی:</Label>
+            <Label HorizontalContentAlignment="Right">تعداد E1:</Label>
+            <Label HorizontalContentAlignment="Right">نام كارت:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox x:Name="cmbSupportingSwitch"
+                               Width="150"
+                               SelectedItem="{Binding SwitchType}"
+                               DisplayMemberPath="Name"
+                               SelectedValuePath="ID"
+                               Margin="0,2,0,2" />
+            <CheckBox x:Name="chkIsControlCard"
+                      Checked="chkIsControlCard_Checked"
+                      Unchecked="chkIsControlCard_Checked"
+                      Width="150"
+                      IsChecked="{Binding IsControlCard}"
+                      Margin="0,6,0,6" />
+            <r:NumericUpDown x:Name="nudE1Count"
+                             Value="{Binding Path=E1Count, Mode=TwoWay}"
+                             Margin="0,5,0,2"
+                             Minimum="0"
+                             HorizontalAlignment="Left" />
+            <TextBox x:Name="txtName"
+                     Width="150"
+                     Text="{Binding Name}"
+                     Margin="0,2,0,2" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

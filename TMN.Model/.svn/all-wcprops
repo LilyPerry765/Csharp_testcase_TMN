@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/TMN.Classic/!svn/ver/761/TMN.Model
+END
+Contact.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/TMN.Classic/!svn/ver/479/TMN.Model/Contact.cs
+END
+CenterContact.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/479/TMN.Model/CenterContact.cs
+END
+TMNModel.designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/TMN.Classic/!svn/ver/725/TMN.Model/TMNModel.designer.cs
+END
+TMNModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/732/TMN.Model/TMNModel.cs
+END
+TMNModel.dbml.layout
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/TMN.Classic/!svn/ver/725/TMN.Model/TMNModel.dbml.layout
+END
+TMN.Model.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/TMN.Classic/!svn/ver/640/TMN.Model/TMN.Model.csproj.user
+END
+TMN.Model.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/761/TMN.Model/TMN.Model.csproj
+END
+TMNModel.dbml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/TMN.Classic/!svn/ver/651/TMN.Model/TMNModel.dbml
+END

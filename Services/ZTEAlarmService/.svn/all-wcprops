@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/TMN.Classic/!svn/ver/761/Services/ZTEAlarmService
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/DebugWindow.xaml.cs
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ProjectInstaller.Designer.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ProjectInstaller.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/SettingsWindow.xaml
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/SettingsWindow.xaml.cs
+END
+ZTEAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/761/Services/ZTEAlarmService/ZTEAlarmService.csproj
+END
+Service.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/Service.Designer.cs
+END
+ZTEAlarmService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ZTEAlarmService.Designer.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ProjectInstaller.resx
+END
+Service.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/Service.cs
+END
+ZTEAlarmService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ZTEAlarmService.cs
+END
+ConnectionType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ConnectionType.cs
+END
+ZTEMessage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ZTEMessage.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/758/Services/ZTEAlarmService/DebugWindow.xaml
+END

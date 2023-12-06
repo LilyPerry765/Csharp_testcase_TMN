@@ -1,0 +1,45 @@
+﻿<Window x:Class="TMN.UI.Windows.ArchiveView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ArchiveView" 
+        Height="350" 
+        Width="650"
+        Loaded="Window_Loaded" MaxHeight="350" MaxWidth="650"
+        Background="{StaticResource lightBlueShadow}">
+    <DockPanel >    
+        <Grid  DockPanel.Dock="Top" >
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"  />
+                <ColumnDefinition Width="Auto"   />
+                <ColumnDefinition Width="Auto"  />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"  />
+                </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center"  >Title :</Label>
+            <TextBox HorizontalAlignment="Left" Grid.ColumnSpan="2" Text="{Binding Path=Title}" Grid.Column="1" Grid.Row="0" Margin="3"  Width="300" x:Name="txtTitle" />
+        <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Time :</Label>
+            <TextBox HorizontalAlignment="Left"  Grid.ColumnSpan="2" Text="{Binding Path=Time}" Margin="3" Grid.Column="1" Grid.Row="1" Width="300"  x:Name="txtTime"/>
+        <Label Grid.Column="3" Grid.Row="0" VerticalAlignment="Center">Severity :</Label>
+            <TextBox Text="{Binding Path=Severity}" Grid.Column="4" Grid.Row="0" Width="180" HorizontalAlignment="Left" Margin="3" x:Name="txtSeverity"/>
+        <Label  Grid.Column="3" Grid.Row="1" VerticalAlignment="Center">Location :</Label>
+            <TextBox Text="{Binding Path=Location}" Grid.Column="4" Grid.Row="1" Width="180" Margin="3" HorizontalAlignment="Left" x:Name="txtLocation"/>
+        <Label Grid.Column="0" Grid.Row="2" >Data :</Label>
+            <TextBox  Text="{Binding Path=Data}" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Margin="3" Height="210" x:Name="txtData"  />
+        <!--<CheckBox  IsChecked="{Binding Path=IsRead}" Grid.Column="1" Grid.Row="3" Margin="0,5,0,5" Content="IsRead" x:Name="chkIsread" />-->
+        </Grid>
+        <StackPanel  Orientation="Horizontal"  Height="30" HorizontalAlignment="Center">
+                <Button   Grid.Column="1" Width="100" Margin="2" x:Name="btnFirst"  Click="btnFirst_Click" >First</Button>
+                <Button Grid.Column="2" Width="100" Margin="2" x:Name="btnNext"  Click="btnNext_Click">Next</Button>
+                <TextBox Grid.Column="3" Width="50" Margin="2" VerticalAlignment="Center" TextAlignment="Center" x:Name="txtPosition"  KeyUp="txtPosition_KeyUp" />
+                <Button Grid.Column="4" Width="100" Margin="2" x:Name="btnPrev"  Click="btnPrev_Click">Prev</Button>
+                <Button Grid.Column="5" Width="100" Margin="2" x:Name="btnLast"  Click="btnLast_Click">Last</Button>
+            </StackPanel>
+    </DockPanel>
+</Window>

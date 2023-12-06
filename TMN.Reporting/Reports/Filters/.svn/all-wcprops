@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters
+END
+_TemplateFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/_TemplateFilter.xaml
+END
+_TemplateFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/_TemplateFilter.xaml.cs
+END
+AlarmsFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/AlarmsFilter.xaml
+END
+LongRecordFiltrer.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/LongRecordFiltrer.xaml
+END
+LinksFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/LinksFilter.xaml
+END
+RoutesFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/RoutesFilter.xaml
+END
+InstructionFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/InstructionFilter.xaml
+END
+AlarmsFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/AlarmsFilter.xaml.cs
+END
+LongRecordFiltrer.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/LongRecordFiltrer.xaml.cs
+END
+LinksFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/LinksFilter.xaml.cs
+END
+InstructionFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/InstructionFilter.xaml.cs
+END
+RoutesFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/RoutesFilter.xaml.cs
+END
+TasksFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/TasksFilter.xaml
+END
+TrunksFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/TrunksFilter.xaml
+END
+SpareCardsFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/SpareCardsFilter.xaml
+END
+IReportFilter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/IReportFilter.cs
+END
+TasksFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/TasksFilter.xaml.cs
+END
+TrunksFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/TrunksFilter.xaml.cs
+END
+SpareCardsFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/SpareCardsFilter.xaml.cs
+END
+CardsFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/CardsFilter.xaml
+END
+FailureReasonPieFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/FailureReasonPieFilter.xaml
+END
+CardsFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/CardsFilter.xaml.cs
+END
+FailureReasonPieFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/FailureReasonPieFilter.xaml.cs
+END
+EventsFilter.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/EventsFilter.xaml
+END
+EventsFilter.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Filters/EventsFilter.xaml.cs
+END

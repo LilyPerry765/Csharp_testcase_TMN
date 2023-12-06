@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/TMN.Classic/!svn/ver/767/Services/Public/ArchiveService
+END
+ArchiveService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/ArchiveService.csproj
+END
+IMainService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/767/Services/Public/ArchiveService/IMainService.cs
+END
+LogAlarm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/LogAlarm.cs
+END
+UserLog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/UserLog.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/app.config
+END
+ArchiveService.Publish.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/ArchiveService.Publish.xml
+END
+SensorData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/SensorData.cs
+END
+MainService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/767/Services/Public/ArchiveService/MainService.cs
+END
+ArchiveService.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/739/Services/Public/ArchiveService/ArchiveService.csproj.user
+END

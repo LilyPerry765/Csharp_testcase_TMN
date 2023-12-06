@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/TMN.Classic/!svn/ver/667/Services/TMN.ShortCircuitService
+END
+CalibrationWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/CalibrationWindow.xaml
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/DebugWindow.xaml.cs
+END
+CalibrationWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/CalibrationWindow.xaml.cs
+END
+CircuitLedButton.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/399/Services/TMN.ShortCircuitService/CircuitLedButton.xaml
+END
+SensorsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/SensorsWindow.xaml
+END
+CircuitService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/CircuitService.Designer.cs
+END
+ShortCircuit Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/ShortCircuit%20Settings.lnk
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/ProjectInstaller.Designer.cs
+END
+CircuitService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/CircuitService.cs
+END
+CircuitLedButton.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/399/Services/TMN.ShortCircuitService/CircuitLedButton.xaml.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/ProjectInstaller.cs
+END
+SensorsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/405/Services/TMN.ShortCircuitService/SensorsWindow.xaml.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/401/Services/TMN.ShortCircuitService/SettingsWindow.xaml
+END
+SensorLedButton.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/SensorLedButton.xaml
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/483/Services/TMN.ShortCircuitService/SettingsWindow.xaml.cs
+END
+SensorLedButton.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/SensorLedButton.xaml.cs
+END
+SensorService.suo
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/SensorService.suo
+END
+SensorStatusEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/SensorStatusEventArgs.cs
+END
+CircuitManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/625/Services/TMN.ShortCircuitService/CircuitManager.cs
+END
+ShortCircuitService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/TMN.Classic/!svn/ver/667/Services/TMN.ShortCircuitService/ShortCircuitService.csproj
+END
+CircuitService.resx
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/CircuitService.resx
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/ProjectInstaller.resx
+END
+CircuitStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/393/Services/TMN.ShortCircuitService/CircuitStatus.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/483/Services/TMN.ShortCircuitService/Program.cs
+END
+Bound.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/Bound.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/655/Services/TMN.ShortCircuitService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/243/Services/TMN.ShortCircuitService/DebugWindow.xaml
+END

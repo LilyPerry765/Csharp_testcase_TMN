@@ -1,0 +1,175 @@
+﻿<v:ItemsListBase     xmlns:v="clr-namespace:TMN.Views.Lists"
+                     x:Class="TMN.Views.Lists.LinksListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                     xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                     xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+                     xmlns:enums="clr-namespace:TMN;assembly=TMN.Common"
+                     SelectionChanged="ItemsListBase_SelectionChanged"
+                     Loaded="ItemsListView_Loaded">
+    <v:ItemsListBase.SearchContent>
+        <WrapPanel FlowDirection="RightToLeft">
+            <WrapPanel.Resources>
+                <Style x:Key="LabelWidth">
+                    <Setter Property="ColumnDefinition.Width"
+                            Value="65" />
+                </Style>
+                <Style x:Key="ComboBoxWidth">
+                    <Setter Property="ColumnDefinition.Width"
+                            Value="100" />
+                    
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Width"
+                            Value="16" />
+                    <Setter Property="Height"
+                            Value="16" />
+                </Style>
+            </WrapPanel.Resources>
+            <Grid Width="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Style="{StaticResource LabelWidth}" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="AddressLabel"
+                       Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Target="{Binding ElementName= AddressTextBox }"
+                       ToolTip="Address">Address:</Label>
+                <TextBox Grid.Column="1"
+                         x:Name="AddressTextBox"
+                         Margin="2"
+                         HorizontalAlignment="Stretch" />
+            </Grid>
+            <Grid Width="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Style="{StaticResource LabelWidth}" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="RouteIDLabel"
+                       Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Target="{Binding ElementName= RouteComboBox }"
+                       ToolTip="مسير">TGNO:</Label>
+                <ComboBox Grid.Column="1"
+                          x:Name="RouteComboBox"
+                          FlowDirection="LeftToRight"
+                          IsEditable="True"
+                          DisplayMemberPath="TGNO"
+                          SelectedValuePath="ID"
+                          Margin="2"
+                          HorizontalAlignment="Stretch" />
+            </Grid>
+            <Grid Width="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Style="{StaticResource LabelWidth}" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Target="{Binding ElementName= TypeComboBox }"
+                       ToolTip="مسير">وضعيت:</Label>
+                <ComboBox Grid.Column="1"
+                          FlowDirection="LeftToRight"
+                          x:Name="TypeComboBox"
+                          Margin="2"
+                          HorizontalAlignment="Stretch"
+                          
+                          ItemsSource="{a:EnumDataSource EnumType=enums:LinkStates}"
+                          SelectedValuePath="Enum">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+
+                                <Image Width="14"
+                                       Height="14"
+                                       Source="{Binding Enum, Converter={x:Static conv:LinkStateToImageConverter.Instance}}" />
+                                <TextBlock  Text="{Binding}"
+                                            Padding="1" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+        </WrapPanel>
+    </v:ItemsListBase.SearchContent>
+    <v:ItemsListBase.ListView>
+        <ListView SelectionMode="Extended">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="RouteMenuItem"
+                              Header="کانال ها"
+                              Click="RouteButton_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Source="{a:ImageSource Path=routes.png}" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="DDFMenuItem"
+                              Header="اتصال به DDF"
+                              Click="DDFButton_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Source="{a:ImageSource Path=ddf_add.png}" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="AssignToCardMenuItem"
+                              Header="تخصيص کارت"
+                              Click="AssignToCardButton_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Source="{a:ImageSource Path=card.png}" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="25">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding State, Converter={x:Static conv:LinkStateToImageConverter.Instance}}"
+                                       Width="16"
+                                       Height="16" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="کارت"
+                                    DisplayMemberBinding="{Binding Card.Name}"
+                                    Width="100" />
+
+                    <GridViewColumn Header="Link Address"
+                                    DisplayMemberBinding="{Binding Address}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="DDF"
+                                    Width="Auto">
+                        <GridViewColumn.DisplayMemberBinding>
+                            <MultiBinding ConverterParameter="{}{0}-{1}-{2}"
+                                          Converter="{x:Static conv:DDFConverter.Instance}">
+                                <Binding Path="DDF.Bay" />
+                                <Binding Path="DDF.Position" />
+                                <Binding Path="DDF.Number" />
+                            </MultiBinding>
+                        </GridViewColumn.DisplayMemberBinding>
+                    </GridViewColumn>
+                    <GridViewColumn Header="CIC"
+                                    DisplayMemberBinding="{Binding CIC}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="Sys"
+                                    DisplayMemberBinding="{Binding Sys}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="TGNO"
+                                    DisplayMemberBinding="{Binding UniqueRoute.TGNO}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="نام مسير"
+                                    DisplayMemberBinding="{Binding UniqueRoute.RouteName}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="توضيحات"
+                                    DisplayMemberBinding="{Binding Description}"
+                                    Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

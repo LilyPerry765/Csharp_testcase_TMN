@@ -1,0 +1,76 @@
+D:\Develop\TMN.Classic\bin\TMN.Reporting.dll
+D:\Develop\TMN.Classic\bin\TMN.Reporting.pdb
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\AlarmsFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\CardsFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\EventsFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\FailureReasonPieFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\InstructionFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LinksFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LongRecordFiltrer.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\RoutesFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\SpareCardsFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TasksFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TrunksFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\_TemplateFilter.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\ReportWindow.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorReportWindow.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorStatusWindow.baml
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\AlarmsFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\CardsFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\EventsFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\FailureReasonPieFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\InstructionFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LinksFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LongRecordFiltrer.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\RoutesFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\SpareCardsFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TasksFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TrunksFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\_TemplateFilter.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\ReportWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorReportWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorStatusWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting_MarkupCompile.cache
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.g.resources
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\RdlCompile.cache
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\RdlCompile.compiled
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.dll
+D:\Develop\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.pdb
+D:\Folder\TMN.Reporting.dll
+D:\Folder\TMN.Reporting.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\AlarmsFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\CardsFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\EventsFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\FailureReasonPieFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\InstructionFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LinksFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LongRecordFiltrer.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\RoutesFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\SpareCardsFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TasksFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TrunksFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\_TemplateFilter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\ReportWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorReportWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorStatusWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\AlarmsFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\CardsFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\EventsFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\FailureReasonPieFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\InstructionFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LinksFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\LongRecordFiltrer.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\RoutesFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\SpareCardsFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TasksFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\TrunksFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\Reports\Filters\_TemplateFilter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\ReportWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorReportWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\SensorStatusWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting_MarkupCompile.cache
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.g.resources
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.dll
+E:\Project\Final Project\TMN.Classic\TMN.Reporting\obj\x86\Debug\TMN.Reporting.pdb

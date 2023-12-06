@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="TMN.Reports.Filters.EventsFilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FlowDirection="RightToLeft">
+    <Grid Height="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label4"
+               HorizontalContentAlignment="Right"
+               Grid.Column="0">نوع عمليات</Label>
+        <ComboBox x:Name="TitleCombo"
+                  KeyDown="TitleCombo_KeyDown"
+                  DisplayMemberPath="Name"
+                  MinWidth="70"
+                  Margin="2"
+                  Grid.Column="1" />
+        <Label Grid.Column="2"
+               HorizontalContentAlignment="Right"
+               x:Name="label2">از تاريخ</Label>
+        <r:PersianDateBox x:Name="DateFromDateBox"
+                          Margin="3"
+                          Grid.Column="3" />
+        <Label x:Name="label3"
+               HorizontalContentAlignment="Right"
+               Grid.Column="4">تا تاريخ</Label>
+        <r:PersianDateBox x:Name="DateToDateBox"
+                          Margin="3"
+                          Grid.Column="5" />
+        <Label x:Name="label5"
+               HorizontalContentAlignment="Right"
+               Grid.Column="6">شرح عمليات</Label>
+        <TextBox x:Name="ContextTextBox"
+                 MinWidth="70"
+                 Margin="3"
+                 Grid.Column="7" />
+    </Grid>
+</UserControl>

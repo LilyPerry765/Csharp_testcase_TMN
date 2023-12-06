@@ -1,0 +1,45 @@
+﻿Installing assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   name = TMN ericsson 2
+Installing service EricssonAlarmService...
+Creating EventLog source EricssonAlarmService in log Application...
+Rolling back assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   name = TMN ericsson 2
+Restoring event log to previous state for source EricssonAlarmService.
+Installing assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   servicename = TMN ericsson 2
+Installing service EricssonAlarmService...
+Creating EventLog source EricssonAlarmService in log Application...
+Rolling back assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   servicename = TMN ericsson 2
+Restoring event log to previous state for source EricssonAlarmService.
+Installing assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   servicename = TMN ericsson 2
+Installing service EricssonAlarmService...
+Creating EventLog source EricssonAlarmService in log Application...
+Rolling back assembly 'D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\EricssonAlarmService2.exe
+   servicename = TMN ericsson 2
+Restoring event log to previous state for source EricssonAlarmService.

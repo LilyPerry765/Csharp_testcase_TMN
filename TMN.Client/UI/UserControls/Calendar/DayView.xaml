@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="TMN.UserControls.Calendar.DayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:cal="clr-namespace:TMN.UserControls.Calendar"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <cal:Navigator x:Name="Navigator"
+                       Grid.Row="0"
+                       DisplayClick="Navigator_DisplayClick"
+                       NavigateBackward="Navigator_NavigateBackward"
+                       NavigateForward="Navigator_NavigateForward" />
+        <Border Grid.Row="1"
+                x:Name="TodaySignerBorder"
+                BorderBrush="Gold"
+                CornerRadius="5"
+                BorderThickness="2" />
+        <Grid Name="ContentGrid"
+              Margin="5"
+              FlowDirection="RightToLeft"
+              Grid.Row="1"></Grid>
+    </Grid>
+</UserControl>

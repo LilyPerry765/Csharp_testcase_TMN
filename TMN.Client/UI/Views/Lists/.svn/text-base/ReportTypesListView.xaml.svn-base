@@ -1,0 +1,20 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.ReportTypesListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                     xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                     xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+                     xmlns:v="clr-namespace:TMN.Views.Lists">
+
+    <v:ItemsListBase.ListView>
+        <ListView Name="listView" Unloaded="listView_Unloaded" >
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="عنوان" DisplayMemberBinding="{Binding Name}" Width="100"  />
+                    <GridViewColumn Header="مقدار پيشفرض" DisplayMemberBinding="{Binding DefaultValue}" Width="100" />
+                    <GridViewColumn Header="نوع سویچ" DisplayMemberBinding="{Binding SwitchName}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

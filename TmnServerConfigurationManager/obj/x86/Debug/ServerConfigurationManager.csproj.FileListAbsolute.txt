@@ -1,0 +1,11 @@
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.exe.config
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.exe
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.pdb
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\MainWindow.baml
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\MainWindow.g.cs
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\App.g.cs
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\Server Configuration Manager_MarkupCompile.cache
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\Server Configuration Manager.g.resources
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\Server Configuration Manager.exe
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Debug\Server Configuration Manager.pdb

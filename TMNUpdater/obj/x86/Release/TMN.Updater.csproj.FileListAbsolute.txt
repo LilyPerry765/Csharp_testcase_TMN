@@ -1,0 +1,11 @@
+D:\Develop\TMN.Classic\bin\UpdateSettings.xml
+D:\Develop\TMN.Classic\bin\TMN.Updater.exe.manifest
+D:\Develop\TMN.Classic\bin\TMN.Updater.application
+D:\Develop\TMN.Classic\bin\TMN.Updater.exe
+D:\Develop\TMN.Classic\bin\TMN.Updater.pdb
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\TMN.Updater.TrustInfo.xml
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\TMN.Updater.exe.manifest
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\TMN.Updater.application
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\TMN.Updater.exe
+D:\Develop\TMN.Classic\TMNUpdater\obj\x86\Release\TMN.Updater.pdb

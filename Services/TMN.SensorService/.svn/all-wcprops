@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/718/Services/TMN.SensorService
+END
+CalibrationWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/33/Services/TMN.SensorService/CalibrationWindow.xaml
+END
+SensorStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/TMN.Classic/!svn/ver/655/Services/TMN.SensorService/SensorStatus.cs
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/DebugWindow.xaml.cs
+END
+CalibrationWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/33/Services/TMN.SensorService/CalibrationWindow.xaml.cs
+END
+SensorsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/51/Services/TMN.SensorService/SensorsWindow.xaml
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/ProjectInstaller.Designer.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/ProjectInstaller.cs
+END
+SensorsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/405/Services/TMN.SensorService/SensorsWindow.xaml.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/400/Services/TMN.SensorService/SettingsWindow.xaml
+END
+SensorService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/667/Services/TMN.SensorService/SensorService.csproj
+END
+SensorLedButton.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.SensorService/SensorLedButton.xaml
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/400/Services/TMN.SensorService/SettingsWindow.xaml.cs
+END
+SensorService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/SensorService.Designer.cs
+END
+SensorService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/SensorService.cs
+END
+SensorLedButton.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/221/Services/TMN.SensorService/SensorLedButton.xaml.cs
+END
+SensorStatusEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/33/Services/TMN.SensorService/SensorStatusEventArgs.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/ProjectInstaller.resx
+END
+SensorManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/400/Services/TMN.SensorService/SensorManager.cs
+END
+SensorService.resx
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/SensorService.resx
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/TMN.Classic/!svn/ver/400/Services/TMN.SensorService/Program.cs
+END
+Bound.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/TMN.Classic/!svn/ver/36/Services/TMN.SensorService/Bound.cs
+END
+Sensor Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/Sensor%20Settings.lnk
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/718/Services/TMN.SensorService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.SensorService/DebugWindow.xaml
+END

@@ -1,0 +1,12 @@
+﻿<Window x:Class="TMN.UI.Windows.SensorStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rptv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        Title="نمودار پاسخگويی سنسوررها" Height="255" Width="526"
+        Loaded="Window_Loaded">
+    <Grid>
+        <WindowsFormsHost>
+            <rptv:ReportViewer x:Name="ReportViewer" />
+        </WindowsFormsHost>
+    </Grid>
+</Window>

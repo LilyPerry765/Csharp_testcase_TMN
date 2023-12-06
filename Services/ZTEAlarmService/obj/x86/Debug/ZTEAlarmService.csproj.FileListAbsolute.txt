@@ -1,0 +1,35 @@
+D:\Develop\TMN.Classic\Services\bin\ZTEAlarmService.exe.config
+D:\Develop\TMN.Classic\Services\bin\ZTEAlarmService.exe
+D:\Develop\TMN.Classic\Services\bin\ZTEAlarmService.pdb
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.Properties.Resources.resources
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.exe
+D:\Develop\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.pdb
+D:\Develop\Main\TMN.Classic\Services\bin\ZTEAlarmService.exe.config
+D:\Develop\Main\TMN.Classic\Services\bin\ZTEAlarmService.exe
+D:\Develop\Main\TMN.Classic\Services\bin\ZTEAlarmService.pdb
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService_MarkupCompile.cache
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.g.resources
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.ProjectInstaller.resources
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.Properties.Resources.resources
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.exe
+D:\Develop\Main\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.pdb
+E:\Project\Final Project\TMN.Classic\Services\bin\ZTEAlarmService.exe.config
+E:\Project\Final Project\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.exe
+E:\Project\Final Project\TMN.Classic\Services\ZTEAlarmService\obj\x86\Debug\ZTEAlarmService.pdb

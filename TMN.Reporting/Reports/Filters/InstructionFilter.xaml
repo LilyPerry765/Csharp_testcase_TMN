@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TMN.Reports.Filters.InstructionFilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FlowDirection="RightToLeft">
+    <WrapPanel FlowDirection="RightToLeft">
+        <Grid Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="140" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="DestinationLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DestinationComboBox }"
+                   ToolTip="مقصد">مقصد:</Label>
+            <ComboBox Grid.Column="1"
+                      IsEditable="True"
+                      x:Name="DestinationComboBox"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="ID"
+                      Margin="2"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+        <Grid Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="240" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="IssueDateLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= IssueDatePersianDateBox }"
+                   ToolTip="تاريخ صدور">تاريخ صدور:</Label>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions >
+                <Label Grid.Column="0">از</Label>
+                <r:PersianDateBox Grid.Column="1"
+                                  x:Name="FromIssueDatePersianDateBox"
+                                  Margin="2"
+                                  HorizontalAlignment="Stretch" />
+                <Label Grid.Column="2">تا</Label>
+                <r:PersianDateBox Grid.Column="3"
+                                  x:Name="ToIssueDatePersianDateBox"
+                                  Margin="2"
+                                  HorizontalAlignment="Stretch" />
+            </Grid >
+        </Grid>
+        <Grid Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="1"
+                      VerticalAlignment="Center"
+                      IsChecked="{x:Null}"
+                      IsThreeState="True"
+                      x:Name="IsDoneCheckBox"
+                      Content="انجام شده"
+                      Margin="2"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+    </WrapPanel>
+</UserControl>

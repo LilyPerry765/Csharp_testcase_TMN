@@ -1,0 +1,45 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 26
+/svn/TMN.Classic/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/TMN.Classic/!svn/ver/771
+END
+TMN.vsmdi
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/TMN.Classic/!svn/ver/1/TMN.vsmdi
+END
+TMN.sln.docstates
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/TMN.Classic/!svn/ver/1/TMN.sln.docstates
+END
+Local.testsettings
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/TMN.Classic/!svn/ver/1/Local.testsettings
+END
+TMN.Classic.sln
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/TMN.Classic/!svn/ver/771/TMN.Classic.sln
+END
+binAlarmLogFilePosition.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/TMN.Classic/!svn/ver/228/binAlarmLogFilePosition.xml
+END
+TraceAndTestImpact.testsettings
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/1/TraceAndTestImpact.testsettings
+END

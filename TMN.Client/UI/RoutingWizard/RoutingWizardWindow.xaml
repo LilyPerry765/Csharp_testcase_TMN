@@ -1,0 +1,50 @@
+﻿<Window x:Class="TMN.UI.RoutingWizard.RoutingWizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        xmlns:a="clr-namespace:TMN.Assets"
+        Title="تخصيص مسير"
+        FontFamily="Tahoma"
+        ResizeMode="CanResize"
+        Height="345"
+        Width="490"
+        Background="{StaticResource lightBlueShadow}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border x:Name="stepViewer"
+                Grid.Row="0" />
+        <StackPanel Orientation="Horizontal"
+                    FlowDirection="RightToLeft"
+                    Grid.Row="1">
+            <StackPanel.Resources> 
+                <Style TargetType="uc:ImageButton">
+                    <Setter Property="Width"
+                            Value="90" />
+                    <Setter Property="Margin"
+                            Value="5" />
+                </Style>
+            </StackPanel.Resources>
+           
+            <uc:ImageButton x:Name="nextButton"
+                            Text="ادامه"
+                            
+                            Height="25"
+                            Click="nextButton_Click" />
+            <uc:ImageButton x:Name="backButton"
+                            Text="برگشت"
+                            FlowDirection="LeftToRight"
+                            ImageSource="{a:ImageSource Path=left.png}"
+                            Height="25"
+                            Click="backButton_Click" />
+            <uc:ImageButton x:Name="cancelButton"
+                            IsCancel="True"
+                            Text="انصراف"
+                            ImageSource="{a:ImageSource Path=cancel.png}"
+                            Height="25"
+                            Click="cancelButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

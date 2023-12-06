@@ -1,0 +1,16 @@
+Starting Setup package, Version: 5.7.2.18053
+Error CopyFile 'LogService.exe' to path 'D:\Logger': The process cannot access the file 'D:\Logger\LogService.exe' because it is being used by another process.
+Error CopyFile 'LogViewer.exe' to path 'D:\Logger': The process cannot access the file 'D:\Logger\LogViewer.exe' because it is being used by another process.
+Installing service ....
+Install failed, or already installed.The specified service already exists
+Starting service ....
+Error Starting Remote Agent.Cannot start service LogService on computer '.'.
+Setup finished successfully!
+Starting Setup package, Version: 5.7.2.18053
+Error CopyFile 'LogService.exe' to path 'D:\Logger': The process cannot access the file 'D:\Logger\LogService.exe' because it is being used by another process.
+Error CopyFile 'LogViewer.exe' to path 'D:\Logger': The process cannot access the file 'D:\Logger\LogViewer.exe' because it is being used by another process.
+Installing service ....
+Install failed, or already installed.The specified service already exists
+Starting service ....
+Error Starting Remote Agent.Cannot start service LogService on computer '.'.
+Setup finished successfully!

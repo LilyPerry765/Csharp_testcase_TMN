@@ -1,0 +1,16 @@
+D:\Develop\TMN.Classic\ServiceManagementUtility\bin\Release\Service Management Utility.exe.config
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\Service Management Utility.exe.config
+D:\Develop\TMN.Classic\bin\Service Management Utility.exe
+D:\Develop\TMN.Classic\bin\Service Management Utility.pdb
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\MainWindow.baml
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\MainWindow.g.cs
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\App.g.cs
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\Service Management Utility_MarkupCompile.cache
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\Service Management Utility.g.resources
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\TMN.Properties.Resources.resources
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\Service Management Utility.exe
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Release\Service Management Utility.pdb

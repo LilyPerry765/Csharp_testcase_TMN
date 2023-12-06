@@ -1,0 +1,36 @@
+﻿<Window x:Class="TMN.SendMessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ارسال پیامک" Height="300" Width="300" FlowDirection="RightToLeft" FontFamily="Tahoma" >
+
+    <DockPanel Margin="5" FlowDirection="RightToLeft"  Background="{StaticResource lightBlueShadow}">
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Bottom">
+            <Button Margin="3"
+                    IsDefault="True"
+                    Content="تایید"
+                    Height="23"
+                    Name="saveButton"
+                    Width="75"
+                    Click="saveButton_Click" />
+            <Button Margin="3"
+                    Content="خروج"
+                    IsCancel="True"
+                    Height="23"
+                    Name="cancelButton"
+                    Width="75"
+                    Click="cancelButton_Click" />
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label>شماره تلفن همراه</Label>
+            <TextBox Name="txtNumber"   />
+            <Label>متن پیام</Label>
+            <TextBox Name="txtMessage" Height="100" />
+            <!--<Label>نام کاربری SQL Server:</Label>
+            <TextBox x:Name="sqlUserTextBox" />
+            <Label>کلمه عبور SQL Server:</Label>
+            <TextBox x:Name="sqlPassTextBox" />-->
+        </StackPanel>
+    </DockPanel>
+    
+</Window>

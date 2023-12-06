@@ -1,0 +1,127 @@
+﻿using System;
+using System.Windows;
+using Enterprise;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Linq;
+
+namespace TMN
+{
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        private static void ConfigLogger()
+        {
+            Enterprise.LogConfig.Default.DailyLog = false;
+            Enterprise.LogConfig.Default.LogFileName = "TMNLog.log";
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            Logger.Write(LogType.End, "Application ended.");
+        }
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            try
+            {
+                AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+                DispatcherUnhandledException += new System.Windows.Threading.DispatcherUnhandledExceptionEventHandler(Application_DispatcherUnhandledException);
+                var app = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+                Logger.WriteStart("Starting {0} {1} ...", app.Name, app.Version.ToString());
+                if (!Environment.GetCommandLineArgs().Contains("/multi"))
+                {
+                    KillOtherInstances(app.Name);
+                }
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fa-ir");
+                ConfigLogger();
+                ChekForUpdate();
+                Logger.WriteInfo("Application started in center \"{0}\".", Center.Current.IsNull(Center.Empty).Name);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+            }
+        }
+
+        private void ChekForUpdate()
+        {
+            try
+            {
+                const string UPDATER_PROCESS_NAME = "TMN.Updater";
+                if (!Process.GetProcessesByName(UPDATER_PROCESS_NAME).Any())
+                {
+                    string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    string updaterPath = Path.Combine(assemblyDir, UPDATER_PROCESS_NAME + ".exe");
+                    if (File.Exists(updaterPath))
+                    {
+                        Logger.WriteInfo("Starting update process...");
+                        var startInfo = new ProcessStartInfo(updaterPath, "/silent");
+                        startInfo.WorkingDirectory = assemblyDir;
+                        Process.Start(startInfo);
+                    }
+                    else
+                    {
+                        Logger.WriteWarning("Updater({0}) was not found. Update failed.", updaterPath);
+                    }
+                }
+                else
+                {
+                    Logger.WriteWarning("Updater is already running.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+            }
+        }
+
+        private void KillOtherInstances(string myName)
+        {
+            try
+            {
+                int counter = 0;
+                foreach (var p in Process.GetProcessesByName(myName))
+                {
+                    if (p.Id != Process.GetCurrentProcess().Id)
+                    {
+                        p.Kill();
+                        counter++;
+                    }
+                }
+                if (counter > 0)
+                    Logger.WriteInfo("Killed {0} previous instance(s) of TMN.", counter);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+            }
+        }
+
+
+
+        private static void HandleException(Exception ex)
+        {
+            Logger.Write(LogType.Error, ex, "Unhandled Exception.");
+            if (MessageBox.Show("متاسفانه عمليات انجام شده موجب بروز اشکال در روند اجرای نرم افزار گرديد. پيشنهاد می شود نرم افزار را مجددا اجرا نماييد.", "خطا", MessageBoxButton.OKCancel, MessageBoxImage.Error) == MessageBoxResult.OK)
+                Application.Current.Shutdown(1);
+        }
+
+        void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            HandleException(e.ExceptionObject as Exception);
+        }
+
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            HandleException(e.Exception);
+        }
+
+
+    }
+}

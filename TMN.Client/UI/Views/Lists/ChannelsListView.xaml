@@ -1,0 +1,45 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.ChannelListView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                 xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                 xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+                 xmlns:v="clr-namespace:TMN.Views.Lists"
+                 Loaded="ItemsListBase_Loaded">
+    <v:ItemsListBase.ListView>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="کانال"
+                                    DisplayMemberBinding="{Binding LNO}"
+                                    Width="100" />
+                    <GridViewColumn Header="CIC"
+                                    Width="100">
+                        <GridViewColumn.DisplayMemberBinding>
+                            <MultiBinding Converter="{x:Static conv:DDFConverter.Instance}"
+                                          ConverterParameter="{}{0}-{1}">
+                                <Binding Path="Link.CIC" />
+                                <Binding Path="TimeSlot" />
+                            </MultiBinding>
+                        </GridViewColumn.DisplayMemberBinding>
+                    </GridViewColumn>
+                    <GridViewColumn Header="نام مسير"
+                                    DisplayMemberBinding="{Binding Route.RouteName}"
+                                    Width="100" />
+                    <GridViewColumn Header="Dest"
+                                    DisplayMemberBinding="{Binding Route.Center.Name}"
+                                    Width="100" />
+                    <GridViewColumn Header="TGNO"
+                                    DisplayMemberBinding="{Binding Route.TGNO}"
+                                    Width="100" />
+                    <GridViewColumn Header="تايم اسلات"
+                                    DisplayMemberBinding="{Binding TimeSlot}"
+                                    Width="100" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </v:ItemsListBase.ListView>
+
+</v:ItemsListBase>

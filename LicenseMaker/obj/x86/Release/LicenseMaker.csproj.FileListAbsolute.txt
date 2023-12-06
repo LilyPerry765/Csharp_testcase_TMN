@@ -1,0 +1,15 @@
+D:\Develop\TMN.Classic\LicenseMaker\bin\Release\LicenseMaker.exe.config
+D:\Develop\TMN.Classic\bin\LicenseMaker.exe.config
+D:\Develop\TMN.Classic\bin\LicenseMaker.exe
+D:\Develop\TMN.Classic\bin\LicenseMaker.pdb
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\MainWindow.baml
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\MainWindow.g.cs
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\App.g.cs
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\LicenseMaker_MarkupCompile.cache
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\LicenseMaker.g.resources
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\LicenseMaker.Properties.Resources.resources
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\LicenseMaker.exe
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Release\LicenseMaker.pdb

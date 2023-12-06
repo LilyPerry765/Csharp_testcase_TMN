@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TMN.UserControls.Calendar.CalendarItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             x:Name="calItem"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="HighlightBrush1"
+                             StartPoint="1,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#F6DB6C"
+                          Offset="0" />
+            <GradientStop Color="#F8A82A"
+                          Offset=".8" />
+            <GradientStop Color="#F6CA46"
+                          Offset="1" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="HighlightBrush"
+                             StartPoint="1,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#FF0000"
+                          Offset="0" />
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <Border Name="Border"
+            CornerRadius="5"
+            Margin="1"
+            BorderThickness="1">
+        <Border.Background>
+            <RadialGradientBrush RadiusX="1"
+                                 RadiusY="1"
+                                 GradientOrigin="1,0">
+                <GradientStop Color="White"
+                              Offset="-.5"></GradientStop>
+                <GradientStop Color="Transparent"
+                              Offset="1" />
+            </RadialGradientBrush>
+        </Border.Background>
+        <MenuItem Margin=".5"
+                  Click="MenuItem_Click"
+                  Padding="-24,0,-54,0">
+            <MenuItem.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="ContentElement.IsMouseOver"
+                                 Value="True">
+                            <Setter Property="MenuItem.Foreground"
+                                    Value="{StaticResource HighlightBrush}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </MenuItem.Style>
+            <MenuItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="headerTextBlock"
+                               VerticalAlignment="Top"
+                               Grid.Row="0"
+                               Margin="2"
+                               HorizontalAlignment="Left" />
+                    <Grid Name="contentPlaceHolder"
+                          Grid.Row="1">
+                        <Control x:Name="TemplateControl" />
+                    </Grid>
+                </Grid>
+            </MenuItem.Header>
+        </MenuItem>
+    </Border>
+</UserControl>

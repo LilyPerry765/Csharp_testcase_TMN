@@ -1,0 +1,35 @@
+﻿Installing assembly 'D:\Develop\TMN.Classic\bin\SensorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\SensorService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\SensorService.exe
+Installing service SensorService...
+Service SensorService has been successfully installed.
+Creating EventLog source SensorService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\SensorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\SensorService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\SensorService.exe
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\SensorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\SensorService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\SensorService.exe
+Removing EventLog source SensorService.
+Service SensorService is being removed from the system...
+Service SensorService was successfully removed from the system.
+Attempt to stop service SensorService.
+Installing assembly 'D:\Develop\TMN.Classic\bin\SensorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\SensorService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\SensorService.exe
+Installing service SensorService...
+Service SensorService has been successfully installed.
+Creating EventLog source SensorService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\SensorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\SensorService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\SensorService.exe

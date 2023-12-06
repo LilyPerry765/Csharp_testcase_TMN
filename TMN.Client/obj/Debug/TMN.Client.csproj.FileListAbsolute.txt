@@ -1,0 +1,670 @@
+D:\Develop\TMN.Classic\bin\help.chm
+D:\Develop\TMN.Classic\bin\Help.pdf
+D:\Develop\TMN.Classic\bin\Sounds\critical.WAV
+D:\Develop\TMN.Classic\bin\Sounds\DC.WAV
+D:\Develop\TMN.Classic\bin\Sounds\info.WAV
+D:\Develop\TMN.Classic\bin\Sounds\major.WAV
+D:\Develop\TMN.Classic\bin\Sounds\minor.WAV
+D:\Develop\TMN.Classic\bin\TMN.exe.config
+D:\Develop\TMN.Classic\bin\TMN.exe
+D:\Develop\TMN.Classic\bin\TMN.pdb
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Diagram\CenterItem.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Units\Unit.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\App.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\App.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.cache
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.lref
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.baml
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN.g.resources
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN.exe
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN.pdb
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitDialogWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SendMessageWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitShowPictureWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ContactView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Diagram\CircuitItem.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ArchiveView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Diagram\CenterItem.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Units\Unit.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\App.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitDialogWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SendMessageWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitShowPictureWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ContactListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ContactView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotPowerItem.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ArchiveView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ArchiveWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PowerCenterSpot.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmCircuitWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\UserLogWindow.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\App.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.cache
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.lref
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\TMN.exe
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\TMN.pdb
+D:\Develop\Main\TMN.Classic\bin\help.chm
+D:\Develop\Main\TMN.Classic\bin\Help.pdf
+D:\Develop\Main\TMN.Classic\bin\Sounds\critical.WAV
+D:\Develop\Main\TMN.Classic\bin\Sounds\DC.WAV
+D:\Develop\Main\TMN.Classic\bin\Sounds\info.WAV
+D:\Develop\Main\TMN.Classic\bin\Sounds\major.WAV
+D:\Develop\Main\TMN.Classic\bin\Sounds\minor.WAV
+D:\Develop\Main\TMN.Classic\bin\TMN.exe.config
+D:\Develop\Main\TMN.Classic\bin\TMN.exe
+D:\Develop\Main\TMN.Classic\bin\TMN.pdb
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CircuitWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ContactListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotPowerItem.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ArchiveWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PowerCenterSpot.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmCircuitWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\UserLogWindow.baml
+D:\Develop\Main\TMN.Classic\TMN.Client\obj\Debug\TMN.g.resources
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN.Client.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Diagram\CenterItem.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Units\Unit.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\App.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyIcon.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\PipeIcon.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoleView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\Themes\Generic.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingLed.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\CalendarItem.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Navigator.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSchema.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\JellyButton.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\MuteCenter.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\DDFDisplay.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\BlinkingImageLed.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SoundButton.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CalendarItemTemplate.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkGroupView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ReportTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShiftView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\FailureReasonView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TaskTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\UserView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LinkView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SwitchTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ItemsListUI.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AboutWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InactiveSensorsWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorChartWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SensorsSettingsWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ServiceStateWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ItemsListHolderWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DDFWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionImageWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LoginWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\App.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.cache
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN_MarkupCompile.lref
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN.exe
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.g.cs
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\RolesWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\Calendar.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\DayView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\MonthView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\Calendar\YearView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpotComplex.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorDisplay.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\SensorPair.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CenterView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ChannelView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\LongRecordView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\SpareCardView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\AlarmView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\TasktView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\EventView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RouteView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\InstructionView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ChannelsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\CardTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\CardTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\ShelfTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\DDFRoutesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LinksListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\LongRecordsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ReportTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShiftsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\AlarmListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\FailureReasonsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TasksListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\TaskTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\UsersListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\EventsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SpareCardsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RoutesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\InstructionsListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\SwitchTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\RackTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Details\RackTypeView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Views\Lists\ShelfTypesListView.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmLogViewerWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPowerWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ChangePasswordWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\InstructionAttachmentsList.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\DetailsHolderWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CalendarWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterLinkWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\CenterReportsWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\LinkToRouteWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetCardWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SetDDFWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SchemaWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\SettingsWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\ShiftConfigWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmRegionWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterSpot.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\UserControls\CenterTree.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\AlarmPanelWindow.baml
+D:\Folder\help.chm
+D:\Folder\Help.pdf
+D:\Folder\Sounds\critical.WAV
+D:\Folder\Sounds\DC.WAV
+D:\Folder\Sounds\info.WAV
+D:\Folder\Sounds\major.WAV
+D:\Folder\Sounds\minor.WAV
+D:\Folder\TMN.exe.config
+D:\Folder\TMN.exe
+D:\Folder\TMN.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\UI\Windows\MainWindow.baml
+E:\Project\Final Project\TMN.Classic\TMN.Client\obj\Debug\TMN.g.resources
+D:\Develop\TMN.Classic\TMN.Client\obj\Debug\TMN.Client.csprojResolveAssemblyReference.cache

@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="TMN.UI.RoutingWizard.ChannelStep"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:e="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             FlowDirection="RightToLeft"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"
+                           MinHeight="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2"
+               Style="{StaticResource HeaderLabel}">اولين کانال و CIC اين مسير را انتخاب کنيد.</Label>
+        <Grid Grid.Row="1"
+              Height="80"
+              Width="150">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="e:NumericUpDown">
+                    <Setter Property="VerticalAlignment"
+                            Value="Center" />
+                    <Setter Property="HorizontalAlignment"
+                            Value="Left" />
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Right" />
+                    <Setter Property="VerticalContentAlignment"
+                            Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Label Grid.Column="0"
+                   Grid.Row="0">کانال شروع:</Label>
+            <Label Grid.Column="0"
+                   Grid.Row="1">CIC شروع:</Label>
+            <e:NumericUpDown x:Name="ChannelUpDown"
+                             Grid.Column="1"
+                             Grid.Row="0" />
+            <e:NumericUpDown x:Name="CICUpDown"
+                             Grid.Column="1"
+                             Grid.Row="1" />
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,346 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ComponentModel;
+
+namespace TMN
+{
+
+    public enum CenterTypes
+    {
+        Null = 0,
+        LX,
+        TX,
+        PC,
+        SC,
+        MSC,
+        ISC,
+        LTX,
+        TALIA,
+        IRCEL,
+        WLL,
+        GSM,
+        IN
+    }
+
+    public enum ViewType
+    {
+        Detail,
+        List
+    }
+
+    public enum EntityTypes
+    {
+        SwitchType = 1,
+        RackType,
+        ShelfType,
+        CardType,
+        Center,
+        Rack,
+        Shelf,
+        Card,
+        Link,
+        Instruction,
+        Route,
+        SpareCard,
+        Channel,
+        Event,
+        Task,
+        EventType,
+        TaskType,
+        User,
+        FailureReason,
+        Alarm,
+        UserShift,
+        DDFRoute,
+        AlarmType,
+        ReportType,
+        Report,
+        LongRecord,
+        Dest,
+        Role,
+        Contact
+    }
+
+    public enum InstructionTypes
+    {
+        Disconnect = 1,
+        Establish
+    }
+
+    public enum Protocols
+    {
+        No7 = 0,
+        PRI,
+        CAS
+    }
+
+    [Flags]
+    public enum LinkTypes
+    {
+        راديويي = 1,
+        فيبرنوري = 2,
+        PCM = 4
+    }
+
+    public enum Displays
+    {
+        None,
+        RackView,
+        CenterView
+    }
+
+    [Flags]
+    public enum Shifts
+    {
+        صبح = 1,
+        بعدازظهر = 2,
+        شب = 4
+    }
+
+    public enum ChannelStatus
+    {
+        IDLE = 1,
+        INC,
+        OUT,
+        NUC,
+        RNUC
+    }
+
+    public enum LinkStates
+    {
+        Free,
+        Voice,
+        DDF,
+        Signal
+    }
+
+    public enum OperationMode
+    {
+        /// <summary>
+        /// Buttons with this OperationMode are always enable.
+        /// </summary>
+        All,
+        /// <summary>
+        /// SingleItem buttons are anable only when there is exactly one item selected in the ItemsList.
+        /// </summary>
+        SingleItem,
+        /// <summary>
+        /// MultiItem buttons are disable only when there is no items selected in the ItemsList.
+        /// </summary>
+        MultiItem
+    }
+
+    [DefaultValue(2)]
+    public enum SensorTypes : byte
+    {
+        [Description("منبع تغذیه")]
+        POWER = 0,
+        [Description("دما")]
+        Temperature = 2,
+        [Description("رطوبت")]
+        Humidity = 1,
+        [Description("افت جریان")]
+        Circuit = 3,
+        [Description("نامشخص")]
+        NONE = 4,
+    }
+
+    public enum CircuitEnum : byte
+    {
+        [Description("Pressure LOW")]
+        ShortCircuit = 1,
+        [Description("Cutoff Voltage")]
+        OpenCircuit = 2,
+        [Description("Normal")]
+        NORMAL = 0
+    }
+
+    public enum ServiceTypes
+    {
+        SensorService,
+        AlarmService,
+        CircuitService,
+        MessageSender
+    }
+
+    public enum AlarmSeverities : byte
+    {
+        None = 0,
+        Critical = 1,
+        Major = 2,
+        Minor = 3,
+        Information = 4,
+        CriticalPostPone = 11,
+        MajorPostPone = 12,
+        MinorPostPone = 13,
+        //CircuitOpen = 116,
+        //CircuitShort = 117,
+        //Power = 118
+    }
+
+    public enum SoundAlarmSeverities : byte
+    {
+        None = 0,
+        Critical = 1,
+        Major = 2,
+        Minor = 3,
+        Information = 4,
+        Power = 5,
+        Cable = 6,
+        Sensor = 7
+    }
+
+    public enum SoundAlertStatus
+    {
+        EnableSoundAlert,
+        DisableSoundAlert
+    }
+
+    public enum Regions
+    {
+        Region2,
+        Region3,
+        Region4,
+        Region5,
+        Region6,
+        Region7,
+        Region8,
+        Home15,
+        Home18,
+        Home20,
+        Home24,
+        Home28,
+    }
+
+    public enum ZoomType
+    {
+        ZoomIN,
+        ZoomOut
+    }
+
+    public enum MessageAlarmType
+    {
+        [Description("آلارم قعطی کابل به صورت روزانه")]
+		AlarmDaily = 1,
+        [Description("آلارم قطعی کابل به صورت سر وقت")]
+		AlarmOnTime = 0,
+    }
+
+    public enum ActionType
+    {
+        [Description("حذف سوییچ")]
+        SwitchRemove = 1,
+
+        [Description("ایجاد سوییچ")]
+        SwitchInsert = 2,
+
+        [Description("حذف رک")]
+        RackRemove = 3,
+
+        [Description("ایجاد رک")]
+        RackInsert = 4,
+
+        [Description("حذف شلف")]
+        ShelfRemove = 5,
+
+        [Description("ایجاد شلف")]
+        ShelfInsert = 6,
+
+        [Description("حذف کارت")]
+        CardRemove = 7,
+
+        [Description("ایجاد کارت")]
+        CardInsert = 8,
+
+
+
+        [Description("حذف عملیات")]
+        EventRemove = 15,
+
+        [Description("ایجاد عملیات")]
+        EventInsert = 16,
+
+        [Description("حذف آیتم گزارش")]
+        ReportItemsRemove = 9,
+
+        [Description("ایجاد آیتم گزارش")]
+        ReportItemsInsert = 10,
+
+        [Description("حذف مسیر")]
+        RouteRemove = 11,
+
+        [Description("ایجاد مسیر")]
+        RouteInsert = 12,
+
+        [Description("حذف آلارم")]
+        AlarmTypeRemove = 13,
+
+        [Description("ایجاد آلارم")]
+        AlarmTypeInsert = 14,
+
+        [Description("حذف سنسور")]
+        SensorRemove = 17,
+
+        [Description("تعریف سنسور")]
+        SensorInsert = 18,
+
+
+
+
+        [Description("حذف مرکز")]
+        CenterRemove = 19,
+
+        [Description("ایجاد مرکز")]
+        CenterInsert = 20,
+
+
+        [Description("اتصال به مرکز")]
+        ConnectToCenter = 21,
+
+        [Description("اتصال به VPN")]
+        ConnectToVPN = 22,
+
+
+        [Description("حذف آلارم های سوییچ")]
+        AlarmRemove = 23,
+
+        [Description("تایید آلارم های سوییچ")]
+        AlarmAccept = 24,
+
+        [Description("تعلیق آلارم های سوییچ")]
+        AlarmPostPone = 25,
+
+
+        [Description("ورود به برنامه")]
+        UserLogin = 26,
+
+        [Description("حذف کاربر")]
+        UserRemove = 27,
+
+        [Description("ایجاد کاربر")]
+        UserInsert = 28,
+
+        [Description("ایجاد نقش جدید")]
+        NewRole = 29,
+
+
+
+        [Description("حذف گزارش")]
+        ReportRemove = 30,
+
+        [Description("ایجاد گزارش")]
+        ReportInsert = 31,
+
+
+        [Description("تایید قطع کابل")]
+        AcceptCircuitAlarm = 32,
+
+        [Description("قطعی کابل جدید")]
+        NewOpenCircuit= 33,
+
+		[Description("خروج از برنامه")]
+        ExitApplication= 34
+    }
+}

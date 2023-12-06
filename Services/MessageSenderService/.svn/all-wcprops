@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/761/Services/MessageSenderService
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/DebugWindow.xaml.cs
+END
+SendMessageWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/SendMessageWindow.xaml
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/ProjectInstaller.Designer.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/SettingsWindow.xaml
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/ProjectInstaller.cs
+END
+LogRegister.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/LogRegister.cs
+END
+SendMessageWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/SendMessageWindow.xaml.cs
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/SettingsWindow.xaml.cs
+END
+ServiceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/ServiceManager.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/ProjectInstaller.resx
+END
+MessageSenderService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/761/Services/MessageSenderService/MessageSenderService.csproj
+END
+MessageSenderService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/MessageSenderService.Designer.cs
+END
+MessageSenderService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/MessageSenderService.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/ServiceCore.cs
+END
+MessageSendInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/MessageSendInfo.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/749/Services/MessageSenderService/DebugWindow.xaml
+END

@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="TMN.Views.Details.CardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             Height="130">
+    <!-- Modified -->
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= cmbType }">نوع كارت:</Label>
+            <Label x:Name="lblSlot"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= nudSlotNo }">شماره اسلات:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtName }">نام:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtSerialNo }">شماره سريال:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   ToolTip="آدرس نرم افزاری کارت"
+                   Target="{Binding ElementName= EQPTextBox }">EQP:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox xmlns:uc="clr-namespace:TMN.UserControls" x:Name="cmbType"
+                      Width="140"
+                      SelectedItem="{Binding CardType}"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left"
+                      DropDownClosed="cmbType_DropDownClosed" />
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,2,0,2">
+                <r:NumericUpDown x:Name="nudSlotNo"
+                                 Minimum="1"
+                                 Value="{Binding Path=SlotNo, Mode=TwoWay}"
+                                 HorizontalAlignment="Left" />
+                <Image Source="{a:ImageSource Path=warning.png}"
+                       Height="16"
+                       Margin="5,2"
+                       ToolTip="اين اسلات اشغال است"
+                       Visibility="{Binding IsOnBusySlot, Converter={x:Static conv:VisibilityBooleanConverter.Instance}}" />
+            </StackPanel>
+            <TextBox x:Name="txtName"
+                     Text="{Binding Name}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="txtSerialNo"
+                     Text="{Binding SerialNo}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="EQPTextBox"
+                     ToolTip="آدرس نرم افزاری کارت"
+                     Text="{Binding EQP}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,15 @@
+D:\Develop\TMN.Classic\bin\TMN.Model.dll
+D:\Develop\TMN.Classic\bin\TMN.Model.pdb
+D:\Develop\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.dll
+D:\Develop\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.pdb
+D:\Develop\Main\TMN.Classic\bin\TMN.Model.dll
+D:\Develop\Main\TMN.Classic\bin\TMN.Model.pdb
+D:\Develop\Main\TMN.Classic\TMN.Model\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.dll
+D:\Develop\Main\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.pdb
+D:\Folder\TMN.Model.dll
+D:\Folder\TMN.Model.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.dll
+E:\Project\Final Project\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.pdb
+D:\Develop\TMN.Classic\TMN.Model\obj\Debug\TMN.Model.csprojResolveAssemblyReference.cache

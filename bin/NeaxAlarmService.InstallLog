@@ -1,0 +1,34 @@
+﻿Installing assembly 'D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\NeaxAlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe
+Installing service NeaxAlarmService...
+Service NeaxAlarmService has been successfully installed.
+Creating EventLog source NeaxAlarmService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\NeaxAlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe
+Uninstalling assembly 'D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\NeaxAlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe
+Removing EventLog source NeaxAlarmService.
+Service NeaxAlarmService is being removed from the system...
+Service NeaxAlarmService was successfully removed from the system.
+Installing assembly 'D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\NeaxAlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe
+Installing service NeaxAlarmService...
+Service NeaxAlarmService has been successfully installed.
+Creating EventLog source NeaxAlarmService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\NeaxAlarmService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\NeaxAlarmService.exe

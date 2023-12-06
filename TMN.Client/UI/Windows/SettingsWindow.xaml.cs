@@ -1,0 +1,249 @@
+﻿using System.Windows;
+using System;
+using TMN.Properties;
+using System.Linq;
+using System.Configuration;
+using System.Windows.Controls;
+using System.Threading;
+using Enterprise;
+
+using System.Reflection;
+using System.IO;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+
+
+
+namespace TMN.UI.Windows
+{
+    public partial class SettingsWindow : Window
+    {
+        string ImagePath;
+
+        public SettingsWindow()
+        {
+            InitializeComponent();
+
+            //FillComboBox();
+        }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            int temp = 0;
+            if (centersCombo.IsAnswered("مرکز شما") && 
+                VoiceAlertIntervalTextbox.IsAnswered("زمان تکرار آلارم صوتی") &&
+                int.TryParse(VoiceAlertIntervalTextbox.Text, out temp))
+            {
+                Center.CurrentCenterID = (Guid)centersCombo.SelectedValue;
+                Setting.Set(Setting.VOICE_ALARM_INTERVAL, VoiceAlertIntervalTextbox.Text);
+
+                Setting.Set(Setting.SOUND_ALARM_DC, DCSoundTextbox.Text);
+                Setting.Set(Setting.SOUND_ALARM_CRITICAL, criticalSoundTextbox.Text);
+                Setting.Set(Setting.SOUND_ALARM_MAJOR, majorSoundTextbox.Text);
+                Setting.Set(Setting.SOUND_ALARM_MINOR, minorSoundTextbox.Text);
+                Setting.Set(Setting.SOUND_ALARM_POWER, powerSoundTextbox.Text);
+
+                this.DialogResult = true;
+            }
+
+            //// set image background
+            //if (cmbImages.SelectedIndex == -1)
+            //    SetBackgroundImage(this.ImagePath);
+            //else
+            //    SetBackgroundImage();
+        }
+
+
+        //private void SetBackgroundImage()
+        //{
+        //    AlarmRegionWindow alarmWindow = new AlarmRegionWindow();
+        //    switch (cmbImages.SelectedIndex)
+        //    {
+        //        case 0:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region2);
+        //            RegSettings.Save("AlarmRegionBachground", "2");
+        //            break;
+        //        case 1:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region3);
+        //            RegSettings.Save("AlarmRegionBachground", "3");
+        //            break;
+        //        case 2:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region4);
+        //            RegSettings.Save("AlarmRegionBachground", "4");
+        //            break;
+        //        case 3:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region5);
+        //            RegSettings.Save("AlarmRegionBachground", "5");
+        //            break;
+        //        case 4:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region6);
+        //            RegSettings.Save("AlarmRegionBachground", "6");
+        //            break;
+        //        case 5:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region7);
+        //            RegSettings.Save("AlarmRegionBachground", "7");
+        //            break;
+        //        case 6:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Region8);
+        //            RegSettings.Save("AlarmRegionBachground", "8");
+        //            break;
+        //        case 7:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Home15);
+        //            RegSettings.Save("AlarmRegionBachground", "15");
+        //            break;
+        //        case 8:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Home18);
+        //            RegSettings.Save("AlarmRegionBachground", "18");
+        //            break;
+        //        case 9:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Home20);
+        //            RegSettings.Save("AlarmRegionBachground", "20");
+        //            break;
+        //        case 10:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Home24);
+        //            RegSettings.Save("AlarmRegionBachground", "24");
+        //            break;
+        //        case 11:
+        //            alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromEnum(Regions.Home28);
+        //            RegSettings.Save("AlarmRegionBachground", "28");
+        //            break;
+        //    }
+        //}
+
+
+        private void SetBackgroundImage(string path)
+        {
+            //if (path != null)
+            //{
+            //    AssemblyBuildHelper builder = new AssemblyBuildHelper();
+            //    builder.CreateAssembly("Images.dll", System.Drawing.Image.FromFile(path));
+            //    RegSettings.Save("AlarmRegionBachground", path);
+            //}
+
+
+            //AlarmRegionWindow alarmWindow = new AlarmRegionWindow();
+            //alarmWindow.regionImage.Source = ImageSourceHelper.GetImageSourceFromFile(path);
+            //RegSettings.Save("AlarmRegionBachground", path);
+
+        }
+
+        
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+            centersCombo.ItemsSource = DB.Instance.Centers.OrderBy(c => c.Name);
+            centersCombo.SelectedValue = Center.CurrentCenterID;
+
+            //shahab 900815
+            VoiceAlertIntervalTextbox.Text = Setting.Get(Setting.VOICE_ALARM_INTERVAL, Setting.DEFAULT_VOICE_ALARM_INTERVAL).ToString();
+            //if (Center.CurrentCenterID != Guid.Empty && Center.Current.IsEwsd)
+            //{
+            //    ewsdAlarmLogPathTextBox.Text = RegSettings.Get("ewsdAlarmLogPath") as string;
+            //    ewsdAlarmLogPaternTextBox.Text = RegSettings.Get("ewsdAlarmLogPatern", @".+\.txt") as string;
+            //}
+            //else
+            //    alarmSettingsTab.Visibility = System.Windows.Visibility.Collapsed;
+
+        }
+
+
+        //private void FillComboBox()
+        //{
+        //    cmbImages.Items.Add("منطقه 2");
+        //    cmbImages.Items.Add("منطقه 3");
+        //    cmbImages.Items.Add("منطقه 4");
+        //    cmbImages.Items.Add("منطقه 5");
+        //    cmbImages.Items.Add("منطقه 6");
+        //    cmbImages.Items.Add("منطقه 7");
+        //    cmbImages.Items.Add("منطقه 8");
+
+        //    cmbImages.Items.Add("پانزده خانه");
+        //    cmbImages.Items.Add("هجده خانه");
+        //    cmbImages.Items.Add("بیست خانه");
+        //    cmbImages.Items.Add("بیست و چهار خانه");
+        //    cmbImages.Items.Add("بیست و هشت خانه");
+        //}
+
+       private void Border_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == System.Windows.Input.MouseButton.Left)
+            {
+                Border s = sender as Border;
+
+                System.Windows.Forms.ColorDialog dlg = new System.Windows.Forms.ColorDialog();
+                dlg.Color = (System.Drawing.Color)Converters.ColorConverter.Instance.ConvertBack(s.Background, null, null, null);
+                if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    s.Background = Converters.ColorConverter.Instance.Convert(dlg.Color, typeof(System.Windows.Media.Brush), null, null) as System.Windows.Media.Brush;
+                    s.DataContext.As<SettingsPropertyValue>().PropertyValue = dlg.Color;
+                }
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Settings.Default.Reload();
+        }
+        private void openFile_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            // Make sure the dialog checks for existence of the 
+            // selected file.
+            dlg.CheckFileExists = true;
+
+            // Allow selection of .wav files only.
+            dlg.Filter = "WAV files (*.wav)|*.wav";
+            dlg.DefaultExt = ".wav";
+            dlg.InitialDirectory = @"Sounds\";
+            if ((sender as Button).CommandParameter.ToString() == "DC")
+                if (dlg.ShowDialog() == true)
+                    DCSoundTextbox.Text = dlg.FileName;
+
+            if ((sender as Button).CommandParameter.ToString() == "CRITICAL")
+                if (dlg.ShowDialog() == true)
+                    criticalSoundTextbox.Text = dlg.FileName;
+
+            if ((sender as Button).CommandParameter.ToString() == "MAJOR")
+                if (dlg.ShowDialog() == true)
+                    majorSoundTextbox.Text = dlg.FileName;
+
+            if ((sender as Button).CommandParameter.ToString() == "MINOR")
+                if (dlg.ShowDialog() == true)
+                    minorSoundTextbox.Text = dlg.FileName;
+
+            if ((sender as Button).CommandParameter.ToString() == "POWER")
+                if (dlg.ShowDialog() == true)
+                    powerSoundTextbox.Text = dlg.FileName;
+        }
+
+
+
+        private void TabAlarms_Loaded(object sender, RoutedEventArgs e)
+        {
+            DCSoundTextbox.Text = Setting.Get(Setting.SOUND_ALARM_DC,  Setting.DEFAULT_SOUND_ALARM_DC);
+            criticalSoundTextbox.Text = Setting.Get(Setting.SOUND_ALARM_CRITICAL,  Setting.DEFAULT_SOUND_ALARM_CRITICAL);
+            majorSoundTextbox.Text = Setting.Get(Setting.SOUND_ALARM_MAJOR,  Setting.DEFAULT_SOUND_ALARM_MAJOR);
+            minorSoundTextbox.Text = Setting.Get(Setting.SOUND_ALARM_MINOR,  Setting.DEFAULT_SOUND_ALARM_MINOR);
+            powerSoundTextbox.Text = Setting.Get(Setting.SOUND_ALARM_POWER, Setting.DEFAULT_SOUND_ALARM_POWER);
+        }
+
+        private void TabColors_Loaded(object sender, RoutedEventArgs e)
+        {
+            ColorList.ItemsSource = Settings.Default.PropertyValues.Cast<SettingsPropertyValue>().Where(s => s.Name.StartsWith("Color"));
+        }
+
+        private void btnImagePath_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter = "JPG (*.jpg) | *.jpg";
+            dialog.Title = "انتخاب تصویر";
+
+            Nullable<bool> show = dialog.ShowDialog();
+
+            if (show == true)
+                this.ImagePath = dialog.FileName;
+        }
+
+    }
+}

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="TMN.UserControls.SoundButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             MouseDown="UserControl_MouseDown"
+             mc:Ignorable="d"
+             FlowDirection="LeftToRight"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             Cursor="Hand"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <Grid VerticalAlignment="Center"
+          HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="1"
+               Height="35"
+               Source="{a:ImageSource speaker.png}" />
+        <Image Grid.Row="1"
+               HorizontalAlignment="Right"
+               Visibility="Collapsed"
+               x:Name="noImage"
+               VerticalAlignment="Bottom"
+               Width="17"
+               Margin="0,5"
+               Source="{a:ImageSource no.png}" />
+        <TextBlock VerticalAlignment="Center"
+                   x:Name="titleTextBlock"
+                   Grid.Column="1">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="1"
+                                  Opacity=".5" />
+            </TextBlock.Effect></TextBlock>
+    </Grid>
+</UserControl>

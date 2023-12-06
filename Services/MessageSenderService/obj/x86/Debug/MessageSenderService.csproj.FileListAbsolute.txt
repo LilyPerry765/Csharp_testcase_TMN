@@ -1,0 +1,39 @@
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SendMessageWindow.baml
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SendMessageWindow.g.cs
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.g.resources
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.Properties.Resources.resources
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\bin\MessageSenderService.exe.config
+D:\Develop\TMN.Classic\Services\bin\MessageSenderService.exe
+D:\Develop\TMN.Classic\Services\bin\MessageSenderService.pdb
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.exe
+D:\Develop\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.pdb
+D:\Develop\Main\TMN.Classic\Services\bin\MessageSenderService.exe.config
+D:\Develop\Main\TMN.Classic\Services\bin\MessageSenderService.exe
+D:\Develop\Main\TMN.Classic\Services\bin\MessageSenderService.pdb
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SendMessageWindow.baml
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SendMessageWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService_MarkupCompile.cache
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.g.resources
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.ProjectInstaller.resources
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.Properties.Resources.resources
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.exe
+D:\Develop\Main\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.pdb
+E:\Project\Final Project\TMN.Classic\Services\bin\MessageSenderService.exe.config
+E:\Project\Final Project\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.exe
+E:\Project\Final Project\TMN.Classic\Services\MessageSenderService\obj\x86\Debug\MessageSenderService.pdb

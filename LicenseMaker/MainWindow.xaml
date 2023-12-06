@@ -1,0 +1,28 @@
+﻿<Window x:Class="LicenseMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        Title="Pendar License Maker"
+        Height="277"
+        Width="399"
+        Loaded="Window_Loaded">
+    <StackPanel Margin="5">
+        <Label>Access Code:</Label>
+        <TextBox x:Name="macTextBox" 
+                   />
+        <Button x:Name="loadDefaultButton"
+                IsDefault="False"
+                Click="loadDefaultButton_Click"
+                Margin="0,10">Refresh</Button>
+        <Button x:Name="generateButton"
+                IsDefault="True"
+                Click="generateButton_Click"
+                Margin="0,10">Generate License</Button>
+        <Label>License Key:</Label>
+        <TextBox x:Name="licenseComboBox" IsEnabled="False"/>
+        <Button x:Name="copyButton"
+                IsDefault="False"
+                Click="copyButton_Click"
+                Margin="0,10">Copy</Button>
+    </StackPanel>
+</Window>

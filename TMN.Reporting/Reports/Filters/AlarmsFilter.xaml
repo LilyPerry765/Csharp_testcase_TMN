@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="TMN.Reports.Filters.AlarmsFilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             xmlns:enums="clr-namespace:TMN;assembly=TMN.Common"
+             FlowDirection="RightToLeft"
+             mc:Ignorable="d"
+             FontFamily="Tahoma"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignWidth="927">
+    <WrapPanel FlowDirection="RightToLeft">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="RouteIDLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= RouteComboBox}"
+                   ToolTip="مسير">مسير:</Label>
+            <ComboBox Grid.Column="1"
+                      IsEditable="True"
+                      x:Name="RouteComboBox"
+                      DisplayMemberPath="TGNO"
+                      SelectedValuePath="ID"
+                      Margin="2"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="TypeLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= TypeComboBox}"
+                   ToolTip="نوع آلارم">نوع آلارم:</Label>
+            <ComboBox Grid.Column="1"
+                      x:Name="TypeComboBox"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="ID"
+                      Margin="2"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= TypeComboBox}"
+                   ToolTip="نوع مرکز">نوع مرکز:</Label>
+            <ComboBox Grid.Column="1"
+                      x:Name="CenterTypeComboBox"
+                      Margin="2"
+                      SelectedValuePath="Value"
+                      ItemsSource="{a:EnumDataSource EnumType=enums:CenterTypes}"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="ShiftLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ShiftComboBox }"
+                   ToolTip="شيفت">شيفت:</Label>
+            <ComboBox Grid.Column="1"
+                      x:Name="ShiftComboBox"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="Value"
+                      Margin="2"
+                      HorizontalAlignment="Stretch" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="ReportTimeLabel"
+                   Grid.Column="0"
+                   HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ReportTimePersianDateBox }"
+                   ToolTip="زمان گزارش">زمان گزارش:</Label>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions >
+                <Label Grid.Column="0">از</Label>
+                <r:PersianDateBox Grid.Column="1"
+                                  x:Name="FromReportTimePersianDateBox"
+                                  Margin="2"
+                                  HorizontalAlignment="Stretch" />
+                <Label Grid.Column="2">تا</Label>
+                <r:PersianDateBox Grid.Column="3"
+                                  x:Name="ToReportTimePersianDateBox"
+                                  Margin="2"
+                                  HorizontalAlignment="Stretch" />
+            </Grid >
+        </Grid>
+        <StackPanel Orientation="Horizontal"
+                    Margin="5,2">
+            <Label>مدت خرابی:</Label>
+            <Label>از</Label>
+            <r:NumericUpDown Maximum="1000"
+                             x:Name="fromDurationNumericUpDown"
+                             Width="50" />
+            <Label>تا</Label>
+            <r:NumericUpDown Maximum="1000"
+                             x:Name="toDurationNumericUpDown"
+                             Width="50" />
+            <Label>ساعت</Label>
+        </StackPanel>
+    </WrapPanel>
+</UserControl>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="TMN.CircuitShowPictureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="نمایش نقشه کابل" Height="600" Width="800" WindowStartupLocation="CenterScreen"  FontSize="16"    >
+
+
+    <Grid  Name="PhotoViewerLayout">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.Row="0"  >
+            <StackPanel FlowDirection="RightToLeft"    >
+                <Label Name="lblAddress" FontFamily="B Nazanin"  FontStyle="Normal" FontWeight="UltraBold"   FontSize="16"  />
+                <Label Name="lblModuleNumber" FontFamily="B Nazanin"  FontStyle="Normal" FontWeight="UltraBold"   FontSize="16" />
+                <Label Name="lblCenter" FontFamily="B Nazanin"  FontStyle="Normal" FontWeight="UltraBold"   FontSize="16" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="1" Padding="4"  >
+            <ScrollViewer>
+                <Image Name="imageBox"  Stretch="UniformToFill"      />
+            </ScrollViewer>
+        </Border>
+    </Grid>
+
+
+</Window>

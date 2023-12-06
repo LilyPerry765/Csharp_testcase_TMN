@@ -1,0 +1,15 @@
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.CLR.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.CLR.pdb
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\Logger.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Model.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Common.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\Enterprise.Wpf.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Config.dll
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Model.pdb
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\Logger.pdb
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Common.pdb
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\Enterprise.Wpf.pdb
+D:\Develop\TMN.Classic\TMN.CLR\bin\Debug\TMN.Config.pdb
+D:\Develop\TMN.Classic\TMN.CLR\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.CLR\obj\Debug\TMN.CLR.dll
+D:\Develop\TMN.Classic\TMN.CLR\obj\Debug\TMN.CLR.pdb

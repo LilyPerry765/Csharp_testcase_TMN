@@ -1,0 +1,17 @@
+D:\Develop\TMN.Classic\bin\Ewsd Settings.lnk
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.exe.config
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.exe
+D:\Develop\TMN.Classic\bin\EwsdAlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\EwsdAlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\EwsdAlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\EwsdAlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.EwsdAlarmService\obj\x86\Release\EwsdAlarmService.pdb

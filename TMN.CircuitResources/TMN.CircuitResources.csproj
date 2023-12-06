@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85F57E60-AB15-46CF-8C56-6DCC91BDBBBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN.CircuitResources</RootNamespace>
+    <AssemblyName>TMN.CircuitResources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tehranMap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circuit_312_01.jpg" />
+    <Resource Include="Images\circuit_312_02.jpg" />
+    <Resource Include="Images\circuit_312_03.jpg" />
+    <Resource Include="Images\circuit_312_04.jpg" />
+    <Resource Include="Images\circuit_312_05.jpg" />
+    <Resource Include="Images\circuit_312_06.jpg" />
+    <Resource Include="Images\circuit_312_07.jpg" />
+    <Resource Include="Images\circuit_312_08.jpg" />
+    <Resource Include="Images\circuit_312_09.jpg" />
+    <Resource Include="Images\circuit_312_10.jpg" />
+    <Resource Include="Images\circuit_312_11.jpg" />
+    <Resource Include="Images\circuit_312_12.jpg" />
+    <Resource Include="Images\circuit_312_13.jpg" />
+    <Resource Include="Images\circuit_312_14.jpg" />
+    <Resource Include="Images\circuit_312_15.jpg" />
+    <Resource Include="Images\circuit_312_16.jpg" />
+    <Resource Include="Images\circuit_312_17.jpg" />
+    <Resource Include="Images\circuit_312_18.jpg" />
+    <Resource Include="Images\circuit_316_01.jpg" />
+    <Resource Include="Images\circuit_316_02.jpg" />
+    <Resource Include="Images\circuit_316_03.jpg" />
+    <Resource Include="Images\circuit_316_04.jpg" />
+    <Resource Include="Images\circuit_316_05.jpg" />
+    <Resource Include="Images\circuit_316_06.jpg" />
+    <Resource Include="Images\circuit_316_07.jpg" />
+    <Resource Include="Images\circuit_316_08.jpg" />
+    <Resource Include="Images\circuit_316_09.jpg" />
+    <Resource Include="Images\circuit_316_10.jpg" />
+    <Resource Include="Images\circuit_316_11.jpg" />
+    <Resource Include="Images\circuit_316_12.jpg" />
+    <Resource Include="Images\circuit_316_13.jpg" />
+    <Resource Include="Images\circuit_316_14.jpg" />
+    <Resource Include="Images\circuit_316_15.jpg" />
+    <Resource Include="Images\circuit_335_02.jpg" />
+    <Resource Include="Images\circuit_335_03.jpg" />
+    <Resource Include="Images\circuit_335_04.jpg" />
+    <Resource Include="Images\circuit_335_05.jpg" />
+    <Resource Include="Images\circuit_335_06.jpg" />
+    <Resource Include="Images\circuit_335_07.jpg" />
+    <Resource Include="Images\circuit_335_08.jpg" />
+    <Resource Include="Images\circuit_335_09.jpg" />
+    <Resource Include="Images\circuit_335_10.jpg" />
+    <Resource Include="Images\circuit_335_11.jpg" />
+    <Resource Include="Images\circuit_335_12.jpg" />
+    <Resource Include="Images\circuit_335_14.jpg" />
+    <Resource Include="Images\circuit_335_15.jpg" />
+    <Resource Include="Images\circuit_335_16.jpg" />
+    <Resource Include="Images\circuit_335_17.jpg" />
+    <Resource Include="Images\circuit_335_18.jpg" />
+    <Resource Include="Images\circuit_335_19.jpg" />
+    <Resource Include="Images\circuit_335_20.jpg" />
+    <Resource Include="Images\circuit_335_21.jpg" />
+    <Resource Include="Images\circuit_335_22.jpg" />
+    <Resource Include="Images\circuit_335_23.jpg" />
+    <Resource Include="Images\circuit_335_24.jpg" />
+    <Resource Include="Images\circuit_335_25.jpg" />
+    <Resource Include="Images\circuit_335_26.jpg" />
+    <Resource Include="Images\circuit_335_28.jpg" />
+    <Resource Include="Images\circuit_335_29.jpg" />
+    <Resource Include="Images\circuit_335_30.jpg" />
+    <Resource Include="Images\circuit_335_31.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

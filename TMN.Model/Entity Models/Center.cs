@@ -1,0 +1,324 @@
+﻿using System;
+using System.Linq;
+using TMN.Interfaces;
+using Enterprise;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Diagnostics;
+using System.ServiceProcess;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading;
+using System.ServiceModel;
+
+namespace TMN
+{
+	public partial class Center : Entity, IDeletable
+	{
+		// TCPClient tcp = new TCPClient();
+
+		const string CURRENT_CENTER_KEY = "DefaultCenter";
+		//   public static Func<Center> GetSelectedCenter;
+		public static Action<Center> SetSelectedCenter;
+		public static Action SetDefaultCenter;
+		public static event Action SelectedChanged;
+
+		partial void OnCreated()
+		{
+			this.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(Center_PropertyChanged);
+		}
+
+		private static Center selected;
+		public static Center Selected
+		{
+			get
+			{
+				//if (GetSelectedCenter != null)
+				//{
+				//    return GetSelectedCenter();
+				//}
+				return selected;
+			}
+			set
+			{
+				if (SetSelectedCenter != null)
+				{
+					SetSelectedCenter(value);
+				}
+			}
+		}
+
+		public static void OnSelectedChanged(Center newCenter)
+		{
+
+
+			selected = newCenter;
+			if (SelectedChanged != null)
+			{
+				SelectedChanged();
+			}
+
+
+		}
+
+		void Center_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName == "SwitchType" | e.PropertyName == "Name" | e.PropertyName == "Switch")
+			{
+				this.SendPropertyChanged("DisplayName");
+			}
+		}
+
+		public bool Delete()
+		{
+
+			if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+			{
+				var db = DB.Instance;
+
+				db.Connection.Open();
+				db.Transaction = db.Connection.BeginTransaction();
+				Center center = db.Centers.Where(p => p == this).SingleOrDefault();
+				try
+				{
+
+					// user log
+					//UserLog.Log(db, ActionType.CenterRemove, string.Format("Name={0}", center.Name), string.Format("ID={0} , Name={1}", center.ID, center.Name));
+
+
+					db.SubmitChanges();
+					db.Transaction.Commit();
+					this.IsDefault = false;
+					return true;
+				}
+				catch (SqlException ex)
+				{
+					db.Transaction.Rollback();
+					if (ex is SqlException)
+					{
+						MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+					}
+					else
+					{
+						Logger.Write(ex);
+						MessageBox.ShowError("انجام عمليات با شکست مواجه شد.");
+					}
+					return false;
+				}
+				finally
+				{
+					db.Connection.Close();
+				}
+			}
+
+			return false;
+		}
+
+
+		public string DisplayName
+		{
+			get
+			{
+				return string.Format("{0} ({1})", this.Name, SwitchType.Name);
+			}
+		}
+
+		public void RemoveFromDiagram()
+		{
+			X = null;
+			Y = null;
+		}
+
+		public static Center Empty
+		{
+			get
+			{
+				return new Center()
+				{
+					Name = "سيستم"
+				};
+			}
+		}
+
+
+		public bool IsEwsd
+		{
+			get
+			{
+				return this.SwitchType.Name.ToLower().Contains("ewsd");
+			}
+		}
+
+		public static Center Current
+		{
+			get
+			{
+				try
+				{
+					return DB.Instance.Centers.SingleOrDefault(c => c.ID == CurrentCenterID);
+				}
+				catch (Exception ex)
+				{
+					Logger.Write(ex, "Problem in getting the default center.");
+					return null;
+				}
+			}
+		}
+
+		private static Guid currentCenterID;
+		public static Guid CurrentCenterID
+		{
+			get
+			{
+				if (currentCenterID == Guid.Empty)
+				{
+					Guid tempId;
+					if (Guid.TryParse((string)RegSettings.Get(CURRENT_CENTER_KEY), out tempId))
+					{
+						if (DB.Instance.Centers.Any(c => c.ID == tempId))
+						{
+							currentCenterID = tempId;
+						}
+						else
+						{
+							Logger.WriteWarning("Default center is invalid.");
+						}
+					}
+					else
+					{
+						Logger.WriteWarning("Default center is not set.");
+					}
+				}
+				return currentCenterID;
+			}
+			set
+			{
+				currentCenterID = value;
+				RegSettings.Save(CURRENT_CENTER_KEY, value);
+				Logger.WriteInfo("Current center changed to \"{0}\".", Center.Current.IsNull(Center.Empty).Name);
+			}
+		}
+
+		private static bool CenterExists(Guid id)
+		{
+			if (DB.Instance.Centers.Any(c => c.ID == id))
+			{
+				return true;
+			}
+			return false;
+		}
+
+
+		public bool IsDefault
+		{
+			get
+			{
+
+				return this.ID == CurrentCenterID;
+			}
+			set
+			{
+				if (value == true)
+					CurrentCenterID = this.ID;
+				else if (this.IsDefault)
+					CurrentCenterID = Guid.Empty;
+			}
+		}
+
+		public bool IsUnique()
+		{
+			if (DB.Instance.Centers.Any(c => c.ID != this.ID &&
+				(c.PointCode == this.PointCode
+				|| (c.CenterType == CenterType && c.Switch == Switch && c.Name.Trim() == Name.Trim()))))
+			{
+				MessageBox.ShowError("بخشی از اطلاعات اين مرکز تکراری می باشد.");
+				return false;
+			}
+			return true;
+		}
+
+		public static Center FromID(Guid centerID)
+		{
+			return DB.Instance.Centers.SingleOrDefault(c => c.ID == centerID);
+		}
+
+		public static IEnumerable<Center> GetAlarmingCenters()
+		{
+			var db = DB.Instance;
+			return db.Centers.Where(c => c.ID != Center.CurrentCenterID && c.LogAlarms.Any(la => (la.IsRead == null || la.IsRead == false) && ((AlarmSeverities)la.Severity == AlarmSeverities.Critical || (AlarmSeverities)la.Severity == AlarmSeverities.Major || (AlarmSeverities)la.Severity == AlarmSeverities.Minor)));
+		}
+
+		public override string ToString()
+		{
+			return DisplayName;
+		}
+
+		/// <summary>
+		/// Starts RemoteDesctop to connect to this center.
+		/// </summary>
+		public void Connect()
+		{
+			try
+			{
+                string username = string.Format(@"{0}\{1}", this.IPAddress, User.Current.UserName.ToLower());
+                string pass = "123" + User.Current.Password;
+
+                //SendDataForAccountCreatorService(User.Current.UserName.ToLower(), pass);
+
+				RDPManager helper = new RDPManager();
+				helper.RdcTest(this.IPAddress, "", username, pass, this.DisplayName);
+
+				// user log
+				//using (var db = new TMNModelDataContext())
+				//{
+					//UserLog.Log(db, ActionType.ConnectToCenter, this.IPAddress, "");
+					//db.SubmitChanges();
+				//}
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+
+		public void Connect(string username, string password)
+		{
+			//Process.Start("mstsc.exe", string.Format("/v:{0}", this.IPAddress));
+			RDPManager helper = new RDPManager();
+			helper.RdcTest(this.IPAddress, "", "administrator", "pendar110", this.DisplayName);
+
+
+		}
+
+		public bool IsChecked
+		{
+			get;
+			set;
+		}
+
+		private void SendDataForAccountCreatorService(string username, string password)
+		{
+			//try
+			//{
+			//	string port = Setting.Get(Setting.ACCOUNT_CREATOR_PORT, Setting.DEFAULT_ACCOUNT_CREATOR_PORT);
+			//	string ip = this.IPAddress;
+
+			//	NetTcpBinding binding = new NetTcpBinding(SecurityMode.None, true);
+			//	EndpointAddress ndPoint = new EndpointAddress(string.Format("net.tcp://{0}:{1}/MainService", ip, port));
+			//	ChannelFactory<TMN.IMainService> channel = new ChannelFactory<TMN.IMainService>(binding);
+			//	TMN.IMainService proxy = channel.CreateChannel(ndPoint);
+			//	proxy.CheckAccount(username, password);
+
+			//	Logger.WriteInfo("send message to AccountCreatorService .");
+
+			//}
+			//catch (Exception ex)
+			//{
+			//	Logger.Write(ex);
+			//}
+		}
+	}
+}
+
+

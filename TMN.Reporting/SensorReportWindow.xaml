@@ -1,0 +1,32 @@
+﻿<Window x:Class="TMN.UI.Windows.SensorReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rptv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        xmlns:e="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        FlowDirection="RightToLeft"
+        Title="گزارش سنسورها"
+        Height="255"
+        Width="526"
+        FontFamily="Tahoma"
+        Loaded="Window_Loaded">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Top"
+                    Margin="0,5">
+            <Label>از تاريخ</Label>
+            <e:PersianDateBox DisplayMode="DateTime"
+                              x:Name="dateFromDateBox"
+                              IsDateNull="False" />
+            <Label>تا</Label>
+            <e:PersianDateBox DisplayMode="DateTime"
+                              x:Name="dateToDateBox" />
+            <Button Margin="5,0" Click="Button_Click">نمايش گزارش</Button>
+        </StackPanel>
+        <WindowsFormsHost>
+            <rptv:ReportViewer x:Name="ReportViewer"
+                               RightToLeft="No" />
+        </WindowsFormsHost>
+    </DockPanel>
+</Window>

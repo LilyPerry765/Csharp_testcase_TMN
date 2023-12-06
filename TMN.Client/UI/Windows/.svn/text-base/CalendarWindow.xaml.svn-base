@@ -1,0 +1,29 @@
+﻿<Window x:Class="TMN.UI.Windows.CalendarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="clr-namespace:TMN.UserControls.Calendar"
+        xmlns:v="clr-namespace:TMN.Views.Details"
+        Title="CalendarWindow"
+        Height="423"
+        Width="638">
+    <Grid>
+        <cal:Calendar x:Name="Calendar"
+                      DateChanged="Calendar_DateChanged"
+                      ViewChanging="Calendar_ViewChanging"
+                      Background="Transparent"
+                      DefaultView="DayView">
+            
+            <cal:Calendar.MonthViewItemTemplate>
+                <ControlTemplate>
+                    <v:CalendarItemTemplate CalendarView="MonthView" />
+                </ControlTemplate>
+            </cal:Calendar.MonthViewItemTemplate>
+            
+            <cal:Calendar.YearViewItemTemplate>
+                <ControlTemplate>
+                    <v:CalendarItemTemplate CalendarView="YearView" />
+                </ControlTemplate>
+            </cal:Calendar.YearViewItemTemplate>
+        </cal:Calendar>
+    </Grid>
+</Window>

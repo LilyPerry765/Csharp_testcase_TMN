@@ -1,0 +1,11 @@
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\bin\Release\MaintenanceService.exe.config
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\MaintenanceService.exe.config
+D:\Develop\TMN.Classic\bin\MaintenanceService.exe
+D:\Develop\TMN.Classic\bin\MaintenanceService.pdb
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\MaintenanceService.exe
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Release\MaintenanceService.pdb

@@ -1,0 +1,67 @@
+﻿<Window x:Class="TMN.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FontFamily="Tahoma"
+        WindowStartupLocation="CenterScreen"
+        Title="S12 Alarm Service Settings"
+        Height="500"
+        Width="414">
+    <DockPanel Margin="5"
+               FlowDirection="RightToLeft">
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Bottom">
+            <Button Margin="3"
+                    IsDefault="True"
+                    Content="ثبت"
+                    Height="23"
+                    Name="saveButton"
+                    Width="75"
+                    Click="saveButton_Click" />
+            <Button Margin="3"
+                    Content="خروج"
+                    IsCancel="True"
+                    Height="23"
+                    Name="cancelButton"
+                    Width="75"
+                    Click="cancelButton_Click" />
+        </StackPanel>
+        <StackPanel Margin="20,10">
+            <StackPanel.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin"
+                            Value="5,0" />
+                    <Setter Property="FlowDirection"
+                            Value="LeftToRight" />
+                    <Setter Property="Width"
+                            Value="300" />
+                    <Setter Property="HorizontalAlignment"
+                            Value="Left" />
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="Margin"
+                            Value="5,5,5,0" />
+                </Style>
+            </StackPanel.Resources>
+            <Label>مرکز جاری:</Label>
+            <ComboBox x:Name="centersCombo"
+                      Width="300"
+                      HorizontalAlignment="Left"
+                      DisplayMemberPath="DisplayName"
+                      SelectedValuePath="ID" />
+            <Label Content="مسير پوشه سرویس" />
+            <TextBox Name="alcatelAlarmServicePathTextBox" />
+            <Label Content="مسير پوشه محتوی لاگ فايل ها"></Label>
+            <TextBox x:Name="alcatelAlarmLogPathTextBox" />
+            <Label>نام کاربری ويندوز سيستم RepView:</Label>
+            <TextBox x:Name="userNameTextBox" />
+            <Label>رمز عبور ويندوز سيستم RepView:</Label>
+            <TextBox x:Name="passwordTextBox" />
+            <Label Content="نام ريزپردازنده" />
+            <TextBox Name="alcatelAlarmLogFixStringTextBox" />
+            <Label Content="حداکثر زمان تاخیر در  Repview(به دقیقه)(صفر = غیر فعال)" />
+            <TextBox x:Name="RepviewDeactiveMinutesTextBox" />
+            <Label>   </Label>
+            <Button Content="بازخوانی دوباره فایلها " Height="23" IsCancel="True" Name="reloadButton" Width="129" Visibility="Hidden" />
+        </StackPanel>
+    </DockPanel>
+</Window>

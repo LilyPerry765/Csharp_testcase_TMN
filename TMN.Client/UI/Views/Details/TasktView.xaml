@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="TMN.Views.Details.TaskView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:uc="clr-namespace:TMN.UserControls"
+             xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+             Height="300"
+             Width="456">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= cmbType }">عنوان:</Label>
+            <Label HorizontalContentAlignment="Right">مسير:</Label>
+            <Label HorizontalContentAlignment="Right">تعداد کانال:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= chkIsDone }">انجام شد:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtFinishDate }">زمان انجام:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtComment }">توضيحات:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox xmlns:uc="clr-namespace:TMN.UserControls"
+                               x:Name="cmbType"
+                               Width="140"
+                               SelectedItem="{Binding TaskType}"
+                               DisplayMemberPath="Name"
+                               SelectedValuePath="ID"
+                               Margin="0,2,0,2"
+                               HorizontalAlignment="Left" />
+            <uc:EntityComboBox x:Name="RouteComboBox"
+                      IsEditable="True"
+                      Width="140"
+                      SelectedItem="{Binding Route}"
+                      DisplayMemberPath="TGNO"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <r:NumericUpDown x:Name="ChannelCountNumericUpDown"
+                             Value="{Binding Path=ChannelCount, Mode=TwoWay}"
+                             Margin="0,2,0,2"
+                             HorizontalAlignment="Left" />
+            <CheckBox x:Name="chkIsDone"
+                      Width="140"
+                      IsChecked="{Binding IsDone}"
+                      Margin="4,7,0,7"
+                      HorizontalAlignment="Left"
+                      Checked="chkIsDone_Checked"
+                      Unchecked="chkIsDone_Unchecked" />
+            <r:PersianDateBox x:Name="txtFinishDate"
+                              DisplayMode="DateTime"
+                              IsCheckedChanged="txtFinishDate_IsCheckedChanged"
+                              Date="{Binding FinishDate}"
+                              Margin="0,2,0,2"
+                              HorizontalAlignment="Left"
+                              ShowCheckBox="False" />
+            <TextBox x:Name="txtComment"
+                     VerticalScrollBarVisibility="Auto"
+                     TextWrapping="Wrap"
+                     Text="{Binding Comment}"
+                     Width="391"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left"
+                     Height="160"
+                     AcceptsReturn="True" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

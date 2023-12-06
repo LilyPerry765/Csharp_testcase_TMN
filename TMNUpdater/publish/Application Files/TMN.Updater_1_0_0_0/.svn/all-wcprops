@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0
+END
+Enterprise.Wpf.dll.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/Enterprise.Wpf.dll.deploy
+END
+TMN.Updater.exe.config.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Updater.exe.config.deploy
+END
+TMN.Model.dll.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Model.dll.deploy
+END
+TMN.Updater.application
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Updater.application
+END
+Logger.dll.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/Logger.dll.deploy
+END
+TMN.Updater.exe.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Updater.exe.manifest
+END
+TMN.Config.dll.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Config.dll.deploy
+END
+TMN.Common.dll.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Common.dll.deploy
+END
+TMN.Updater.exe.deploy
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/publish/Application%20Files/TMN.Updater_1_0_0_0/TMN.Updater.exe.deploy
+END

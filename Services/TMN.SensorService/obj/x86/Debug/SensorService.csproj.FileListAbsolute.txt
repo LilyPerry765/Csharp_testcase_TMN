@@ -1,0 +1,25 @@
+D:\Develop\TMN.Classic\bin\Sensor Settings.lnk
+D:\Develop\TMN.Classic\bin\SensorService.exe.config
+D:\Develop\TMN.Classic\bin\SensorService.exe
+D:\Develop\TMN.Classic\bin\SensorService.pdb
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\CalibrationWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorLedButton.baml
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\CalibrationWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorLedButton.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorService_MarkupCompile.lref
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\TMN.SensorService.resources
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorService.exe
+D:\Develop\TMN.Classic\Services\TMN.SensorService\obj\x86\Debug\SensorService.pdb

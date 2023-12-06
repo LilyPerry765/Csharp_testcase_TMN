@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.EwsdAlarmService
+END
+EwsdAlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TMN.Classic/!svn/ver/187/Services/TMN.EwsdAlarmService/EwsdAlarmService.csproj
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/DebugWindow.xaml.cs
+END
+EwsdAlarmService.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/EwsdAlarmService.Designer.cs
+END
+EwsdAlarmService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/EwsdAlarmService.cs
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/ProjectInstaller.resx
+END
+EwsdLogParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/340/Services/TMN.EwsdAlarmService/EwsdLogParser.cs
+END
+Ewsd Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/Ewsd%20Settings.lnk
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TMN.Classic/!svn/ver/718/Services/TMN.EwsdAlarmService/ProjectInstaller.Designer.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/ProjectInstaller.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/SettingsWindow.xaml
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/5/Services/TMN.EwsdAlarmService/Program.cs
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/334/Services/TMN.EwsdAlarmService/SettingsWindow.xaml.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.EwsdAlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/1/Services/TMN.EwsdAlarmService/DebugWindow.xaml
+END

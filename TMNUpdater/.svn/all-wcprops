@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/TMN.Classic/!svn/ver/718/TMNUpdater
+END
+TMN.Updater.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/718/TMNUpdater/TMN.Updater.csproj
+END
+UpdateSettings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/718/TMNUpdater/UpdateSettings.xml
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/718/TMNUpdater/app.config
+END
+Updater.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/703/TMNUpdater/Updater.cs
+END
+TMN.Updater_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/169/TMNUpdater/TMN.Updater_TemporaryKey.pfx
+END
+UpdaterSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/681/TMNUpdater/UpdaterSettings.cs
+END
+Impersonation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/TMN.Classic/!svn/ver/682/TMNUpdater/Impersonation.cs
+END

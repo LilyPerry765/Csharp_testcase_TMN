@@ -1,0 +1,39 @@
+﻿<Window x:Class="TMN.UI.Windows.InputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        FlowDirection="RightToLeft"
+        Title="عنوان"
+        Activated="Window_Activated"
+        Background="{StaticResource backgroundPicture}"
+        FontFamily="Tahoma"
+        Height="190"
+        Width="342">
+    <DockPanel>
+        <Border DockPanel.Dock="Bottom"
+                Padding="5"
+                BorderBrush="WhiteSmoke"
+                BorderThickness="0,1,0,0">
+            <StackPanel Height="29"
+                        Orientation="Horizontal">
+                <Button Width="70"
+                        IsDefault="True"
+                        x:Name="okButton"
+                        Margin="3"
+                        Click="okButton_Click">تاييد</Button>
+                <Button Width="70"
+                        IsCancel="True"
+                        x:Name="cancelButton"
+                        Margin="3"
+                        Click="cancelButton_Click">انصراف</Button>
+            </StackPanel>
+        </Border>
+        <StackPanel Margin="20">
+            <Label>لطفا عنوان را وارد نماييد</Label>
+            <TextBox VerticalAlignment="Center" TabIndex="0"
+                     x:Name="textBox"
+                     Margin="5" />
+        </StackPanel>
+    </DockPanel>
+</Window>

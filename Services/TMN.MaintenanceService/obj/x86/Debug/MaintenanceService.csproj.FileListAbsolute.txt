@@ -1,0 +1,9 @@
+D:\Develop\TMN.Classic\bin\MaintenanceService.exe.config
+D:\Develop\TMN.Classic\bin\MaintenanceService.exe
+D:\Develop\TMN.Classic\bin\MaintenanceService.pdb
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\MaintenanceService.exe
+D:\Develop\TMN.Classic\Services\TMN.MaintenanceService\obj\x86\Debug\MaintenanceService.pdb

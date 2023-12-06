@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TMN.Classic/!svn/ver/534/TMN.Client/UI/Diagram
+END
+CenterItem.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/90/TMN.Client/UI/Diagram/CenterItem.xaml
+END
+CircuitItem.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/403/TMN.Client/UI/Diagram/CircuitItem.xaml
+END
+CenterItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/281/TMN.Client/UI/Diagram/CenterItem.cs
+END
+CircuitItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/534/TMN.Client/UI/Diagram/CircuitItem.cs
+END
+CircuitRegion.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/404/TMN.Client/UI/Diagram/CircuitRegion.xml
+END

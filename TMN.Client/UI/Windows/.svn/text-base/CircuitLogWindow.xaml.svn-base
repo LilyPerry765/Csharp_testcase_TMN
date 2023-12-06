@@ -1,0 +1,74 @@
+﻿<Window x:Class="TMN.CircuitLogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserLogWindow" 
+        Height="350" 
+        FlowDirection="RightToLeft" 
+        Width="1000"
+        FontFamily="Tahoma" >
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" x:Name="Root">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Expander  x:Name="SearchExpander" x:FieldModifier="public" Grid.Row="0"  >
+                <Expander.Header>
+                    <TextBlock Margin="5">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="1" />
+                    </TextBlock.Effect>جستجو</TextBlock>
+                </Expander.Header>
+
+                <Border CornerRadius="5" BorderThickness="1" BorderBrush="White" Padding="3" Background="#44FFFFFF" Margin="3">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel  Margin="3,2,3,4" FlowDirection="RightToLeft"  DockPanel.Dock="Top" Orientation="Horizontal" >
+                            <TextBlock   Margin="2" VerticalAlignment="Center" Text="تاریخ :" />
+                            <DatePicker Margin="2" Width="150" x:Name="datePicker" VerticalAlignment="Center"  CalendarClosed="datePicker_CalendarClosed"   />
+                            <TextBlock Margin="2" VerticalAlignment="Center" Text="جستجو :"  />
+                            <TextBox Margin="2" Width="200" x:Name="txtSearch" VerticalAlignment="Center"   FlowDirection="RightToLeft" KeyUp="txtSearch_KeyUp"    />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Expander>
+
+            <Border x:Name="ListViewHolder" Grid.Row="1" />
+
+        </Grid>
+
+        <Border DockPanel.Dock="Bottom" CornerRadius="5" BorderThickness="1" BorderBrush="White" Padding="3" Background="#44FFFFFF" Margin="2">
+            <ListView   x:Name="listView"    FlowDirection="RightToLeft"    >
+                <ListView.View  >
+                    <GridView x:Name="dataGrid"   >
+                        <GridViewColumn  Width="200" Header="تاریخ و زمان" DisplayMemberBinding="{Binding Date}"/>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Action}" Header="عملکرد" >
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate >
+                                    <TextBlock x:Name="txt" Text="info" />
+                                    <DataTemplate.Triggers >
+                                        <DataTrigger Binding="{Binding Action }" Value="32">
+                                            <Setter TargetName="txt" Property="Text"  Value="تایید قطع کابل" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Action }" Value="33">
+                                            <Setter TargetName="txt" Property="Text"  Value="قطعی کابل جدید" />
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="Auto" Header="توضیحات" DisplayMemberBinding="{Binding Description}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+
+    </DockPanel>
+
+</Window>

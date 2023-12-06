@@ -1,0 +1,17 @@
+D:\Develop\TMN.Classic\bin\TMN.ServiceCommon.dll
+D:\Develop\TMN.Classic\bin\TMN.ServiceCommon.pdb
+D:\Develop\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.dll
+D:\Develop\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.pdb
+D:\Develop\Main\TMN.Classic\bin\TMN.ServiceCommon.dll
+D:\Develop\Main\TMN.Classic\bin\TMN.ServiceCommon.pdb
+D:\Develop\Main\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.dll
+D:\Develop\Main\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.pdb
+E:\Project\Final Project\TMN.Classic\bin\TMN.ServiceCommon.dll
+E:\Project\Final Project\TMN.Classic\bin\TMN.ServiceCommon.pdb
+E:\Project\Final Project\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\ServiceCommon.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.dll
+E:\Project\Final Project\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\TMN.ServiceCommon.pdb
+D:\Folder\TMN.ServiceCommon.dll
+D:\Folder\TMN.ServiceCommon.pdb
+D:\Develop\TMN.Classic\Services\TMN.ServiceCommon\obj\Debug\ServiceCommon.csprojResolveAssemblyReference.cache

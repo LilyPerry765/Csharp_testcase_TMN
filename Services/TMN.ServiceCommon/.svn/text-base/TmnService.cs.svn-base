@@ -1,0 +1,365 @@
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.ServiceModel;
+using System.ServiceModel.Description;
+using System.Text.RegularExpressions;
+using Enterprise;
+
+
+namespace TMN
+{
+    public abstract class TmnService   
+    {
+        public TmnService()
+        {
+        }
+
+		public static ServiceHost host;
+
+        public const short SECOND = 1000;
+
+        public abstract void Start();
+        public abstract void Stop();
+
+        protected int newCriticalCounter = 0; 
+		protected int newMajorCounter = 0;
+		protected int newMinorCounter = 0; 
+		protected int newPowerCounter = 0; 
+		protected int newSensorPowerCounter = 0;
+        protected string newCircuitOpenCounter = ""; 
+		protected string newCircuitShortCounter = "";
+
+
+		private void OpenAccountCreatorService()
+		{
+			try
+			{
+                
+				string port = Setting.Get(Setting.ACCOUNT_CREATOR_PORT, Setting.DEFAULT_ACCOUNT_CREATOR_PORT);
+
+				NetTcpBinding netTcpbinding = new NetTcpBinding(SecurityMode.None, true);
+				host = new ServiceHost(typeof(TMN.MainService));
+				ServiceEndpoint netTcpEndPoint = host.AddServiceEndpoint(typeof(TMN.IMainService), netTcpbinding, string.Format("net.tcp://localhost:{0}/MainService", port));
+
+				Logger.WriteStart("CommunicationService is starting");
+				host.Open();
+				Logger.WriteStart("CommunicationService state is {0}", host.State.ToString());
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+
+		private void CloseAccountCreatorService()
+		{
+			try
+			{
+				Logger.WriteInfo("ServiceHost is closing");
+				host.Close();
+				Logger.WriteStart("CommunicationService state is {0}", host.State.ToString());
+			}
+			catch (Exception ex)
+			{
+				Logger.Write(ex);
+			}
+		}
+
+        protected void CountNewAlarms(LogAlarm alarm)
+        {
+            if (!alarm.IsRead.Value)
+            {
+                switch ((AlarmSeverities)alarm.Severity)
+                {
+                    case AlarmSeverities.Critical:
+                        newCriticalCounter++;
+                        break;
+                    case AlarmSeverities.Major:
+                        newMajorCounter++;
+                        break;
+                    case AlarmSeverities.Minor:
+                        newMinorCounter++;
+                        break;
+                    case AlarmSeverities.CircuitOpen:
+                        string to = alarm.Location.Substring(4) + "_";
+                        if (newCircuitOpenCounter.Contains(to) == false)
+                            newCircuitOpenCounter += to;
+                        break;
+                    case AlarmSeverities.CircuitShort:
+                        string ts = alarm.Location.Substring(4) + "_";
+                        if(newCircuitShortCounter.Contains(ts) == false)
+                            newCircuitShortCounter += ts;
+                        //newCircuitShortCounter = newCircuitShortCounter.TrimEnd('_');
+                        break;
+                    case AlarmSeverities.Power:
+                        newSensorPowerCounter++;
+                        break;
+                }       
+
+                checkPowerAlarms(alarm);
+            }
+        }
+
+        private void checkPowerAlarms(LogAlarm alarm)
+        {
+            string data = alarm.Data.ToUpper();
+            string serviceName = Assembly.GetEntryAssembly().GetName().Name;
+            if (alarm.Severity <= 4)
+            {
+                if (serviceName.Contains("Huawei"))
+                {
+                    data = alarm.Title.ToUpper();
+
+                    //if (data.Contains("POWER ") || data.Contains("AC ") || data.Contains("DC ") || data.Contains("RECTIFIRE "))
+                    if (Regex.IsMatch(data.ToUpper(), @"[\s\r\n](POWER|AC|DC|RECTIFIRE)[\s\r\n]"))
+                    {
+                        newPowerCounter++;
+                    }
+                }
+                else if (Regex.IsMatch(data.ToUpper(), @"[\s\r\n](POWER|AC|DC|RECTIFIRE|EMFU|CONV)[\s\r\n]"))
+                {
+                    //else if (data.Contains("POWER ") || data.Contains("AC ") || data.Contains("DC ") || data.Contains("RECTIFIRE ") || data.Contains("EMFU ") || data.Contains("CONV "))
+                    newPowerCounter++;
+                }
+            }
+        }
+
+        protected void SetCenterNewAlarms()
+        {
+            //string newAlarmCenters = Setting.Get(Setting.NEW_ALARM_INSERTED, "");
+            if (newCriticalCounter > 0)
+            {
+                Setting.Set(Setting.NEW_ALARM_INSERTED + Center.Current.PointCode, AlarmSeverities.Critical.ToString());
+                //newAlarmCenters += "_C" + Center.Current.PointCode;
+                newCriticalCounter = 0;
+            }
+            else if (newMajorCounter > 0)
+            {
+                Setting.Set(Setting.NEW_ALARM_INSERTED + Center.Current.PointCode, AlarmSeverities.Major.ToString());
+                //newAlarmCenters += "_J" + Center.Current.PointCode;
+                newMajorCounter = 0;
+            }
+            else if (newMinorCounter > 0)
+            {
+                Setting.Set(Setting.NEW_ALARM_INSERTED + Center.Current.PointCode, AlarmSeverities.Minor.ToString());
+                //newAlarmCenters += "_I" + Center.Current.PointCode;
+                newMinorCounter = 0;
+            }
+            //Setting.Set(Setting.NEW_ALARM_INSERTED, newAlarmCenters.TrimStart('_'));
+
+            if (newPowerCounter > 0)
+            {
+                Setting.Set(Setting.NEW_POWER_ALARM_INSERTED + Center.Current.PointCode, "true");
+                newPowerCounter = 0;
+            }
+
+            if (newSensorPowerCounter > 0)
+            {
+                Setting.Set(Setting.NEW_SENSOR_POWER_ALARM_INSERTED + Center.Current.PointCode, "true");
+                newSensorPowerCounter = 0;
+            }
+            
+            if (newCircuitShortCounter != "")
+            {
+                string temp = ""; // Setting.Get(Setting.NEW_CIRCUIT_SHORT_ALARM_INSERTED + Center.Current.PointCode, "");
+                temp = newCircuitShortCounter;
+                Setting.Set(Setting.NEW_CIRCUIT_SHORT_ALARM_INSERTED + Center.Current.PointCode, temp);
+                newCircuitShortCounter = "";
+            }
+
+            if (newCircuitOpenCounter != "")
+            {
+                string temp = ""; // Setting.Get(Setting.NEW_CIRCUIT_OPEN_ALARM_INSERTED + Center.Current.PointCode, "");
+                temp = newCircuitOpenCounter;
+                Setting.Set(Setting.NEW_CIRCUIT_OPEN_ALARM_INSERTED + Center.Current.PointCode, temp);
+                newCircuitOpenCounter = "";
+            }
+        }
+
+        public virtual void Start(string[] args)
+        {
+            try
+            {
+                if (args.Contains("/update") || args.Contains("/upgrade") || args.Contains("/u"))
+                {
+                    UpgradeService();
+                }
+                else if (args.Contains("/account"))
+                {
+                    //  CheckAccount(args[1], args[2]);
+                    StartNormally();
+                }
+                else
+                {
+                    StartNormally();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+            }
+        }
+
+		private void StartNormally()
+		{
+			_AlarmExpireSeconds = 0;
+			_AlarmQueryInterval = 0;
+            
+
+			try
+			{
+                using (var db = new TMNModelDataContext())
+                {
+                    SystemTime.SetTime(db.GetDate().Value);
+                }
+				OpenAccountCreatorService();
+
+                AssemblyName serviceInfo = System.Reflection.Assembly.GetEntryAssembly().GetName();
+                Logger.WriteStart("Starting {0} Version {1} ...", serviceInfo.Name, serviceInfo.Version);
+                ServiceTypes type;
+                if (serviceInfo.Name.ToLower().Contains("alarm"))
+                {
+                    type = ServiceTypes.AlarmService;
+                }
+                else if (serviceInfo.Name.ToLower().Contains("sensor"))
+                {
+                    type = ServiceTypes.SensorService;
+                }
+                else if (serviceInfo.Name.ToLower().Contains("circuit"))
+                {
+                    type = ServiceTypes.CircuitService;
+                }
+                else if (serviceInfo.Name.ToLower().Contains("message"))
+                {
+                    type = ServiceTypes.MessageSender;
+                }
+                else
+                {
+                    throw new NotSupportedException(serviceInfo.Name + " is neither a Sensor(Circuit)Service nor an AlarmService!");
+                }
+                ServiceState.UpgareVersion(Assembly.GetEntryAssembly(), type);
+                this.Start();
+                Logger.WriteInfo("{0} started.", serviceInfo.Name);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+            }
+		}
+
+
+        protected void UpgradeService()
+        {
+            try
+            {
+                string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string updaterPath = Path.Combine(assemblyDir, "TMN.Updater.exe");
+                if (File.Exists(updaterPath))
+                {
+                    Logger.WriteInfo("Starting update process...");
+                    var startInfo = new ProcessStartInfo(updaterPath, string.Format("/silent /username {0} /password {1}", Setting.UpdaterUserName, Setting.UpdaterPassword));
+                    startInfo.WorkingDirectory = assemblyDir;
+                    new System.Threading.Thread((arg) =>
+                    {
+                        try
+                        {
+                            Process.Start((ProcessStartInfo)arg);
+                        }
+                        catch (Exception ex)
+                        {
+                            Logger.Write(ex);
+                        }
+                    }).Start(startInfo);
+                    Logger.WriteDebug("Update process started.");
+                }
+                else
+                {
+                    Logger.WriteWarning("Updater({0}) was not found. Update failed.", updaterPath);
+                    this.Stop();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                this.Stop();
+            }
+        }
+
+        //protected void CheckAccount(string username, string password)
+        //{
+        //    //User user = DB.Instance.Users.SingleOrDefault(u => u.UserName == username && u.Password == password);
+        //    //if (user != null)
+        //    //{
+
+
+            
+
+        //  //  if (socket.Connected)
+        // //{
+        //        string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        //        string accountCreator = Path.Combine(assemblyDir, "AccountCreator.exe");
+
+        //        if (File.Exists(accountCreator))
+        //        {
+        //            Logger.WriteInfo("Starting check account...");
+
+        //            ProcessStartInfo processInfo = new ProcessStartInfo(accountCreator, string.Format(" {0} {1} ", username, password));
+        //            processInfo.WorkingDirectory = assemblyDir;
+
+        //            new System.Threading.Thread((arg) =>
+        //            {
+        //                try
+        //                {
+        //                    Process.Start((ProcessStartInfo)arg);
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    Logger.Write(ex);
+        //                }
+        //            }).Start(processInfo);
+
+        //            Logger.WriteDebug("Check account started.");
+        //        }
+        //        else
+        //        {
+        //            Logger.WriteWarning("Check account ({0}) was not found. ", accountCreator);
+        //        }
+        // //   }
+        //}
+
+
+        private static int _AlarmQueryInterval = 0;
+        /// <summary>
+        /// Global interval for alarm services in milli seconds.
+        /// </summary>
+        protected static int AlarmQueryInterval
+        {
+            get
+            {
+                if(_AlarmQueryInterval == 0)
+                    _AlarmQueryInterval = Setting.Get(Setting.ALARM_QUERY_INTERVAL, Setting.DEFAULT_ALARM_QUERY_INTERVAL) * SECOND;
+                return _AlarmQueryInterval;
+            }
+        }
+
+        private static int _AlarmExpireSeconds = 0;
+
+        /// <summary>
+        /// alarm expire duration in second
+        /// </summary>
+        protected static int AlarmExpireSeconds
+        {
+            get
+            {
+                if (_AlarmExpireSeconds == 0)
+                    _AlarmExpireSeconds = Setting.Get(Setting.ALARM_EXPIRE_SECONDS, Setting.DEFAULT_ALARM_EXPIRE_SECONDS);
+                return _AlarmExpireSeconds;
+            }
+        }
+
+        
+    }
+}

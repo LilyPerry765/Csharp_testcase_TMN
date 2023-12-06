@@ -1,0 +1,208 @@
+﻿<Window x:Class="TMN.UI.Windows.CenterReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        FontFamily="Tahoma"
+        Title="CenterReportsWindow"
+        FlowDirection="RightToLeft"
+        Height="350"
+        Width="549">
+
+        <Grid Margin="5"
+          x:Name="RootGrid"
+          Loaded="RootGrid_Loaded"
+          Unloaded="RootGrid_Unloaded">
+    
+        <ToolBar x:Name="MyToolbar">
+            <Button x:Name="DeleteButton" ToolTip="حذف" Click="DeleteButton_Click">
+                <Image FlowDirection="RightToLeft" Source="{a:ImageSource Path=delete.png}" Height="24" />
+            </Button>
+            <Button x:Name="RefreshButton" ToolTip="به روزرسانی" Click="RefreshButton_Click">
+                <Image Source="{a:ImageSource Path=refresh.png}" Height="24" />
+            </Button>
+            <TextBlock Text="کاربران :" HorizontalAlignment="Center"  VerticalAlignment="Center"  />
+            <ComboBox Grid.Column="3" Grid.Row="1"  Width="150" Margin="2" Name="cmbUsers" DisplayMemberPath="UserName" SelectedValuePath="ID" SelectionChanged="cmbUsers_SelectionChanged" />
+        </ToolBar>
+        
+        <Grid x:Name="EmptyGrid">
+            <Border x:Name="CreateButton"
+                    Opacity=".5"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    CornerRadius="5"
+                    Background="#55FFFFFF"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    MouseEnter="Border_MouseEnter"
+                    MouseLeave="Border_MouseLeave"
+                    ToolTip="ايجاد گزارش جديد"
+                    MouseDown="Border_MouseDown"
+                    Padding="10">
+                <Image x:Name="CreateReportImage"
+                       FlowDirection="LeftToRight"
+                       Source="{a:ImageSource Path=NewReport.png}"
+                       Width="128"></Image>
+            </Border>
+        </Grid>
+        
+        <Grid x:Name="DataFormGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    Padding="5"
+                    Height="90"
+                    CornerRadius="5"
+                    Margin="5"
+                    Background="#55FFFFFF">
+                <Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1"
+                              FlowDirection="RightToLeft">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.Resources>
+                                <Style TargetType="Label">
+                                    <Setter Property="Foreground"
+                                            Value="Gray" />
+                                </Style>
+                            </Grid.Resources>
+                            <Label Grid.Column="0"
+                                   x:Name="WeekDayNameLabel" />
+                            <Label Grid.Column="1"
+                                   x:Name="PersianDateLabel" />
+                            <Label  Grid.Column="2"
+                                    x:Name="EnglishDateLabel" />
+                            <Label Grid.Column="3"
+                                   x:Name="UserLabel" />
+                            <Label Grid.Column="4"
+                                   x:Name="ShiftLabel" />
+                        </Grid>
+                        
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions >
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <!--<TextBlock Grid.Column="2" Grid.Row="1" Text="کاربران :" VerticalAlignment="Center"  />-->
+                            <!--<ComboBox Grid.Column="3" Grid.Row="1"  Width="150" Margin="2" Name="cmbUsers" DisplayMemberPath="UserName" SelectedValuePath="ID" SelectionChanged="cmbUsers_SelectionChanged" />-->
+                            <!--<Label Grid.Column="0">افراد متفرقه وارد شده به مرکز:</Label>
+                            <TextBox Grid.Column="1" x:Name="MiscTextBox" Text="{Binding Miscellaneous}" />-->
+                        </Grid>
+                        
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Name="lblCenterName" Grid.Column="0"  TextAlignment="Center"   FontStretch="Condensed" FontSize="20"  Text="مرکز جاری"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1"
+                    CornerRadius="5"
+                    Background="#55FFFFFF"
+                    Margin="5"
+                    Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="198*" />
+                        <ColumnDefinition Width="29" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="13" />
+                        <ColumnDefinition Width="4" />
+                        <ColumnDefinition Width="201" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Column="0"
+                               Grid.Row="0">
+                        <Button x:Name="autoFillButton"
+                                DockPanel.Dock="Right"
+                                ToolTip="تکميل خودکار"
+                                Click="autoFillButton_Click">
+                            <Image Source="{a:ImageSource Path=auto_fill.png}" />
+                        </Button>
+                        <Label>خلاصه وضعيت موجود سيستم</Label>
+                    </DockPanel>
+                    <Label Grid.Column="1" Grid.ColumnSpan="5">گزارش:</Label>
+                    <DataGrid x:Name="reportsGrid"
+                                Grid.Column="0"
+                                CanUserResizeColumns="True"
+                                CanUserSortColumns="True" 
+                                CanUserResizeRows="True"
+                                CanUserAddRows="False"
+                                CanUserDeleteRows="False"
+                                RowHeight="25"
+                                VerticalContentAlignment="Center"
+                                VerticalGridLinesBrush="LightBlue"
+                                HorizontalGridLinesBrush="LightBlue"
+                                HeadersVisibility="Row"
+                                RowHeaderWidth="20"
+                                Grid.Row="1"
+                                AutoGenerateColumns="False"
+                                AlternationCount="2"
+                                ItemsSource="{Binding ReportItemsView}"
+                                AlternatingRowBackground="AliceBlue"
+                                RowBackground="Transparent" 
+                                Background="#55FFFFFF"  >
+                        <DataGrid.Columns>
+
+
+                            <DataGridTextColumn Header="Rank" x:Name="colRank" Width="SizeToCells"
+                                                  Binding="{Binding ReportType.Rank}" SortDirection="Ascending"
+                                                  IsReadOnly="True"  Visibility="Hidden" />
+
+
+                            <DataGridTextColumn  Header="Name" Width="SizeToCells"
+                                                  Binding="{Binding ReportType.Name}"
+                                                  IsReadOnly="True"  />
+                            
+                            
+                            <DataGridTextColumn Header="Value"  Binding="{Binding Value}"
+                                                  Width="*"      />
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox x:Name="DescriptionTextBox"
+                             Text="{Binding Description}"
+                             TextWrapping="Wrap"
+                             Grid.Column="1"
+                             Grid.Row="1"
+                             VerticalScrollBarVisibility="Visible"
+                             AcceptsReturn="True" Grid.ColumnSpan="5" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="2"
+                    Height="30">
+                <uc:ImageButton x:Name="SaveButton"
+                                IsDefault="True"
+                                ImageSource="{a:ImageSource Path=check.png}"
+                                Text="ذخيره"
+                                Click="SaveButton_Click" />
+            </Border>
+        </Grid>
+            
+    </Grid>
+</Window>

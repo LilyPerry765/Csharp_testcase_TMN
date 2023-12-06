@@ -1,0 +1,16 @@
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\bin\Release\Server Configuration Manager.exe.config
+D:\Develop\TMN.Classic\bin\Role_Insert.sql
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.exe.config
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.exe
+D:\Develop\TMN.Classic\bin\Server Configuration Manager.pdb
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\MainWindow.baml
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\MainWindow.g.cs
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\App.g.cs
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\Server Configuration Manager_MarkupCompile.cache
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\Server Configuration Manager.g.resources
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\TMN.Properties.Resources.resources
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\Server Configuration Manager.exe
+D:\Develop\TMN.Classic\TmnServerConfigurationManager\obj\x86\Release\Server Configuration Manager.pdb

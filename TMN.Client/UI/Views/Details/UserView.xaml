@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="TMN.Views.Details.UserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+             xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             FlowDirection="RightToLeft"
+             Height="166"
+             Width="261">
+    <!-- Modified -->
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtUserName }">نام کاربری:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtFullName }">نام  حقيقی:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtPassword }">کلمه عبور:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= txtPassword }">تکرار کلمه عبور:</Label>
+            <Label HorizontalContentAlignment="Right">سطوح دسترسی:</Label>
+        </StackPanel>
+        <StackPanel>
+            <TextBox x:Name="txtUserName"
+                     Text="{Binding UserName}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="txtFullName"
+                     Text="{Binding FullName}"
+                     Width="140"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <PasswordBox x:Name="txtPassword"
+                         Width="140"
+                         Margin="0,2,0,2"
+                         HorizontalAlignment="Left" />
+            <PasswordBox x:Name="txtPassword2"
+                         Width="140"
+                         Margin="0,2,0,2"
+                         HorizontalAlignment="Left" />
+            <ListBox Height="63"
+                     x:Name="RolesListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox x:Name="RoleCheckBox"
+                                  Content="{Binding Name}"
+                                  IsChecked="{Binding IsChecked}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

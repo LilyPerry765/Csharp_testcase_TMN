@@ -1,0 +1,18 @@
+D:\Develop\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.dll.config
+D:\Develop\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.dll
+D:\Develop\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.pdb
+D:\Develop\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.dll
+D:\Develop\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.pdb
+D:\Develop\Main\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.dll.config
+D:\Develop\Main\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.dll
+D:\Develop\Main\TMN.Classic\TMN.Config\bin\Debug\TMN.Config.pdb
+D:\Develop\Main\TMN.Classic\TMN.Config\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.dll
+D:\Develop\Main\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.pdb
+D:\Folder\TMN.Config.dll.config
+D:\Folder\TMN.Config.dll
+D:\Folder\TMN.Config.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.dll
+E:\Project\Final Project\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.pdb
+E:\Project\Final Project\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.csprojResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.Config\obj\Debug\TMN.Config.csprojResolveAssemblyReference.cache

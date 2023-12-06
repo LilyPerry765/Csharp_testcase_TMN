@@ -1,0 +1,5 @@
+D:\Develop\TMN.Classic\bin\TMN.Converters.dll
+D:\Develop\TMN.Classic\bin\TMN.Converters.pdb
+D:\Develop\TMN.Classic\TMN.Converters\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\TMN.Converters\obj\Debug\TMN.Converters.dll
+D:\Develop\TMN.Classic\TMN.Converters\obj\Debug\TMN.Converters.pdb

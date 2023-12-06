@@ -1,0 +1,11 @@
+D:\Develop\TMN.Classic\bin\Service Management Utility.exe.config
+D:\Develop\TMN.Classic\bin\Service Management Utility.exe
+D:\Develop\TMN.Classic\bin\Service Management Utility.pdb
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\MainWindow.baml
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\MainWindow.g.cs
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\App.g.cs
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\Service Management Utility_MarkupCompile.cache
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.g.resources
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.exe
+D:\Develop\TMN.Classic\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.pdb

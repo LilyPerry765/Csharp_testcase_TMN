@@ -1,0 +1,15 @@
+﻿<Window x:Class="TMN.UI.Windows.SchemaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        Title="شماي مركز سويچ"
+        Height="410"
+        Width="627">
+    <Grid x:Name="Root" Loaded="Grid_Loaded" Unloaded="Grid_Unloaded">
+        <Grid.LayoutTransform>
+            <ScaleTransform ScaleX="1"
+                            ScaleY="1" />
+        </Grid.LayoutTransform>
+        <uc:CenterSchema  x:Name="Schema" />
+    </Grid>
+</Window>

@@ -1,0 +1,50 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.LongRecordsListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                     xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                     xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+                     xmlns:v="clr-namespace:TMN.Views.Lists">
+    <v:ItemsListBase.ListView>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="نام کشيک"
+                                    DisplayMemberBinding="{Binding User.FullName}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="تاريخ ميلادی"
+                                    DisplayMemberBinding="{Binding Date, StringFormat=yyyy/MM/dd}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="تاريخ شمسی"
+                                    DisplayMemberBinding="{Binding Date, Converter={x:Static conv:PersianDateConverter.Instance}, ConverterParameter=d}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="ساعت"
+                                    DisplayMemberBinding="{Binding Date, StringFormat=HH:mm}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="نام مسير ورودی"
+                                    DisplayMemberBinding="{Binding Route.RouteName}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="شماره مشترک A"
+                                    DisplayMemberBinding="{Binding ANumber}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="شماره مشترک B"
+                                    DisplayMemberBinding="{Binding BNumber}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="شماره کانال"
+                                    DisplayMemberBinding="{Binding Channel}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="وضعيت کانال"
+                                    xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                                    DisplayMemberBinding="{Binding State, Converter={x:Static conv:ChannelStatesConverter.Instance} }"
+                                    Width="Auto" />
+                    <GridViewColumn Header="مدت مکالمه"
+                                    DisplayMemberBinding="{Binding Length}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="توضيحات"
+                                    DisplayMemberBinding="{Binding Description}"
+                                    Width="Auto" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

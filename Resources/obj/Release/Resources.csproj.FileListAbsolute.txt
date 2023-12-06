@@ -1,0 +1,9 @@
+D:\Develop\TMN.Classic\bin\Resources.dll
+D:\Develop\TMN.Classic\bin\Resources.pdb
+D:\Develop\TMN.Classic\Resources\obj\Release\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Resources\obj\Release\Resources.g.resources
+D:\Develop\TMN.Classic\Resources\obj\Release\Resources.Properties.Resources.resources
+D:\Develop\TMN.Classic\Resources\obj\Release\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Resources\obj\Release\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Resources\obj\Release\Resources.dll
+D:\Develop\TMN.Classic\Resources\obj\Release\Resources.pdb

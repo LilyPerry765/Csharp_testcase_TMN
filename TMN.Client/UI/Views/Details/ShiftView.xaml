@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="TMN.Views.Details.ShiftView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             Height="118"
+             Width="221">
+    <!--Modified-->
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DatePersianDateBox }">تاريخ:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= MorningUserComboBox }">صبح:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= AfterNoonUserComboBox }">عصر:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= NightUserComboBox }">شب:</Label>
+        </StackPanel>
+        <StackPanel>
+            <r:PersianDateBox x:Name="DatePersianDateBox"
+                              IsEnabled="False"
+                              Width="140"
+                              Date="{Binding Date}"
+                              Margin="0,2,0,2"
+                              ShowCheckBox="False"
+                              HorizontalAlignment="Left" />
+            <ComboBox x:Name="MorningUserComboBox"
+                      TabIndex="0"
+                      Width="140"
+                      SelectedItem="{Binding User}"
+                      DisplayMemberPath="FullName"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <ComboBox x:Name="AfterNoonUserComboBox"
+                      Width="140"
+                      SelectedItem="{Binding User2}"
+                      DisplayMemberPath="FullName"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <ComboBox x:Name="NightUserComboBox"
+                      Width="140"
+                      SelectedItem="{Binding User1}"
+                      DisplayMemberPath="FullName"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

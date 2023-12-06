@@ -1,0 +1,33 @@
+D:\Develop\TMN.Classic\Services\bin\Service Management Utility.exe.config
+D:\Develop\TMN.Classic\Services\bin\Service Management Utility.exe
+D:\Develop\TMN.Classic\Services\bin\Service Management Utility.pdb
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.baml
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.g.cs
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\App.g.cs
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.g.resources
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.exe
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.pdb
+D:\Develop\Main\TMN.Classic\Services\bin\Service Management Utility.exe.config
+D:\Develop\Main\TMN.Classic\Services\bin\Service Management Utility.exe
+D:\Develop\Main\TMN.Classic\Services\bin\Service Management Utility.pdb
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.baml
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.g.cs
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\App.g.cs
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility_MarkupCompile.cache
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.g.resources
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.exe
+D:\Develop\Main\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.pdb
+D:\Folder\Service Management Utility.exe.config
+D:\Folder\Service Management Utility.exe
+D:\Folder\Service Management Utility.pdb
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\ServiceManagementUtility.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.baml
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\MainWindow.g.cs
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\App.g.cs
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility_MarkupCompile.cache
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.g.resources
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.exe
+E:\Project\Final Project\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\Service Management Utility.pdb
+D:\Develop\TMN.Classic\Services\ServiceManagementUtility\obj\x86\Debug\ServiceManagementUtility.csprojResolveAssemblyReference.cache

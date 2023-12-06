@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BBC56BE-623F-423D-AB80-6EE599356D6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN.Converters</RootNamespace>
+    <AssemblyName>TMN.Converters</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\Folder\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logger, Version=4.6.0.24176, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EnterpriseAssemblies\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinaryToImageConverter.cs" />
+    <Compile Include="BooleanFontWeightConverter.cs" />
+    <Compile Include="CenterTypesColorConverter.cs" />
+    <Compile Include="CenterTypesConverter.cs" />
+    <Compile Include="ChannelStatesConverter.cs" />
+    <Compile Include="ColorConverter.cs" />
+    <Compile Include="DDFConverter.cs" />
+    <Compile Include="DoubleAddConverter.cs" />
+    <Compile Include="DoubleMultiplyConverter.cs" />
+    <Compile Include="InstructionTypesConverter.cs" />
+    <Compile Include="LinkStateToImageConverter.cs" />
+    <Compile Include="LinkTypesColorConverter.cs" />
+    <Compile Include="LinkTypesConverter.cs" />
+    <Compile Include="NotConverter.cs" />
+    <Compile Include="PersianDateConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolsConverter.cs" />
+    <Compile Include="SensorToBrushConverter.cs" />
+    <Compile Include="StringFormatConverter.cs" />
+    <Compile Include="StringRemoverConverter.cs" />
+    <Compile Include="StringToLinesConverter.cs" />
+    <Compile Include="TimeSpanConverter.cs" />
+    <Compile Include="VisibilityBooleanConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMN.Common\TMN.Common.csproj">
+      <Project>{EC843D73-217F-43E8-BDD4-BA1E7C16415E}</Project>
+      <Name>TMN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Config\TMN.Config.csproj">
+      <Project>{F2CF4237-26B0-4785-8897-F762C4092D09}</Project>
+      <Name>TMN.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMN.Model\TMN.Model.csproj">
+      <Project>{D822965E-8830-4021-9F33-450A2F47A713}</Project>
+      <Name>TMN.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3547C596-4484-44B1-94E7-DFEFDE1C5EC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMN</RootNamespace>
+    <AssemblyName>TMN</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Diagram\CenterItem.cs" />
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Interfaces\ICapacity.cs" />
+    <Compile Include="Interfaces\IChild.cs" />
+    <Compile Include="Interfaces\IDeletable.cs" />
+    <Compile Include="Model\Center.cs" />
+    <Compile Include="Model\CardType.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\CenterLink.cs" />
+    <Compile Include="Model\ChannelRange.cs" />
+    <Compile Include="Model\SpareCard.cs" />
+    <Compile Include="Model\Route.cs" />
+    <Compile Include="Model\Link.cs" />
+    <Compile Include="Model\Instruction.cs" />
+    <Compile Include="Model\Shelf.cs" />
+    <Compile Include="Model\Rack.cs" />
+    <Compile Include="Model\ShelfType.cs" />
+    <Compile Include="Model\RackType.cs" />
+    <Compile Include="Model\SwitchType.cs" />
+    <Compile Include="UserControls\CenterTree.xaml.cs">
+      <DependentUpon>CenterTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CenterView.xaml.cs">
+      <DependentUpon>CenterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ChannelView.xaml.cs">
+      <DependentUpon>ChannelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\RouteView.xaml.cs">
+      <DependentUpon>RouteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\InstructionView.xaml.cs">
+      <DependentUpon>InstructionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\LinkView.xaml.cs">
+      <DependentUpon>LinkView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Items\RackView.xaml.cs">
+      <DependentUpon>RackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ShelfView.xaml.cs">
+      <DependentUpon>ShelfView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\SwitchTypeView.xaml.cs">
+      <DependentUpon>SwitchTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\BasicInfoListView.cs">
+    </Compile>
+    <Compile Include="Interfaces\IBasicInfoItemView.cs" />
+    <Compile Include="Views\Lists\CardTypesListView.xaml.cs">
+      <DependentUpon>CardTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CardTypeView.xaml.cs">
+      <DependentUpon>CardTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ShelfTypeView.xaml.cs">
+      <DependentUpon>ShelfTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\ChannelListView.xaml.cs">
+      <DependentUpon>ChannelListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\SpareCardsListView.xaml.cs">
+      <DependentUpon>SpareCardsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\RoutesListView.xaml.cs">
+      <DependentUpon>RoutesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\InstructionsListView.xaml.cs">
+      <DependentUpon>InstructionsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\SwitchTypesListView.xaml.cs">
+      <DependentUpon>SwitchTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\RackTypesListView.xaml.cs">
+      <DependentUpon>RackTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\RackTypeView.xaml.cs">
+      <DependentUpon>RackTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\ShelfTypesListView.xaml.cs">
+      <DependentUpon>ShelfTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Units\CardUnit.cs" />
+    <Compile Include="Units\CenterUnit.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Extensions\CommonExtensions.cs" />
+    <Compile Include="Model\DB.cs" />
+    <Compile Include="Helpers\MessageBox.cs" />
+    <Compile Include="Units\RackUnit.cs" />
+    <Compile Include="Units\ShelfUnit.cs" />
+    <Compile Include="Units\Unit.cs" />
+    <Compile Include="UserControls\CenterSchema.xaml.cs">
+      <DependentUpon>CenterSchema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Windows\BasicInfoListWindow.xaml.cs">
+      <DependentUpon>BasicInfoListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BasicInfoItemWindow.xaml.cs">
+      <DependentUpon>BasicInfoItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CenterLinkWindow.xaml.cs">
+      <DependentUpon>CenterLinkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DDFWindow.xaml.cs">
+      <DependentUpon>DDFWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SchemaWindow.xaml.cs">
+      <DependentUpon>SchemaWindow.xaml</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="app.manifest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\RDLC\Alarm.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\EventsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\FailureReasonPieChart.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\No7LinksReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\CardsReport.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDLC\SpareCardsReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\RoutesReport.rdlc" />
+    <EmbeddedResource Include="Reports\RDLC\TasksReport.rdlc" />
+    <None Include="Model\TMNModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TMNModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model\TMNModel.dbml.layout">
+      <DependentUpon>TMNModel.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\TMN.Reports.Model.Cards.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Events.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Failure.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.FailurePieChart.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Links.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Routes.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.SpareCards.datasource" />
+    <None Include="Properties\DataSources\TMN.Reports.Model.Tasks.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\BrightnessExtension.cs" />
+    <Compile Include="Assets\ColorExtension.cs" />
+    <Compile Include="Assets\ImageSourceExtension.cs" />
+    <Compile Include="Assets\OpacityExtension.cs" />
+    <Compile Include="Converters\BinaryToImageConverter.cs" />
+    <Compile Include="Converters\CenterTypesConverter.cs" />
+    <Compile Include="Converters\CenterTypesColorConverter.cs" />
+    <Compile Include="Converters\StringToLinesConverter.cs" />
+    <Compile Include="Converters\DoubleMultiplyConverter.cs" />
+    <Compile Include="Converters\DoubleAddConverter.cs" />
+    <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Converters\PersianDateConverter.cs" />
+    <Compile Include="Converters\VisibilityBooleanConverter.cs" />
+    <Compile Include="Converters\StringFormatConverter.cs" />
+    <Compile Include="Converters\LinkTypesConverter.cs" />
+    <Compile Include="Converters\LinkTypesColorConverter.cs" />
+    <Compile Include="Converters\InstructionTypesConverter.cs" />
+    <Compile Include="Converters\ProtocolsConverter.cs" />
+    <Compile Include="Diagram\LineExtensions.cs" />
+    <Compile Include="Extensions\SolidColorBrushExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\ThicknessExtensions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="Extensions\UIElementExtensions.cs" />
+    <Compile Include="Extensions\WindowExtensions.cs" />
+    <Compile Include="Helpers\EnumEnumerator.cs" />
+    <Compile Include="Helpers\GridViewSort.cs" />
+    <Compile Include="Helpers\LicenseManager.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+    <Compile Include="Interfaces\IInsertableBasedOn.cs" />
+    <Compile Include="Interfaces\IReportFilter.cs" />
+    <Compile Include="Model\ConnectionData.cs" />
+    <Compile Include="Model\AlarmType.cs" />
+    <Compile Include="Model\DDF.cs" />
+    <Compile Include="Model\Alarm.cs" />
+    <Compile Include="Model\FailureReason.cs" />
+    <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TaskType.cs" />
+    <Compile Include="Model\EventType.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\TMNModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TMNModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserShift.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\FailureReasonPieFilter.xaml.cs">
+      <DependentUpon>FailureReasonPieFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\TasksFilter.xaml.cs">
+      <DependentUpon>TasksFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\EventsFilter.xaml.cs">
+      <DependentUpon>EventsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\No7Links.xaml.cs">
+      <DependentUpon>No7Links.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\SpareCardsFilter.xaml.cs">
+      <DependentUpon>SpareCardsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model\Cards.cs" />
+    <Compile Include="Model\TimeSlot.cs" />
+    <Compile Include="Model\Range.cs" />
+    <Compile Include="Reports\Filters\CardsFilter.xaml.cs">
+      <DependentUpon>CardsFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Filters\RoutesFilter.xaml.cs">
+      <DependentUpon>RoutesFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model\FailurePieChart.cs" />
+    <Compile Include="Reports\Model\Alarm.cs" />
+    <Compile Include="Reports\Model\SpareCards.cs" />
+    <Compile Include="Reports\Model\Tasks.cs" />
+    <Compile Include="Reports\Model\Events.cs" />
+    <Compile Include="Reports\Model\Links.cs" />
+    <Compile Include="Reports\Model\Routes.cs" />
+    <Compile Include="Themes\Generic.xaml.cs">
+      <DependentUpon>Generic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\CalendarItem.xaml.cs">
+      <DependentUpon>CalendarItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\DayView.xaml.cs">
+      <DependentUpon>DayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\MonthView.xaml.cs">
+      <DependentUpon>MonthView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\Navigator.xaml.cs">
+      <DependentUpon>Navigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Calendar\YearView.xaml.cs">
+      <DependentUpon>YearView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DDFDisplay.xaml.cs">
+      <DependentUpon>DDFDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\E1.xaml.cs">
+      <DependentUpon>E1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EntityComboBox.cs">
+    </Compile>
+    <Compile Include="Views\Items\CalendarItemTemplate.xaml.cs">
+      <DependentUpon>CalendarItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\AlarmTypeView.xaml.cs">
+      <DependentUpon>AlarmTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\_TemplateView.xaml.cs">
+      <DependentUpon>_TemplateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ShiftView.xaml.cs">
+      <DependentUpon>ShiftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\SpareCardView.xaml.cs">
+      <DependentUpon>SpareCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\AlarmView.xaml.cs">
+      <DependentUpon>AlarmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\FailureReasonView.xaml.cs">
+      <DependentUpon>FailureReasonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\TasktView.xaml.cs">
+      <DependentUpon>TasktView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\TaskTypeView.xaml.cs">
+      <DependentUpon>TaskTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\EventTypeView.xaml.cs">
+      <DependentUpon>EventTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\BasicInfoListViewUI.xaml.cs">
+      <DependentUpon>BasicInfoListViewUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\AlarmTypesListView.xaml.cs">
+      <DependentUpon>AlarmTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\DDFRoutesListView.xaml.cs">
+      <DependentUpon>DDFRoutesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\LinksListView.xaml.cs">
+      <DependentUpon>LinksListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\_TemplateListView.xaml.cs">
+      <DependentUpon>_TemplateListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\ShiftsListView.xaml.cs">
+      <DependentUpon>ShiftsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\AlarmListView.xaml.cs">
+      <DependentUpon>AlarmListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\FailureReasonsListView.xaml.cs">
+      <DependentUpon>FailureReasonsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\TasksListView.xaml.cs">
+      <DependentUpon>TasksListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\TaskTypesListView.xaml.cs">
+      <DependentUpon>TaskTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\EventTypesListView.xaml.cs">
+      <DependentUpon>EventTypesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\UsersListView.xaml.cs">
+      <DependentUpon>UsersListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\EventsListView.xaml.cs">
+      <DependentUpon>EventsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CalendarWindow.xaml.cs">
+      <DependentUpon>CalendarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LinkToRouteWindow.xaml.cs">
+      <DependentUpon>LinkToRouteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SetDDFWindow.xaml.cs">
+      <DependentUpon>SetDDFWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InstructionImageWindow.xaml.cs">
+      <DependentUpon>InstructionImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Enterprise\Enterprise.Wpf\Enterprise.Wpf.csproj">
+      <Project>{147D2AFB-7D44-46B4-8BA7-AC245A8C1250}</Project>
+      <Name>Enterprise.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="..\..\EnterpriseAssemblies\Enterprise.Utility.dll" />
+    <ReferencePath Include="D:\Develop\Enterprise\Enterprise.Wpf\bin\Debug\Enterprise.Wpf.dll" />
+    <ReferencePath Include="..\..\EnterpriseAssemblies\Logger.dll" />
+    <ReferencePath Include="C:\Program Files\Microsoft Visual Studio 9.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.configuration.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Linq.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Management.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\System.Printing.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Security.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\CardsFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\FailureReasonPieFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\TasksFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\EventsFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\No7Links.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\SpareCardsFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Reports\Filters\RoutesFilter.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Themes\Generic.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\Calendar.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\CalendarItem.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\DayView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\MonthView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\Navigator.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\Calendar\YearView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\CenterSchema.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\CenterTree.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\DDFDisplay.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\UserControls\E1.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\CalendarItemTemplate.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\CenterView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\CardView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\ChannelView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\AlarmTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\_TemplateView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\ShiftView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\SpareCardView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\AlarmView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\FailureReasonView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\TasktView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\TaskTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\EventTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\UserView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\EventView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\RouteView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\InstructionView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\LinkView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\RackView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\ShelfView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\SwitchTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\BasicInfoListViewUI.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\CardTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\CardTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\ShelfTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\ChannelListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\AlarmTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\DDFRoutesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\LinksListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\_TemplateListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\ShiftsListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\AlarmListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\FailureReasonsListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\TasksListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\TaskTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\EventTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\UsersListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\EventsListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\SpareCardsListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\RoutesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\InstructionsListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\SwitchTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\RackTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Items\RackTypeView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Views\Lists\ShelfTypesListView.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\AboutWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\BasicInfoListWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\BasicInfoItemWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\CalendarWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\CenterLinkWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\LinkToRouteWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\SetDDFWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\DDFWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\InstructionImageWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\LoginWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\MainWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\ReportWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\SchemaWindow.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\Windows\test.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\App.g.cs" />
+    <Compile Include="D:\Develop\TMN\TMN\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

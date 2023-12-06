@@ -1,0 +1,12 @@
+﻿<Window x:Class="ZTEAlarmService.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ZTE Debug Window" Height="150" Width="300">
+    
+    <StackPanel>
+        <Button Content="Stop" Name="StopButton" Click="StopButton_Click" />
+        <Button Content="Start" Name="StartButton" Click="StartButton_Click" />
+        <Button Content="Setting" Name="SettingButton" Click="SettingButton_Click" />
+    </StackPanel>
+    
+</Window>

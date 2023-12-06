@@ -1,0 +1,14 @@
+D:\Develop\TMN.Classic\Services\bin\CommunicationService.dll
+D:\Develop\TMN.Classic\Services\bin\CommunicationService.pdb
+D:\Develop\TMN.Classic\Services\Public\CommunicationService\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.dll
+D:\Develop\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.pdb
+D:\Develop\Main\TMN.Classic\Services\bin\CommunicationService.dll
+D:\Develop\Main\TMN.Classic\Services\bin\CommunicationService.pdb
+D:\Develop\Main\TMN.Classic\Services\Public\CommunicationService\obj\Debug\ResolveAssemblyReference.cache
+D:\Develop\Main\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.dll
+D:\Develop\Main\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.pdb
+E:\Project\Final Project\TMN.Classic\Services\bin\CommunicationService.dll
+E:\Project\Final Project\TMN.Classic\Services\bin\CommunicationService.pdb
+E:\Project\Final Project\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.dll
+E:\Project\Final Project\TMN.Classic\Services\Public\CommunicationService\obj\Debug\CommunicationService.pdb

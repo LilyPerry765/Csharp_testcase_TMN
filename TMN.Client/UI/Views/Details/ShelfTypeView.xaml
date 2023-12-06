@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="TMN.Views.Details.ShelfTypeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right">سوييچ:</Label>
+            <Label HorizontalContentAlignment="Right">نام:</Label>
+            <Label HorizontalContentAlignment="Right">تعداد کارت:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox xmlns:uc="clr-namespace:TMN.UserControls"  x:Name="cmbSwitch"
+                       SelectedItem="{Binding SwitchType}"
+                       Margin="0,2,0,2"
+                       DisplayMemberPath="Name"
+                       SelectedValuePath="ID" />
+            <TextBox x:Name="txtName"
+                     Text="{Binding Name}"
+                     Width="144"
+                     Margin="0,2,0,2" />
+            <r:NumericUpDown x:Name="nudCapacity"
+                             Value="{Binding Path=Capacity, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             Margin="0,2,0,2"
+                             Minimum="1" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

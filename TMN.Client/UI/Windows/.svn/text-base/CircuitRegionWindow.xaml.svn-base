@@ -1,0 +1,312 @@
+﻿<Window x:Class="TMN.UI.Windows.CircuitRegionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dgm="clr-namespace:TMN.Diagram"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:enums="clr-namespace:TMN;assembly=TMN.Common"
+        xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+        xmlns:uc="clr-namespace:TMN.UserControls"
+        xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        Title="نقشه کابل"
+        FlowDirection="RightToLeft" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <DockPanel>
+        <DockPanel.Resources>
+            <ImageBrush Stretch="None"
+                        AlignmentX="Left"
+                        AlignmentY="Top"
+                        ImageSource="{a:ImageSource tehranMap.jpg, Width=7000}"
+                        x:Key="map"
+                        Opacity=".9" />
+        </DockPanel.Resources>
+        <Grid DockPanel.Dock="Left"
+              Width="120">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.BitmapEffect>
+                <BevelBitmapEffect Relief=".1"
+                                   BevelWidth="1"
+                                   LightAngle="45"
+                                   EdgeProfile="CurvedOut"
+                                   Smoothness="1" />
+            </Grid.BitmapEffect>
+            <Expander IsExpanded="True"
+                      Grid.Row="0"
+                      Background="#33FFFFFF">
+                <Expander.Header>
+                    <Label Content="ابزارها" />
+                </Expander.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnRefresh"
+                            Height="30"
+                            Margin="5"
+                            Grid.Row="3"
+                            ToolTip="به روزرساني"
+                            Click="btnRefresh_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16"
+                                   Margin="2,0"
+                                   Source="{a:ImageSource Path=refresh.png}" />
+                            <Label Content="به روزرساني" />
+                        </StackPanel>
+                    </Button>
+                    <uc:BlinkingLed x:Name="connectLed" 
+                                    Grid.Row="0"
+                            DisplayMode="On"
+                            InnerBackground="Red"
+                            Height="37"
+                            Width="85"
+                            Title="وضعيت ارتباط"
+                            Cursor="Hand"
+                            MouseLeftButtonUp="connectLed_MouseLeftButtonUp">
+                        <uc:BlinkingLed.Style>
+                            <Style>
+                                <Setter Property="TextElement.FontFamily"
+                                Value="Tahoma" />
+                            </Style>
+                        </uc:BlinkingLed.Style>
+                    </uc:BlinkingLed>
+                    <uc:SoundButton x:Name="muteAllSoundButton" Grid.Row="1"
+                            IsMuteChanged="muteAllSoundButton_IsMuteChanged"
+                            Title=" قطع صدا "
+                            FontFamily="Tahoma" />
+                    <Grid Grid.Row="2"
+                          Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="22" />
+                            <ColumnDefinition  Width="*" />
+                            <ColumnDefinition  Width="22" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnZoomOut"
+                                Click="btnZoomOut_Click"
+                                Margin="0">
+                            <Image Width="13"   x:Name="regionImage"
+                                   Source="{a:ImageSource Path=zoomout.png}" />
+                        </Button>
+                        <Slider x:Name="ZoomSlider"
+                                Minimum=".1"
+                                Maximum="1"
+                                SmallChange=".1"
+                                LargeChange=".5"
+                                Value="1"
+                                Margin="0"
+                                Grid.Column="1" />
+                        <Button x:Name="btnZoomIn"
+                                Grid.Column="2"
+                                Click="btnZoomIn_Click"
+                                Margin="0">
+                            <Image Width="13"
+                                   Source="{a:ImageSource Path= zoomin.png}" />
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Expander>
+            <Expander IsExpanded="True"
+                      Grid.Row="1"
+                      Background="#33FFFFFF">
+                <Expander.Header>
+                    <Label Content="کابل" />
+                </Expander.Header>
+                <Grid Height="Auto">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"
+                                       MinHeight="74" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="1"
+                               Margin="5,5,0,0"
+                               x:Name="label11"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Width="Auto">منطقه:</TextBlock>
+                    <ComboBox x:Name="cmbRegion" 
+                          Grid.Row="2"
+                          Margin="5,1"
+                          Height="20"
+                          HorizontalAlignment="Stretch" SelectedValuePath="ID" DisplayMemberPath="Name"  SelectionChanged="cmbRegion_SelectionChanged"
+                           >
+
+                    </ComboBox>
+                    <TextBlock Grid.Row="3"
+                               Margin="5,5,0,0"
+                               x:Name="label1"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Width="Auto">مرکز:</TextBlock>
+                    <ComboBox x:Name="cmbCenter"
+                          Grid.Row="4"
+                          Margin="5,1"
+                          Height="20"
+                          HorizontalAlignment="Stretch" SelectedValuePath="ID"  SelectionChanged="cmbCenter_SelectionChanged"
+                           />
+                    <TextBlock Grid.Row="5" 
+                               Margin="5,5,0,0"
+                               x:Name="label2"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Width="Auto">کابل:</TextBlock>
+                    <ComboBox x:Name="cmbSensor"
+                          Grid.Row="6"
+                          Margin="5,1"
+                          Height="20"
+                          HorizontalAlignment="Stretch" SelectedValuePath="ID"
+                           />
+                    <TextBlock Grid.Row="7" 
+                               Margin="5,5,0,0"
+                               x:Name="label3"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Width="Auto">رنگ:</TextBlock>
+
+                    <telerik:RadColorPicker HorizontalAlignment="Stretch"  Name="cmbColor" VerticalAlignment="Top"
+                                                                      Grid.Row="8"
+                          Margin="5,1"
+                          Height="20"
+                          />
+                    <StackPanel  Orientation="Horizontal">
+                    <ToggleButton Margin="0,5,0,5"
+                                  Height="30"
+                                  x:Name="btnLine"
+                                  ToolTip="ايجاد ارتباط"
+                                  Grid.Row="0"
+                                  IsChecked="False"
+                                  Checked="btnLine_Checked"
+                                  Unchecked="btnLine_Unchecked">
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Margin="0"
+                                    Width="24"
+                                    Source="{a:ImageSource Path=Link.png}" />
+                            <Label x:Name="lblLineLabel"> کابل</Label>
+                        </StackPanel>
+                    </ToggleButton>
+                    <ToggleButton Margin="0,5,5,5"
+                                  Height="30"
+                                  x:Name="btnCircle"
+                                  ToolTip="ايجاد تقاطع"
+                                  Grid.Row="0"
+                                  IsChecked="False"
+                                  Checked="btnCircle_Checked"
+                                  Unchecked="btnCircle_Unchecked">
+                        <StackPanel Orientation="Horizontal">
+                            <Label> تقاطع</Label>
+                        </StackPanel>
+                        </ToggleButton>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5,1,0,1" 
+                           HorizontalAlignment="Left">فيلتر منطقه:</TextBlock>
+                <ComboBox x:Name="cmbFilterRegion"
+                          Grid.Row="1"
+                          Margin="5,1"
+                          Height="20"
+                          SelectedValuePath="ID"
+                          
+                          HorizontalAlignment="Stretch" Grid.ColumnSpan="2" SelectionChanged="cmbFilterRegion_SelectionChanged" />
+
+                <TextBlock Grid.Row="2"
+                               Margin="5,5,0,0"
+                               x:Name="label12"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Width="Auto">مرکز:</TextBlock>
+                <ComboBox x:Name="cmbFilterCenter"
+                          Grid.Row="3"
+                          Margin="5,1"
+                          Height="20"
+                          HorizontalAlignment="Stretch" SelectedValuePath="ID"  SelectionChanged="cmbFilterCenter_SelectionChanged"
+                           />
+            </Grid>
+            <TreeView x:Name="Tree"
+                      Grid.Row="3"
+                      Foreground="White"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      Margin="2">
+                <TreeView.ItemContainerStyle>
+                    <Style>
+                        <EventSetter Event="Mouse.PreviewMouseDown"
+                                     Handler="TreeViewItem_PreviewMouseDown" />
+                        <Setter Property="TreeViewItem.Foreground"
+                                Value="Black" />
+                        <Setter Property="TreeViewItem.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect ShadowDepth="1" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="TreeViewItem.Margin"
+                                Value="2" />
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                <TreeView.ItemTemplate>
+                    <DataTemplate>
+                        <dgm:CenterItem    Width="50"
+                                         Height="20"
+                                         ToolTip="{Binding Title}" >
+                            <dgm:CenterItem.Background>
+                                <LinearGradientBrush StartPoint="1,0"
+                                                     EndPoint="0,1">
+                                    <GradientStop Color="White"
+                                                  Offset="0" />
+                                    <GradientStop Color="Green"
+                                                  Offset="2" />
+                                </LinearGradientBrush>
+                            </dgm:CenterItem.Background>
+                        </dgm:CenterItem>
+                    </DataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+
+        </Grid>
+        <ScrollViewer x:Name="scrollViewer" 
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto">
+            <Canvas x:Name="Root" 
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Width="7000"
+                    Height="5000"
+                    Background="{StaticResource map}" >
+
+                <Canvas.LayoutTransform>
+                    
+                    <ScaleTransform ScaleX="{Binding Value, ElementName=ZoomSlider}"
+                                    ScaleY="{Binding Value, ElementName=ZoomSlider}" />
+                </Canvas.LayoutTransform>
+            </Canvas>
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform X="0" Y="0"></TranslateTransform>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

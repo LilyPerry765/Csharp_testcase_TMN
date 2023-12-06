@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/TMN.Classic/!svn/ver/753/TMN.Client/Properties/DataSources
+END
+TMN.Reports.Model.LongRecord.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.LongRecord.datasource
+END
+TMN.Reports.Model.Events.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Events.datasource
+END
+TMN.ServiceModel.AlarmRegionModel.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/TMN.Classic/!svn/ver/399/TMN.Client/Properties/DataSources/TMN.ServiceModel.AlarmRegionModel.datasource
+END
+ArchiveService.LogAlarm.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TMN.Classic/!svn/ver/642/TMN.Client/Properties/DataSources/ArchiveService.LogAlarm.datasource
+END
+TMN.Reports.Model.FailurePieChart.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.FailurePieChart.datasource
+END
+ServiceState.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TMN.Classic/!svn/ver/753/TMN.Client/Properties/DataSources/ServiceState.datasource
+END
+TMN.Reports.Model.SensorState.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.SensorState.datasource
+END
+ArchiveService.SensorData.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TMN.Classic/!svn/ver/642/TMN.Client/Properties/DataSources/ArchiveService.SensorData.datasource
+END
+TMN.Reports.Model.SensorVal.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.SensorVal.datasource
+END
+TMN.Reports.Model.Links.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Links.datasource
+END
+TMN.ServiceModel.AlarmPanelModel.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/TMN.Classic/!svn/ver/399/TMN.Client/Properties/DataSources/TMN.ServiceModel.AlarmPanelModel.datasource
+END
+TMN.Reports.Model.Routes.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Routes.datasource
+END
+TMN.Reports.Model.Instruction.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Instruction.datasource
+END
+TMN.ServiceModel.AlarmRegionModelCollection.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/TMN.Classic/!svn/ver/399/TMN.Client/Properties/DataSources/TMN.ServiceModel.AlarmRegionModelCollection.datasource
+END
+TMN.Reports.Model.Tasks.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Tasks.datasource
+END
+TMN.Reports.Model.Trunks.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Trunks.datasource
+END
+TMN.Reports.Model.Failure.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Failure.datasource
+END
+TMN.Reports.Model.SpareCards.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.SpareCards.datasource
+END
+ArchiveService.UserLog.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TMN.Classic/!svn/ver/642/TMN.Client/Properties/DataSources/ArchiveService.UserLog.datasource
+END
+TMN.Reports.Model.Cards.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TMN.Classic/!svn/ver/56/TMN.Client/Properties/DataSources/TMN.Reports.Model.Cards.datasource
+END

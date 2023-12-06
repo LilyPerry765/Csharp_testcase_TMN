@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.S12AlarmService
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/281/Services/TMN.S12AlarmService/Constants.cs
+END
+S12Decopressor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/345/Services/TMN.S12AlarmService/S12Decopressor.cs
+END
+DebugWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/DebugWindow.xaml.cs
+END
+AlarmLogFilePosition.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/AlarmLogFilePosition.xml
+END
+ProjectInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TMN.Classic/!svn/ver/37/Services/TMN.S12AlarmService/ProjectInstaller.Designer.cs
+END
+S12LogParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/313/Services/TMN.S12AlarmService/S12LogParser.cs
+END
+ProjectInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/ProjectInstaller.cs
+END
+SettingsWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TMN.Classic/!svn/ver/281/Services/TMN.S12AlarmService/SettingsWindow.xaml
+END
+S12Service.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/S12Service.Designer.cs
+END
+S12Service.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/71/Services/TMN.S12AlarmService/S12Service.cs
+END
+SettingsWindow.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/281/Services/TMN.S12AlarmService/SettingsWindow.xaml.cs
+END
+Watcher.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/TMN.Classic/!svn/ver/191/Services/TMN.S12AlarmService/Watcher.cs
+END
+S12AlarmService.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TMN.Classic/!svn/ver/187/Services/TMN.S12AlarmService/S12AlarmService.csproj
+END
+ProjectInstaller.resx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TMN.Classic/!svn/ver/37/Services/TMN.S12AlarmService/ProjectInstaller.resx
+END
+S12Service.resx
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/S12Service.resx
+END
+S12 Settings.lnk
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/S12%20Settings.lnk
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TMN.Classic/!svn/ver/44/Services/TMN.S12AlarmService/Program.cs
+END
+ServiceCore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/TMN.Classic/!svn/ver/719/Services/TMN.S12AlarmService/ServiceCore.cs
+END
+DebugWindow.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TMN.Classic/!svn/ver/14/Services/TMN.S12AlarmService/DebugWindow.xaml
+END

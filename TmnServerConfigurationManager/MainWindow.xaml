@@ -1,0 +1,105 @@
+﻿<Window x:Class="TMN.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FontFamily="Tahoma"
+        Title="TMN Server Configuration Manager"
+        Height="357"
+        Width="441">
+    <Window.Resources>
+        <Style TargetType="TextBox"
+               x:Key="SmallTextbox">
+            <Setter Property="Margin"
+                    Value="3" />
+            <Setter Property="Width"
+                    Value="50" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Left" />
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom"
+                    Orientation="Horizontal"
+                    FlowDirection="RightToLeft">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width"
+                            Value="70" />
+                    <Setter Property="Margin"
+                            Value="3" />
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="okButton"
+                    Click="okButton_Click">Save</Button>
+        </StackPanel>
+        <TabControl Margin="5">
+            <TabItem Header="Server Security">
+                <StackPanel>
+                    <TextBlock Foreground="Gray"
+                               TextWrapping="Wrap">
+                        These information is required to authenticate services who want to access shared resources of this server remotely.</TextBlock>
+                    <StackPanel Orientation="Vertical"
+                                Margin="5"
+                                Width="200"
+                                HorizontalAlignment="Left">
+                        <Label>Server username:</Label>
+                        <TextBox x:Name="usernameTextBox" />
+                        <Label>Current password:</Label>
+                        <Label x:Name="currentPassword"
+                               BorderThickness="1"
+                               BorderBrush="LightGray"
+                               Height="23" />
+                        <Label>New password:</Label>
+                        <TextBox x:Name="passwordTextBox" />
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Sensor Service">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style BasedOn="{StaticResource SmallTextbox}"
+                               TargetType="TextBox" />
+                    </StackPanel.Resources>
+                    <Label Foreground="Gray">Leave ecah box blanck to use default value.</Label>
+                    <Label ToolTip="Sensor data will be queried but not saved every ? seconds just for monitoring.">Query interval (seconds):</Label>
+                    <TextBox x:Name="sensorQueryIntervalTextbox" />
+                    <Label ToolTip="Sensor data will be saved every ? seconds for logging.">Save interval (seconds):</Label>
+                    <TextBox x:Name="sensorSaveIntervalTextbox" />
+                    <Label ToolTip="Sensor Service will be considered as disconnected if no activity is reported within the following timeout.">Activity timeout (seconds):</Label>
+                    <TextBox x:Name="sensorActivityTimeoutTextbox" />
+                    <Label>Delete old data after (Days):</Label>
+                    <TextBox x:Name="sensorExpireTextbox" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Alarm Services">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style BasedOn="{StaticResource SmallTextbox}"
+                               TargetType="TextBox" />
+                    </StackPanel.Resources>
+                    <Label Foreground="Gray">Leave ecah box blanck to use default value.</Label>
+                    <Label>Query interval (seconds):</Label>
+                    <TextBox x:Name="alarmQueryIntervalTextbox" />
+                    <Label ToolTip="Alarm Service will be considered as disconnected if no activity is reported within the following timeout">Activity timeout (seconds):</Label>
+                    <TextBox x:Name="alarmActivityTimeoutTextbox" />
+                    <Label Content="Delete old data after (Seconds):" />
+                    <TextBox Name="alarmExpireTextBox" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Alarm Panel">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style BasedOn="{StaticResource SmallTextbox}"
+                               TargetType="TextBox" />
+                    </StackPanel.Resources>
+                    <Label Foreground="Gray">Leave ecah box blanck to use default value.</Label>
+                    <Label>Center alarm panel refresh interval (seconds):</Label>
+                    <TextBox x:Name="centerPanelIntervalTextbox" />
+                    <Label>Regional alarm panel refresh interval (seconds):</Label>
+                    <TextBox x:Name="regionPanelIntervalTextbox" />
+                    <Label>Voice Alarm Interval (seconds)(0 = continous):</Label>
+                    <TextBox Name="VoiceAlarmIntervalTextbox" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

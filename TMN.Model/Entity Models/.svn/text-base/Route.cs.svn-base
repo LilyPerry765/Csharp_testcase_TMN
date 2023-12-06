@@ -1,0 +1,149 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TMN.Interfaces;
+
+namespace TMN
+{
+
+    public partial class Route : Entity, IDeletable
+    {
+        public bool Delete()
+        {
+            if (MessageBox.Show(MessageTypes.ConfirmDelete) == System.Windows.MessageBoxResult.Yes)
+            {
+                var db = DB.Instance;
+
+                try
+                {
+                    Route route = db.Routes.Where(p => p.ID == this.ID).SingleOrDefault();
+                    db.Routes.DeleteOnSubmit(route );
+
+                    // user log
+					UserLog.Log(db, ActionType.RouteRemove, string.Format("Name={0}",route.RouteName), string.Format("ID={0} , Name={1}", route.ID, route.RouteName));
+
+
+                    db.SubmitChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(MessageTypes.CannotDeleteHasItems);
+                    return false;
+                }
+            }
+            return false;
+        }
+        partial void OnSourceCenterChanged()
+        {
+            SendPropertyChanged("Source");
+        }
+
+        public Center Source
+        {
+            get
+            {
+                return this.Center;
+            }
+            set
+            {
+                this.Center = value;
+            }
+        }
+
+        partial void OnDestIDChanged()
+        {
+            SendPropertyChanged("Destination");
+        }
+
+        public Center Destination
+        {
+            get
+            {
+                return this.Dest == null ? null : this.Dest.Center;
+            }
+        }
+
+        /// <summary>
+        /// Original Point Code
+        /// </summary>
+        public string OPC
+        {
+            get
+            {
+                return this.Source.PointCode.IsNull("-");
+            }
+        }
+
+        /// <summary>
+        /// Destination Point Code
+        /// </summary>
+        public string DPC
+        {
+            get
+            {
+                if (this.Destination == null)
+                    return "-";
+                return this.Destination.PointCode.IsNull("-");
+            }
+        }
+
+        public CenterTypes Traffic
+        {
+            get
+            {
+                return (CenterTypes)(Destination.CenterType ?? 0);
+            }
+        }
+
+        ///// <summary>
+        ///// Checks whether there is any route linking the two given centers.
+        ///// </summary>
+        //public static bool ExistsOn(Center center1, Center center2)
+        //{
+        //    return DB.Instance.Routes.Any(p => (p.Center == center1 && p.Center1 == center2)
+        //                                        || (p.Center == center2 && p.Center1 == center1)) ;
+        //}
+
+        //public static Route UpdateOrCreate(string tgno, string opm, bool isSignalling, bool isImported)
+        //{
+        //    var db = DB.Instance;
+        //    Route route = db.Routes.SingleOrDefault(r => r.SourceCenter == Center.CurrentCenterID && r.TGNO.Trim() == tgno.Trim());
+        //    if (route == null)
+        //    {
+        //        route = new Route()
+        //        {
+        //            ID = Guid.NewGuid(),
+        //            TGNO = tgno.Trim(),
+        //            SourceCenter = Center.CurrentCenterID,
+        //            IsSignaling = isSignalling
+        //        };
+        //        db.Routes.InsertOnSubmit(route);
+        //    }
+        //    route.OPMID = db.OPMs.Single(o => o.Name.ToLower() == opm.ToLower().Trim()).ID;
+        //    route.IsImported = isImported;
+        //    db.SubmitChanges();
+        //    return route;
+        //}
+
+        public string DisplayString
+        {
+            get
+            {
+                return string.Format("{0} - {1}", RouteName, TGNO);
+            }
+        }
+
+        public bool IsUnique()
+        {
+            if (DB.Instance.Routes.Any(r => r.ID != this.ID && r.TGNO == this.TGNO))
+            {
+                MessageBox.Show(MessageTypes.RepeatedName, "اطلاعات اين مسير");
+                return false;
+            }
+            return true;
+        }
+    }
+
+}

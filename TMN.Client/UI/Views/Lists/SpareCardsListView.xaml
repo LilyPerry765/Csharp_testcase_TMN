@@ -1,0 +1,22 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.SpareCardsListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:v="clr-namespace:TMN.Views.Lists">
+    <v:ItemsListBase.ListView>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="نوع کارت"
+                                    DisplayMemberBinding="{Binding CardType.Name}"
+                                    Width="100" />
+                    <GridViewColumn Header="تعداد"
+                                    DisplayMemberBinding="{Binding Count}"
+                                    Width="100" />
+                    <GridViewColumn Header="توضيحات"
+                                    DisplayMemberBinding="{Binding Description}"
+                                    Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

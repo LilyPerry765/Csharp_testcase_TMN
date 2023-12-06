@@ -1,0 +1,13 @@
+﻿Installing assembly 'D:\Develop\TMN.Classic\bin\CircuitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\CircuitService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\CircuitService.exe
+Installing service CircuitService...
+Service CircuitService has been successfully installed.
+Creating EventLog source CircuitService in log Application...
+Committing assembly 'D:\Develop\TMN.Classic\bin\CircuitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Develop\TMN.Classic\bin\CircuitService.InstallLog
+   assemblypath = D:\Develop\TMN.Classic\bin\CircuitService.exe

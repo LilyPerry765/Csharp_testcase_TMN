@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Enterprise;
+using System.Text.RegularExpressions;
+using System.Data;
+using System.Data.Common;
+
+namespace TMN
+{
+    public class TMNModelDataContext : TMNDataContextBase
+    {
+
+        public TMNModelDataContext()
+            : base(DatabaseDiagnostics.GetConnectionString())
+        {
+        }
+
+
+
+  //      public TMNModelDataContext()
+		//	: base(@"Data Source=192.168.0.105;Initial Catalog=TMN.Classic;User ID=sa;Password=pendar")
+		//{
+		//}
+
+        //public TMNModelDataContext(string connection)
+        //    : base(connection)
+        //{
+        //}
+        //public TMNModelDataContext(bool useStandardConfig)
+        //{
+        //} 
+
+        public int DeleteAll(System.Linq.IQueryable collection)
+        {
+            DbCommand comm = this.GetCommand(collection);
+            Regex selectRE = new Regex("^SELECT[\\s]*(?<Fields>.*)[\\s]*FROM[\\s]*(?<Table>.*)[\\s]*AS[\\s]*(?<TableAlias>.*)[\\s]*WHERE[\\s]*(?<Condition>.*)", RegexOptions.IgnoreCase);
+            Match m = selectRE.Match(comm.CommandText);
+
+            if (!m.Success)
+                throw new ArgumentException("Cannot delete this type of collection");
+
+            string table = m.Groups["Table"].Value.Trim();
+            string tableAlias = m.Groups["TableAlias"].Value.Trim();
+            string condition = m.Groups["Condition"].Value.Trim().Replace(tableAlias, table);
+
+            comm.CommandText = string.Format("DELETE FROM {0} WHERE {1}", table, condition);
+            if (comm.Connection.State != ConnectionState.Open)
+                comm.Connection.Open();
+
+            return comm.ExecuteNonQuery();
+        }
+
+    }
+}

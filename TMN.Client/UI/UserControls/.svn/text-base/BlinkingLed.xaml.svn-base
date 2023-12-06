@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="TMN.UserControls.BlinkingLed"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             IsVisibleChanged="Border_IsVisibleChanged"
+             mc:Ignorable="d"
+             d:DesignHeight="54"
+             d:DesignWidth="221">
+    <Border BorderThickness="1"
+            x:Name="rootBorder"
+            SnapsToDevicePixels="True"
+            BorderBrush="#AA000000"
+            CornerRadius="3">
+        <Border x:Name="blinkGrid"
+                BorderThickness="0.01"
+                CornerRadius="2">
+            <Border CornerRadius="2"
+                    Opacity=".9"
+                    BorderThickness="1"
+                    BorderBrush="White">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                                         EndPoint="0,1">
+                        <GradientStop Offset="0"
+                                      Color="#50FFFFFF" />
+                        <GradientStop Offset=".5"
+                                      Color="#00FFFFFF" />
+                        <GradientStop Offset=".7"
+                                      Color="#00FFFFFF" />
+                        <GradientStop Offset="1"
+                                      Color="#50FFFFFF" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Opacity=".9"
+                      Background="{StaticResource GlassFilter}">
+                    <TextBlock VerticalAlignment="Center"
+                               Padding="2"
+                               Visibility="Collapsed"
+                               x:Name="alarmLabelText"
+                               Foreground="Black"
+                               HorizontalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="1"
+                                          BlurRadius="1"
+                                          Direction="-90"
+                                          Color="White" />
+                    </TextBlock.Effect></TextBlock>
+                </Grid>
+            </Border>
+        </Border>
+    </Border>
+</UserControl>

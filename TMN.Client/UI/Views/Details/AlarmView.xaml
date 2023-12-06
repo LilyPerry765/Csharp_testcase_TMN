@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="TMN.Views.Details.AlarmView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+             xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+             xmlns:uc="clr-namespace:TMN.UserControls"
+             Height="326"
+             Width="245">
+    <!--Modifies-->
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= RouteComboBox }">مسير:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= FailedLinkComboBox }">لينک:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= AlarmTypeComboBox }">نوع آلارم:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DisconnectTimePersianDateBox }">زمان شروع:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ConnectTimePersianDateBox }">زمان رفع:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= AnnounceDatePersianDateBox }">تاريخ اعلام:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ReportReceiverTextBox }">گيرنده گزارش:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= FixerTextBox }">رفع کننده:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= AssessorTextBox }">تحويل گيرنده:</Label>
+            <Label HorizontalContentAlignment="Right">علت خرابی:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= DescriptionTextBox }">توضيحات:</Label>
+        </StackPanel>
+        <StackPanel Width="166">
+            <uc:EntityComboBox x:Name="RouteComboBox"
+                               Width="160"
+                               SelectedItem="{Binding Route}"
+                               IsEditable="True"
+                               DisplayMemberPath="TGNO"
+                               SelectedValuePath="ID"
+                               Margin="0,2,0,2"
+                               HorizontalAlignment="Left"
+                               SelectionChanged="RouteComboBox_SelectionChanged" />
+            <ComboBox x:Name="FailedLinkComboBox"
+                      IsEditable="True"
+                      Width="160"
+                      SelectedItem="{Binding Link}"
+                      DisplayMemberPath="Address"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <uc:EntityComboBox x:Name="AlarmTypeComboBox"
+                               Width="160"
+                               SelectedItem="{Binding AlarmType}"
+                               DisplayMemberPath="Name"
+                               SelectedValuePath="ID"
+                               Margin="0,2,0,2"
+                               HorizontalAlignment="Left" />
+            <r:PersianDateBox x:Name="DisconnectTimePersianDateBox"
+                              Width="160"
+                              Date="{Binding DisconnectTime}"
+                              DisplayMode="DateTime"
+                              Margin="0,2,0,2"
+                              HorizontalAlignment="Left" />
+            <r:PersianDateBox x:Name="ConnectTimePersianDateBox"
+                              Width="160"
+                              Date="{Binding ConnectTime}"
+                              DisplayMode="DateTime"
+                              Margin="0,2,0,2"
+                              HorizontalAlignment="Left" />
+            <r:PersianDateBox x:Name="AnnounceDatePersianDateBox"
+                              Width="160"
+                              Date="{Binding AnnounceDate}"
+                              DisplayMode="Date"
+                              Margin="0,2,0,2"
+                              HorizontalAlignment="Left" />
+            <TextBox x:Name="ReportReceiverTextBox"
+                     Text="{Binding ReportReceiver}"
+                     Width="160"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="FixerTextBox"
+                     Text="{Binding Fixer}"
+                     Width="160"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="AssessorTextBox"
+                     Text="{Binding Assessor}"
+                     Width="160"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="DamagePlaceTextBox"
+                     Text="{Binding DamagePlace}"
+                     Width="160"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left" />
+            <TextBox x:Name="DescriptionTextBox"
+                     Text="{Binding Description}"
+                     Width="160"
+                     Margin="0,2,0,2"
+                     HorizontalAlignment="Left"
+                     Height="46" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CircuitSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Regions>
+    <region name="منطقه سه"  connectionString="Data Source=.;Initial Catalog=TMN.classic;User ID=sa;Password=pendar"
+        >
+    <region name="منطقه چهار"  connectionString="Data Source=.;Initial Catalog=TMN.classic;User ID=sa;Password=pendar"
+        >
+    <region name="منطقه شش"  connectionString="Data Source=.;Initial Catalog=TMN.classic;User ID=sa;Password=pendar"
+        >
+  </Regions>
+</CircuitSettings>
+
+

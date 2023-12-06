@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model
+END
+Alarm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Alarm.cs
+END
+Cards.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Cards.cs
+END
+LongRecord.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/LongRecord.cs
+END
+Links.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Links.cs
+END
+Instruction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Instruction.cs
+END
+Routes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Routes.cs
+END
+SensorData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/SensorData.cs
+END
+Events.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Events.cs
+END
+Tasks.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Tasks.cs
+END
+Trunks.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/Trunks.cs
+END
+FailurePieChart.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/FailurePieChart.cs
+END
+SpareCards.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/SpareCards.cs
+END
+SensorState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TMN.Classic/!svn/ver/96/TMN.Reporting/Reports/Model/SensorState.cs
+END

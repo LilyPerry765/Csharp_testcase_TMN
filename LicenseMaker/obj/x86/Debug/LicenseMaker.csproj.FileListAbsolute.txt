@@ -1,0 +1,28 @@
+D:\Develop\TMN.Classic\LicenseMaker\bin\LicenseMaker.exe.config
+D:\Develop\TMN.Classic\LicenseMaker\bin\LicenseMaker.exe
+D:\Develop\TMN.Classic\LicenseMaker\bin\LicenseMaker.pdb
+D:\Develop\TMN.Classic\LicenseMaker\bin\TMN.Common.dll
+D:\Develop\TMN.Classic\LicenseMaker\bin\Logger.dll
+D:\Develop\TMN.Classic\LicenseMaker\bin\TMN.Config.dll
+D:\Develop\TMN.Classic\LicenseMaker\bin\Logger.pdb
+D:\Develop\TMN.Classic\LicenseMaker\bin\TMN.Config.pdb
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\MainWindow.baml
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\MainWindow.g.cs
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\App.g.cs
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker_MarkupCompile.cache
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.g.resources
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.exe
+D:\Develop\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.pdb
+D:\Develop\TMN.Classic\LicenseMaker\bin\TMN.Common.pdb
+D:\Folder\LicenseMaker.exe.config
+D:\Folder\LicenseMaker.exe
+D:\Folder\LicenseMaker.pdb
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.csprojResolveAssemblyReference.cache
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\MainWindow.baml
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\MainWindow.g.cs
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\App.g.cs
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker_MarkupCompile.cache
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.g.resources
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.exe
+E:\Project\Final Project\TMN.Classic\LicenseMaker\obj\x86\Debug\LicenseMaker.pdb

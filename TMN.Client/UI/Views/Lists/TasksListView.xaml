@@ -1,0 +1,44 @@
+﻿<v:ItemsListBase x:Class="TMN.Views.Lists.TasksListView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+                     xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+                     xmlns:v="clr-namespace:TMN.Views.Lists"
+                     Adding="ItemsListView_Adding"  >
+    <v:ItemsListBase.ListView>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="انجام"
+                                    Width="Auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{a:ImageSource Path=tick.png}"
+                                       Width="16"
+                                       Visibility="{Binding IsDone, Converter={x:Static conv:VisibilityBooleanConverter.Instance}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="کاربر"
+                                    DisplayMemberBinding="{Binding User.FullName}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="عنوان"
+                                    DisplayMemberBinding="{Binding TaskType.Name}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="مسير"
+                                    DisplayMemberBinding="{Binding Route.TGNO}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="تعداد کانال"
+                                    DisplayMemberBinding="{Binding ChannelCount}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="زمان انجام"
+                                    DisplayMemberBinding="{Binding FinishDate, Converter={x:Static conv:PersianDateConverter.Instance},ConverterParameter=dt}"
+                                    Width="Auto" />
+                    <GridViewColumn Header="توضيحات"
+                                    DisplayMemberBinding="{Binding Comment}"
+                                    Width="Auto" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </v:ItemsListBase.ListView>
+</v:ItemsListBase>

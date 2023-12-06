@@ -1,0 +1,20 @@
+﻿<Window x:Class="TMN.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        Title="Huawei Service Debug Window"
+        mc:Ignorable="d"
+        Height="541"
+        Width="288">
+    <StackPanel>
+        <Button Click="StartButton_Click">Start</Button>
+        <Label>Start parameters:</Label>
+        <TextBox x:Name="startParamsTextBox"/>
+        <Button Click="StoptButton_Click">Stop</Button>
+        <Button Click="SettingsButton_Click">Settings</Button>
+        <Label Content="Switch Log :" />
+        <TextBox MinLines="10" Name="SwitchLogTextBox" Height="312" AcceptsReturn="True" TextWrapping="Wrap" />
+        <Button Content="Send"  Click="SendButton_Click"/>
+    </StackPanel>
+</Window>

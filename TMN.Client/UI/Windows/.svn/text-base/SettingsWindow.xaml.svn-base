@@ -1,0 +1,179 @@
+﻿<Window x:Class="TMN.UI.Windows.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:u="clr-namespace:TMN.UserControls"
+        xmlns:conv="clr-namespace:TMN.Converters;assembly=TMN.Converters"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:access="clr-namespace:TMN" 
+        Loaded="Window_Loaded"
+        Title="تنظيمات سيستم"
+        FlowDirection="RightToLeft"
+        FontFamily="Tahoma"
+        Background="{StaticResource lightBlueShadow}"
+        Height="270"
+        Width="386"
+        Closing="Window_Closing">
+    <DockPanel Margin="5">
+        <Border DockPanel.Dock="Bottom"
+                x:Name="ControlPanel"
+                Grid.Row="1"
+                Margin="-1,0,-1,-1"
+                Height="32"
+                BorderBrush="LightBlue"
+                BorderThickness="1">
+            <Grid>
+                <u:ImageButton Margin="12,0,0,0"
+                               x:Name="btnOK"
+                               HorizontalAlignment="Left"
+                               HorizontalContentAlignment="Stretch"
+                               Width="75"
+                               Height="23"
+                               VerticalAlignment="Center"
+                               IsDefault="True"
+                               ImageSource="{a:ImageSource Path=check.png}"
+                               Text="تاييد"
+                               Click="btnOK_Click" />
+                <u:ImageButton  Margin="93,3.5,0,3.5"
+                                x:Name="btnCancel"
+                                HorizontalContentAlignment="Stretch"
+                                IsCancel="True"
+                                Text="انصراف"
+                                ImageSource="{a:ImageSource Path=cancel.png}"
+                                HorizontalAlignment="Left"
+                                Width="78" />
+            </Grid>
+        </Border>
+        <TabControl>
+            <TabItem Header="مرکز جاری" >
+                <Grid DockPanel.Dock="Top" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="90" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" MinHeight="30" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition  Height="Auto"/>
+                        <RowDefinition  Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.ColumnSpan="2"
+                               TextWrapping="Wrap"
+                               Margin="5"
+                               Padding="5"
+                               Foreground="#FF8080A0"
+                               VerticalAlignment="Top">لطفا مرکز خود را از ليست زير انتخاب نماييد.</TextBlock>
+                    <Label Height="25" Grid.Row="1" Margin="5">مرکز جاری:</Label>
+                    <ComboBox x:Name="centersCombo"
+                              Grid.Row="1"
+                              DisplayMemberPath="DisplayName"
+                              SelectedValuePath="ID"
+                              Margin="83,5,5,5" Grid.ColumnSpan="2" Width="246" />
+                    
+                    <StackPanel Grid.Row="2" Grid.ColumnSpan="2"  Orientation="Horizontal" >
+          
+                            <Label>زمان پخش آلارم های صوتی:</Label>
+                            <TextBox x:Name="VoiceAlertIntervalTextbox" Width="80" Margin="5" ></TextBox>
+                            <Label>ثانیه</Label>
+              
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3"  Orientation="Horizontal"   >
+                            <TextBlock VerticalAlignment="Center"  Margin="3"  Text="تصوبر زمینه :"   />
+                            <ComboBox  Width="120" x:Name="cmbImages" Margin="3"   />
+                            <TextBlock VerticalAlignment="Center" Text="انتخاب تصویر :" Margin="3" />
+                            <Button  Width="35" x:Name="btnImagePath" Click="btnImagePath_Click" Content="..." Margin="3" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="رنگ ها"
+                     Loaded="TabColors_Loaded" >
+                <ListView x:Name="ColorList">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="عنوان"
+                                            Width="100"
+                                            DisplayMemberBinding="{Binding Name, Converter={x:Static conv:StringRemoverConverter.Instance}, ConverterParameter=Color_}" />
+                            <GridViewColumn Header="رنگ"
+                                            Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border CornerRadius="3"
+                                                FlowDirection="LeftToRight"
+                                                BorderThickness="1"
+                                                BorderBrush="#BB000000"
+                                                Height="20"
+                                                Width="20"
+                                                Cursor="Hand"
+                                                MouseUp="Border_MouseUp"
+                                                Background="{Binding PropertyValue, Converter={x:Static conv:ColorConverter.Instance}}"
+                                                SnapsToDevicePixels="True">
+                                            <Border CornerRadius="3"
+                                                    BorderThickness="1"
+                                                    BorderBrush="#D0FFFFFF"
+                                                    Background="{StaticResource GlassFilter}"></Border>
+                                        </Border>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+            <TabItem Header="آلارم های صوتی" Loaded="TabAlarms_Loaded" >
+                <ScrollViewer>
+                    <StackPanel Margin="5" CanVerticallyScroll="True" CanHorizontallyScroll="True"  >
+                        <TextBlock Text="صدای آلارم عدم ارتباط با سرویس:" ></TextBlock>
+                        <StackPanel  Orientation="Horizontal" Margin="0,5,0,10" >
+                            <TextBox x:Name="DCSoundTextbox"  Width="286"  ></TextBox>
+                            <Button x:Name="openDCFileButton" Content="..." Width="30" Click="openFile_Click" CommandParameter="DC" ></Button>
+                        </StackPanel>
+                        <TextBlock Text="صدای آلارم Critical:"></TextBlock>
+                        <StackPanel  Orientation="Horizontal" Margin="0,5,0,10" >
+                            <TextBox x:Name="criticalSoundTextbox"  Width="286" ></TextBox>
+                            <Button x:Name="openCriticalFileButton" Content="..." Width="30" Click="openFile_Click" CommandParameter="CRITICAL"></Button>
+                        </StackPanel>
+                        <TextBlock Text="صدای آلارم Major:"></TextBlock>
+                        <StackPanel  Orientation="Horizontal" Margin="0,5,0,10" >
+                            <TextBox x:Name="majorSoundTextbox"  Width="286" ></TextBox>
+                            <Button x:Name="openMajorFileButton" Content="..." Width="30" Click="openFile_Click" CommandParameter="MAJOR"></Button>
+                        </StackPanel>
+                        <TextBlock Text="صدای آلارم Minor:"></TextBlock>
+                        <StackPanel  Orientation="Horizontal" Margin="0,5,0,10" >
+                            <TextBox x:Name="minorSoundTextbox"  Width="286" ></TextBox>
+                            <Button x:Name="openMinorFileButton" Content="..." Width="30" Click="openFile_Click" CommandParameter="MINOR"></Button>
+                        </StackPanel>
+                        <TextBlock Text="صدای آلارم Power:"></TextBlock>
+                        <StackPanel  Orientation="Horizontal" Margin="0,5,0,10" >
+                            <TextBox x:Name="powerSoundTextbox"  Width="286" ></TextBox>
+                            <Button x:Name="openPowerFileButton" Content="..." Width="30" Click="openFile_Click" CommandParameter="POWER"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <!--<TabItem Header="تنظيمات آلارم"
+                     x:Name="alarmSettingsTab">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Margin"
+                                    Value="5,0" />
+                            <Setter Property="FlowDirection"
+                                    Value="LeftToRight" />
+                        </Style>
+                        <Style TargetType="Label">
+                            <Setter Property="Margin"
+                                    Value="5,5,5,0" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label>مسير محتوی log فايل های آلارم</Label>
+                    <TextBox x:Name="ewsdAlarmLogPathTextBox" />
+                    <Label>نام يا الگوی Log فايل (RegEx)</Label>
+                    <TextBox x:Name="ewsdAlarmLogPaternTextBox" />
+                    <Label>نام ريزپردازنده</Label>
+                    <TextBox  x:Name="ewsdAlarmLogFixStringTextBox" />
+                </StackPanel>
+            </TabItem>-->
+        </TabControl>
+    </DockPanel>
+</Window>

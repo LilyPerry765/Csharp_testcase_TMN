@@ -1,0 +1,46 @@
+﻿<Window x:Class="TMN.UI.Windows.ServiceStateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FlowDirection="RightToLeft"
+        Title="مشکلات مرکز"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Tahoma"
+        Height="379"
+        Width="529">
+    <Grid Loaded="Grid_Loaded">
+        <DataGrid x:Name="dataGrid"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*"
+                                    x:Name="centerColumn"
+                                    Header="مرکز"
+                                    Binding="{Binding Center.DisplayName}" />
+                <DataGridTextColumn Width="*"
+                                    Header="سرويس"
+                                    Binding="{Binding ServiceName}" />
+                <DataGridTextColumn Header="توضيحات"
+                                    Width="*"
+                                    Binding="{Binding DisconnectReason}" />
+                <DataGridTextColumn Header="آخرين زمان فعاليت"
+                                    Binding="{Binding LastActiveTime}"
+                                    Width="*" />
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="به روزرسانی"
+                              x:Name="refreshMenuItem"
+                              Click="refreshMenuItem_Click" />
+                    <MenuItem Header="به روزرسانی خودکار"
+                              x:Name="autoRefreshMenuItem"
+                              Checked="autoRefreshMenuItem_Checked"
+                              Unchecked="autoRefreshMenuItem_Unchecked"
+                              IsChecked="True"
+                              IsCheckable="True" />
+                    <MenuItem x:Name="viewDetailsMenuItem"
+                              Click="viewDetailsMenuItem_Click"
+                              Header="توضيحات فنی" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</Window>

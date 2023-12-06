@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="TMN.Views.Details.ChannelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:uc="clr-namespace:TMN.UserControls"
+             xmlns:r="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf">
+    <StackPanel Orientation="Horizontal"
+                Loaded="StackPanel_Loaded">
+        <StackPanel>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= RouteComboBox }">مسير:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= TimeSlotNumericUpDown }">تايم اسلات:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= ChannelNumericUpDown }">کانال:</Label>
+            <Label HorizontalContentAlignment="Right"
+                   Target="{Binding ElementName= CICUpDown }">CIC:</Label>
+        </StackPanel>
+        <StackPanel>
+            <uc:EntityComboBox x:Name="RouteComboBox"
+                      Width="140"
+                      IsEditable="True"
+                      SelectedValue="{Binding RouteID}"
+                      DisplayMemberPath="TGNO"
+                      SelectedValuePath="ID"
+                      Margin="0,2,0,2"
+                      HorizontalAlignment="Left" />
+            <r:NumericUpDown x:Name="TimeSlotNumericUpDown"
+                             Value="{Binding Path=TimeSlot, Mode=TwoWay}"
+                             Margin="0,2,0,2"
+                             HorizontalAlignment="Left" />
+            <r:NumericUpDown x:Name="ChannelNumericUpDown"
+                             Value="{Binding Path=LNO, Mode=TwoWay}"
+                             Margin="0,2,0,2"
+                             HorizontalAlignment="Left" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding TimeSlot}" />
+                <TextBlock VerticalAlignment="Center">-</TextBlock>
+                <r:NumericUpDown x:Name="CICUpDown"
+                                 Value="{Binding Path=Link.CIC, Mode=TwoWay}"
+                                 Margin="0,2,0,2"
+                                 HorizontalAlignment="Left" />
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+
+</UserControl>

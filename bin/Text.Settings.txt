@@ -1,0 +1,1 @@
+;recheckConnectivity=true;;ZOOM_FACTOR=1;

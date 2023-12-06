@@ -1,0 +1,47 @@
+﻿<Window x:Class="MessageSenderService.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Tahoma"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message Sender Service Settings"
+        Height="260"
+        Width="360">
+
+    <DockPanel Margin="5" FlowDirection="RightToLeft">
+        <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Bottom">
+            <Button Margin="3"
+                    IsDefault="True"
+                    Content="ثبت"
+                    Height="23"
+                    Name="saveButton"
+                    Width="75"
+                    Click="saveButton_Click" />
+            <Button Margin="3"
+                    Content="خروج"
+                    IsCancel="True"
+                    Height="23"
+                    Name="cancelButton"
+                    Width="75"
+                    Click="cancelButton_Click" />
+            <Button Margin="3"
+                    Content="ارسال پیامک"
+                    IsCancel="True"
+                    Height="23"
+                    Name="sendMessageButton"
+                    Width="75"
+                    Click="sendMessageButton_Click" />
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label>نام پوررت</Label>
+            <TextBox Name="txtPortName"   />
+            <Label>فاصله زمانی برای تایمر (میلی ثانیه)</Label>
+            <TextBox Name="txtTimeInterval" />
+            <!--<Label>نام کاربری SQL Server:</Label>
+            <TextBox x:Name="sqlUserTextBox" />
+            <Label>کلمه عبور SQL Server:</Label>
+            <TextBox x:Name="sqlPassTextBox" />-->
+        </StackPanel>
+    </DockPanel>
+
+</Window>

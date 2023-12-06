@@ -1,0 +1,17 @@
+D:\Develop\TMN.Classic\bin\AlarmLogFilePosition.xml
+D:\Develop\TMN.Classic\bin\S12AlarmService.exe.config
+D:\Develop\TMN.Classic\bin\S12AlarmService.exe
+D:\Develop\TMN.Classic\bin\S12AlarmService.pdb
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\SettingsWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\DebugWindow.baml
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\SettingsWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\DebugWindow.g.cs
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\S12AlarmService_MarkupCompile.cache
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\S12AlarmService.g.resources
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\TMN.ProjectInstaller.resources
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\TMN.S12Service.resources
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\S12AlarmService.exe
+D:\Develop\TMN.Classic\Services\TMN.S12AlarmService\obj\x86\Debug\S12AlarmService.pdb

@@ -1,0 +1,117 @@
+﻿<Window x:Class="TMN.UI.Windows.DDFWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:a="clr-namespace:TMN.Assets;assembly=TMN.Common"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wpf="clr-namespace:Enterprise.Wpf;assembly=Enterprise.Wpf"
+        FlowDirection="RightToLeft"
+        Title="DDF"
+        Height="494"
+        Width="775"
+        Background="{StaticResource lightBlueShadow}"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="Connected">
+            <GradientStop Color="White"
+                          Offset="0" />
+            <GradientStop Color="#FF00AAFF"
+                          Offset="2" />
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid Loaded="Window_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="30*"
+                              MaxWidth="250" />
+        </Grid.ColumnDefinitions >
+        <Border CornerRadius="5"
+                Grid.Column="1"
+                Margin="5,0"
+                Background="#50FFFFFF">
+            <Grid x:Name="DDFGrid"
+                  FlowDirection="LeftToRight">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                      Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="30" />
+                    </Grid.ColumnDefinitions>
+                    <Button HorizontalAlignment="Left"
+                            x:Name="btnPrint"
+                            Margin="5,0,0,0"
+                            Click="btnPrint_Click"
+                            ToolTip="چاپ"
+                            Grid.Column="4">
+                        <Image Source="{a:ImageSource Path=printer.png}" />
+                    </Button>
+                    <Button HorizontalAlignment="Left"
+                            x:Name="btnRefresh"
+                            Margin="5,0,0,0"
+                            Click="btnRefresh_Click"
+                            ToolTip="به روز رسانی"
+                            Grid.Column="5">
+                        <Image Source="{a:ImageSource Path=refresh.png}" />
+                    </Button>
+                    <Label x:Name="label1"
+                           Grid.Column="0"
+                           HorizontalAlignment="Left">Bay:</Label>
+                    <wpf:NumericUpDown x:Name="BayUpDown"
+                                       Grid.Column="1"
+                                       Minimum="1"
+                                       Value="1"
+                                       ValueChanged="BayUpDown_ValueChanged" />
+                    <Label x:Name="label2"
+                           HorizontalAlignment="Left"
+                           Grid.Column="2">Pos:</Label>
+                    <wpf:NumericUpDown x:Name="PositionUpdown"
+                                       Maximum="2"
+                                       Minimum="1"
+                                       Value="1"
+                                       Grid.Column="3"
+                                       ValueChanged="PositionUpdown_ValueChanged" />
+                </Grid>
+                <ScrollViewer Grid.Row="1">
+                    <Grid Margin="5"
+                          Focusable="True"
+                          x:Name="DDFPanel">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+        <Grid x:Name="ChannelsPanel"
+              Grid.Column="0"></Grid>
+    </Grid>
+</Window>

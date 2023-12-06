@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/TMN.Classic/!svn/ver/2/TMN.Common/Interfaces
+END
+IChild.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/1/TMN.Common/Interfaces/IChild.cs
+END
+IValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/TMN.Classic/!svn/ver/1/TMN.Common/Interfaces/IValidator.cs
+END
+IAlarm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TMN.Classic/!svn/ver/1/TMN.Common/Interfaces/IAlarm.cs
+END
+ICapacity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/TMN.Classic/!svn/ver/1/TMN.Common/Interfaces/ICapacity.cs
+END
+IDeletable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/TMN.Classic/!svn/ver/1/TMN.Common/Interfaces/IDeletable.cs
+END
